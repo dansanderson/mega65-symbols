@@ -64,6 +64,7 @@ CHIPS = set((
     'SDFDC',
     'SID',
     'SUMMARY',
+    'SYSCTL',
     'TOUCH',
     'UART',
     'UARTMISC',
@@ -188,6 +189,7 @@ def parse_iomap_line(line):
     # 2: Identifier (chipid:symbol), placeholder hyphen, split range, first word of description
     # 3: Split range end, word of description
     # 4+: Rest of description words
+    # TODO: support identifier in field index 3
     chip_id = None
     base_name = None
     desc_start = 3
@@ -271,46 +273,21 @@ def write_sym(outfh, sym, fmt):
     outfh.write(item + '\n')
 
 
-def main():
-    parser = argparse.ArgumentParser(
-        description=DESCRIPTION,
-        usage=USAGE,
-        epilog=EPILOG,
-        formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument(
-        '--format',
-        choices=FORMATS.keys(),
-        default='acme',
-        help='The output format')
-    parser.add_argument(
-        '--output-file',
-        help='The symbols output file path')
-    parser.add_argument(
-        '--iomap-file',
-        help='The iomap.txt file path')
-    parser.add_argument(
-        '--verbose',
-        action='store_true',
-        help='Print messages about how the iomap is handled')
-    args = parser.parse_args()
+def parse_file(iomap_fname, verbose=False):
+    """Parse an iomap.txt file.
 
-    fmt = FORMATS[args.format]
+    Parse each line into a Symbol. Keep them in file order.
 
-    iomap_fname = args.iomap_file
-    if not iomap_fname:
-        if os.path.isfile('iomap.txt'):
-            iomap_fname = 'iomap.txt'
-        else:
-            exit_with_error(
-                'Cannot find iomap.txt file. Use --iomap-file to set a path.')
-    if not os.path.isfile(iomap_fname):
-        exit_with_error('iomap file not found: ' + iomap_fname)
+    Args:
+        iomap_fname: Filename of the iomap.txt file.
+        verbose: If True, prints verbose progress messages.
 
-    output_fname = args.output_file
-    if not output_fname:
-        output_fname = 'mega65_io' + fmt.fname_suffix
-
-    # Parse each line into a Symbol. Keep them in file order.
+    Returns:
+        (iomap, line_count, line_no_symbol_count)
+        iomap: Sequence of Symbols.
+        line_count: Total number of lines read.
+        line_no_symbol_count: Number of lines that did not have recognizable symbols.
+    """
     iomap = []
     line_count = 0
     line_no_symbol_count = 0
@@ -321,7 +298,7 @@ def main():
                 if syms:
                     iomap.extend(syms)
                 else:
-                    if args.verbose:
+                    if verbose:
                         print('Skipped: ' + line[:-1])
                     line_no_symbol_count += 1
             except:
@@ -329,8 +306,24 @@ def main():
                 raise
             line_count += 1
 
-    # Despite our best efforts, some keys repeat. Attempt to disambiguate
-    # with the arch mode, and resolve further with an incremented key.
+    return (iomap, line_count, line_no_symbol_count)
+
+
+def dedupe_names(iomap, verbose=False):
+    """Resolve duplicate symbol names.
+
+    Despite our best efforts, some keys repeat. Attempt to disambiguate
+    with the arch mode, and resolve further with an incremented key.
+
+    This renames Symbols destructively.
+
+    Args:
+        iomap: Sequence of Symbols.
+        verbose: If True, prints verbose progress messages.
+
+    Returns:
+        Count of symbols that needed de-duping.
+    """
     full_name_counters = collections.Counter()
     duplicate_count = 0
     for i in iomap:
@@ -344,10 +337,22 @@ def main():
                     '_' +
                     str(full_name_counters[i.full_name]))
             duplicate_count += 1
-            if args.verbose:
+            if verbose:
                 print(f'De-duplicating a key: {i.full_name}')
+    return duplicate_count
 
-    # Add short base name aliases for unique base names.
+
+def add_short_symbols(iomap):
+    """Add short symbols when unambiguous.
+
+    Add short base name aliases for unique base names.
+
+    Args:
+        iomap: Sequence of Symbols.
+
+    Returns:
+        New sequence of Symbols.
+    """
     basename_counts = collections.Counter(i.base_name for i in iomap)
     revised_iomap = []
     for i in iomap:
@@ -358,24 +363,49 @@ def main():
                 base_name=i.base_name,
                 value=i.value,
                 description=i.description))
-    iomap = revised_iomap
+    return revised_iomap
 
-    # It is possible that we generate a key that collides with an assembler
-    # mnemonic or keyword. We keep a list of these and add an underscore
-    # prefix.
+
+def resolve_collisions(iomap, verbose=False):
+    """Resolve collisions with reserved names.
+
+    It is possible that we generate a key that collides with an assembler
+    mnemonic or keyword. We keep a list of these and add an underscore
+    prefix.
+
+    This renames Symbols destructively.
+
+    Args:
+        iomap: Sequence of Symbols.
+        verbose: If True, prints verbose progress messages.
+
+    Returns:
+        Count of symbols that needed resolving.
+    """
     collision_count = 0
     for i in iomap:
         if i.base_name in COLLISIONS:
             i.base_name = '_' + i.base_name
             collision_count += 1
-            if args.verbose:
+            if verbose:
                 print(f'Resolving full name collision: {i.base_name}')
         if i.full_name in COLLISIONS:
             i.full_name = '_' + i.full_name
             collision_count += 1
-            if args.verbose:
+            if verbose:
                 print(f'Resolving base name collision: {i.full_name}')
+    return collision_count
 
+
+def write_symbols_file(output_fname, iomap_fname, fmt, iomap):
+    """Write the symbols file.
+
+    Args:
+        output_fname: The filename of the symbols file to create.
+        iomap_fname: The iomap.txt filename, for including in the header.
+        fmt: The FORMATS entry for the selected format.
+        iomap: Sequence of Symbols.
+    """
     with open(output_fname, 'w') as outfh:
         write_comment(outfh, 'Generated from: ' + iomap_fname, fmt)
         write_comment(
@@ -386,13 +416,76 @@ def main():
         for sym in iomap:
             write_sym(outfh, sym, fmt)
 
+
+def main():
+    parser = argparse.ArgumentParser(
+        description=DESCRIPTION,
+        usage=USAGE,
+        epilog=EPILOG,
+        formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument(
+        '--format',
+        choices=FORMATS.keys(),
+        help='The output format')
+    parser.add_argument(
+        '--output-file',
+        help='The symbols output file path')
+    parser.add_argument(
+        '--iomap-file',
+        help='The iomap.txt file path')
+    parser.add_argument(
+        '--verbose',
+        action='store_true',
+        help='Print messages about how the iomap is handled')
+    parser.add_argument(
+        '--all-formats',
+        action='store_true',
+        help='Generate files in all supported formats using default filenames')
+    args = parser.parse_args()
+
+    if args.all_formats:
+        if args.format:
+            exit_with_error('Cannot request both --all-formats and a --format')
+        if args.output_file:
+            exit_with_error('Cannot request both --all-formats and an --output-file')
+
+    iomap_fname = args.iomap_file
+    if not iomap_fname:
+        if os.path.isfile('iomap.txt'):
+            iomap_fname = 'iomap.txt'
+        else:
+            exit_with_error(
+                'Cannot find iomap.txt file. Use --iomap-file to set a path.')
+    if not os.path.isfile(iomap_fname):
+        exit_with_error('iomap file not found: ' + iomap_fname)
+
+    iomap, line_count, line_no_symbol_count = parse_file(iomap_fname, verbose=args.verbose)
+    duplicate_count = dedupe_names(iomap, verbose=args.verbose)
+    iomap = add_short_symbols(iomap)
+    collision_count = resolve_collisions(iomap, args.verbose)
+
     if args.verbose:
         print(f'\nTotal iomap lines:     {line_count:>4}')
         print(f'Lines without symbols: {line_no_symbol_count:>4}')
         print(f'Duplicates:            {duplicate_count:>4}')
         print(f'Collisions:            {collision_count:>4}')
 
-    print(f'\nCreated {output_fname} in {args.format or "acme"} format.')
+    if args.all_formats:
+        print()
+        for fmt_name in FORMATS:
+            fmt = FORMATS[fmt_name]
+            output_fname = 'mega65_io' + fmt.fname_suffix
+            write_symbols_file(output_fname, iomap_fname, fmt, iomap)
+            print(f'Created {output_fname} in {fmt_name} format.')
+    else:
+        fmt = FORMATS['acme']
+        if args.format:
+            fmt = FORMATS[args.format]
+        output_fname = args.output_file
+        if not output_fname:
+            output_fname = 'mega65_io' + fmt.fname_suffix
+        write_symbols_file(output_fname, iomap_fname, fmt, iomap)
+        print(f'\nCreated {output_fname} in {args.format or "acme"} format.')
 
 
 if __name__ == '__main__':

@@ -649,9 +649,7 @@
 .alias FDC_MOTOR_MASK 32  ; Activates drive motor and LED (unless LED signal is also set, causing the drive LED to blink) (bit mask)
 .alias MOTOR_MASK 32  ; Activates drive motor and LED (unless LED signal is also set, causing the drive LED to blink) (bit mask)
 .alias FDC_LED_ADDR $D080  ; Drive LED blinks when set (address)
-.alias LED_ADDR $D080  ; Drive LED blinks when set (address)
 .alias FDC_LED_MASK 64  ; Drive LED blinks when set (bit mask)
-.alias LED_MASK 64  ; Drive LED blinks when set (bit mask)
 .alias FDC_IRQ_ADDR $D080  ; When set, enables interrupts to occur. Clearing clears any pending interrupt and disables interrupts until set again. (address)
 .alias FDC_IRQ_MASK 128  ; When set, enables interrupts to occur. Clearing clears any pending interrupt and disables interrupts until set again. (bit mask)
 .alias FDC_COMMAND $D081  ; F011 FDC command register
@@ -1033,6 +1031,28 @@
 .alias UNUSED $D619  ; port o output value
 .alias UARTMISC_SYSCTL $D61A  ; System control flags (target specific)
 .alias SYSCTL $D61A  ; System control flags (target specific)
+.alias SYSCTL_AUDMUTE_ADDR $D61A  ; Mute digital video audio (MEGA65 R2 only) (address)
+.alias AUDMUTE_ADDR $D61A  ; Mute digital video audio (MEGA65 R2 only) (address)
+.alias SYSCTL_AUDMUTE_MASK 1  ; Mute digital video audio (MEGA65 R2 only) (bit mask)
+.alias AUDMUTE_MASK 1  ; Mute digital video audio (MEGA65 R2 only) (bit mask)
+.alias SYSCTL_DVI_ADDR $D61A  ; Control digital video as DVI (disables audio) (address)
+.alias DVI_ADDR $D61A  ; Control digital video as DVI (disables audio) (address)
+.alias SYSCTL_DVI_MASK 2  ; Control digital video as DVI (disables audio) (bit mask)
+.alias DVI_MASK 2  ; Control digital video as DVI (disables audio) (bit mask)
+.alias SYSCTL_AUDDBG_ADDR $D61A  ; Visualise audio samples (DEBUG) (address)
+.alias AUDDBG_ADDR $D61A  ; Visualise audio samples (DEBUG) (address)
+.alias SYSCTL_AUDDBG_MASK 4  ; Visualise audio samples (DEBUG) (bit mask)
+.alias AUDDBG_MASK 4  ; Visualise audio samples (DEBUG) (bit mask)
+.alias SYSCTL_AUD48K_ADDR $D61A  ; Select 48KHz or 44.1KHz digital video audio sample rate (address)
+.alias AUD48K_ADDR $D61A  ; Select 48KHz or 44.1KHz digital video audio sample rate (address)
+.alias SYSCTL_AUD48K_MASK 8  ; Select 48KHz or 44.1KHz digital video audio sample rate (bit mask)
+.alias AUD48K_MASK 8  ; Select 48KHz or 44.1KHz digital video audio sample rate (bit mask)
+.alias SYSCTL_LED_ADDR $D61A  ; Control LED next to U1 on mother board (address)
+.alias SYSCTL_LED_MASK 16  ; Control LED next to U1 on mother board (bit mask)
+.alias SYSCTL_AUDINV_ADDR $D61A  ; Invert digital video audio sample values (address)
+.alias AUDINV_ADDR $D61A  ; Invert digital video audio sample values (address)
+.alias SYSCTL_AUDINV_MASK 128  ; Invert digital video audio sample values (bit mask)
+.alias AUDINV_MASK 128  ; Invert digital video audio sample values (bit mask)
 .alias DEBUG_AMIMOUSDETECT $D61B  ; READ 1351/amiga mouse auto detection DEBUG
 .alias AMIMOUSDETECT $D61B  ; READ 1351/amiga mouse auto detection DEBUG
 .alias DEBUG__1541PCLSB $D61C  ; internal 1541 PC LSB

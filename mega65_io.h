@@ -1297,12 +1297,8 @@
 #define MOTOR_MASK 32
 /* Drive LED blinks when set (address) */
 #define FDC_LED_ADDR $D080
-/* Drive LED blinks when set (address) */
-#define LED_ADDR $D080
 /* Drive LED blinks when set (bit mask) */
 #define FDC_LED_MASK 64
-/* Drive LED blinks when set (bit mask) */
-#define LED_MASK 64
 /* When set, enables interrupts to occur. Clearing clears any pending interrupt and disables interrupts until set again. (address) */
 #define FDC_IRQ_ADDR $D080
 /* When set, enables interrupts to occur. Clearing clears any pending interrupt and disables interrupts until set again. (bit mask) */
@@ -2065,6 +2061,50 @@
 #define UARTMISC_SYSCTL $D61A
 /* System control flags (target specific) */
 #define SYSCTL $D61A
+/* Mute digital video audio (MEGA65 R2 only) (address) */
+#define SYSCTL_AUDMUTE_ADDR $D61A
+/* Mute digital video audio (MEGA65 R2 only) (address) */
+#define AUDMUTE_ADDR $D61A
+/* Mute digital video audio (MEGA65 R2 only) (bit mask) */
+#define SYSCTL_AUDMUTE_MASK 1
+/* Mute digital video audio (MEGA65 R2 only) (bit mask) */
+#define AUDMUTE_MASK 1
+/* Control digital video as DVI (disables audio) (address) */
+#define SYSCTL_DVI_ADDR $D61A
+/* Control digital video as DVI (disables audio) (address) */
+#define DVI_ADDR $D61A
+/* Control digital video as DVI (disables audio) (bit mask) */
+#define SYSCTL_DVI_MASK 2
+/* Control digital video as DVI (disables audio) (bit mask) */
+#define DVI_MASK 2
+/* Visualise audio samples (DEBUG) (address) */
+#define SYSCTL_AUDDBG_ADDR $D61A
+/* Visualise audio samples (DEBUG) (address) */
+#define AUDDBG_ADDR $D61A
+/* Visualise audio samples (DEBUG) (bit mask) */
+#define SYSCTL_AUDDBG_MASK 4
+/* Visualise audio samples (DEBUG) (bit mask) */
+#define AUDDBG_MASK 4
+/* Select 48KHz or 44.1KHz digital video audio sample rate (address) */
+#define SYSCTL_AUD48K_ADDR $D61A
+/* Select 48KHz or 44.1KHz digital video audio sample rate (address) */
+#define AUD48K_ADDR $D61A
+/* Select 48KHz or 44.1KHz digital video audio sample rate (bit mask) */
+#define SYSCTL_AUD48K_MASK 8
+/* Select 48KHz or 44.1KHz digital video audio sample rate (bit mask) */
+#define AUD48K_MASK 8
+/* Control LED next to U1 on mother board (address) */
+#define SYSCTL_LED_ADDR $D61A
+/* Control LED next to U1 on mother board (bit mask) */
+#define SYSCTL_LED_MASK 16
+/* Invert digital video audio sample values (address) */
+#define SYSCTL_AUDINV_ADDR $D61A
+/* Invert digital video audio sample values (address) */
+#define AUDINV_ADDR $D61A
+/* Invert digital video audio sample values (bit mask) */
+#define SYSCTL_AUDINV_MASK 128
+/* Invert digital video audio sample values (bit mask) */
+#define AUDINV_MASK 128
 /* READ 1351/amiga mouse auto detection DEBUG */
 #define DEBUG_AMIMOUSDETECT $D61B
 /* READ 1351/amiga mouse auto detection DEBUG */
