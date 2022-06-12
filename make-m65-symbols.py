@@ -265,8 +265,13 @@ def write_comment(outfh, txt, fmt):
 
 def write_sym(outfh, sym, fmt):
     val = sym.value
-    if fmt.use_c_hex and val.startswith('$'):
-        val = '0x' + val[1:]
+    if fmt.use_c_hex:
+        if val.startswith('$'):
+            val = '0x' + val[1:]
+        elif sym.base_name.endswith('_MASK'):
+            val = f'{int(val):#010b}'
+    elif sym.base_name.endswith('_MASK') and not val.startswith('$'):
+        val = f'%{int(val):08b}'
 
     item = fmt.sym_tmpl.format(
         addr='!addr ' if sym.is_address else '',

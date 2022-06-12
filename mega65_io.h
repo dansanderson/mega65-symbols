@@ -94,49 +94,49 @@
 /* 24/25 vertical smooth scroll (address) */
 #define YSCL_ADDR 0xD011
 /* 24/25 vertical smooth scroll (bit mask) */
-#define VIC2_YSCL_MASK 7
+#define VIC2_YSCL_MASK 0b00000111
 /* 24/25 vertical smooth scroll (bit mask) */
-#define YSCL_MASK 7
+#define YSCL_MASK 0b00000111
 /* 24/25 row select (address) */
 #define VIC2_RSEL_ADDR 0xD011
 /* 24/25 row select (address) */
 #define RSEL_ADDR 0xD011
 /* 24/25 row select (bit mask) */
-#define VIC2_RSEL_MASK 8
+#define VIC2_RSEL_MASK 0b00001000
 /* 24/25 row select (bit mask) */
-#define RSEL_MASK 8
+#define RSEL_MASK 0b00001000
 /* disable display (address) */
 #define VIC2_BLNK_ADDR 0xD011
 /* disable display (address) */
 #define BLNK_ADDR 0xD011
 /* disable display (bit mask) */
-#define VIC2_BLNK_MASK 16
+#define VIC2_BLNK_MASK 0b00010000
 /* disable display (bit mask) */
-#define BLNK_MASK 16
+#define BLNK_MASK 0b00010000
 /* bitmap mode (address) */
 #define VIC2_BMM_ADDR 0xD011
 /* bitmap mode (address) */
 #define BMM_ADDR 0xD011
 /* bitmap mode (bit mask) */
-#define VIC2_BMM_MASK 32
+#define VIC2_BMM_MASK 0b00100000
 /* bitmap mode (bit mask) */
-#define BMM_MASK 32
+#define BMM_MASK 0b00100000
 /* extended background mode (address) */
 #define VIC2_ECM_ADDR 0xD011
 /* extended background mode (address) */
 #define ECM_ADDR 0xD011
 /* extended background mode (bit mask) */
-#define VIC2_ECM_MASK 64
+#define VIC2_ECM_MASK 0b01000000
 /* extended background mode (bit mask) */
-#define ECM_MASK 64
+#define ECM_MASK 0b01000000
 /* raster compare bit 8 (address) */
 #define VIC2_RC_ADDR 0xD011
 /* raster compare bit 8 (address) */
 #define RC_ADDR 0xD011
 /* raster compare bit 8 (bit mask) */
-#define VIC2_RC_MASK 128
+#define VIC2_RC_MASK 0b10000000
 /* raster compare bit 8 (bit mask) */
-#define RC_MASK 128
+#define RC_MASK 0b10000000
 /* raster compare bits 0 to 7 */
 #define VIC2_RC 0xD012
 /* raster compare bits 0 to 7 */
@@ -158,29 +158,29 @@
 /* horizontal smooth scroll (address) */
 #define XSCL_ADDR 0xD016
 /* horizontal smooth scroll (bit mask) */
-#define VIC2_XSCL_MASK 7
+#define VIC2_XSCL_MASK 0b00000111
 /* horizontal smooth scroll (bit mask) */
-#define XSCL_MASK 7
+#define XSCL_MASK 0b00000111
 /* 38/40 column select (address) */
 #define VIC2_CSEL_ADDR 0xD016
 /* 38/40 column select (address) */
 #define CSEL_ADDR 0xD016
 /* 38/40 column select (bit mask) */
-#define VIC2_CSEL_MASK 8
+#define VIC2_CSEL_MASK 0b00001000
 /* 38/40 column select (bit mask) */
-#define CSEL_MASK 8
+#define CSEL_MASK 0b00001000
 /* Multi-colour mode (address) */
 #define VIC2_MCM_ADDR 0xD016
 /* Multi-colour mode (address) */
 #define MCM_ADDR 0xD016
 /* Multi-colour mode (bit mask) */
-#define VIC2_MCM_MASK 16
+#define VIC2_MCM_MASK 0b00010000
 /* Multi-colour mode (bit mask) */
-#define MCM_MASK 16
+#define MCM_MASK 0b00010000
 /* Disables video output on MAX Machine(tm) VIC-II 6566. Ignored on normal C64s and the MEGA65 (address) */
 #define VIC2_RST_ADDR 0xD016
 /* Disables video output on MAX Machine(tm) VIC-II 6566. Ignored on normal C64s and the MEGA65 (bit mask) */
-#define VIC2_RST_MASK 32
+#define VIC2_RST_MASK 0b00100000
 /* sprite vertical expansion enable bits */
 #define VIC2_SEXY 0xD017
 /* sprite vertical expansion enable bits */
@@ -190,73 +190,73 @@
 /* character set address location ($\times$ 1KiB) (address) */
 #define CB_ADDR 0xD018
 /* character set address location ($\times$ 1KiB) (bit mask) */
-#define VIC2_CB_MASK 14
+#define VIC2_CB_MASK 0b00001110
 /* character set address location ($\times$ 1KiB) (bit mask) */
-#define CB_MASK 14
+#define CB_MASK 0b00001110
 /* screen address ($\times$ 1KiB) (address) */
 #define VIC2_VS_ADDR 0xD018
 /* screen address ($\times$ 1KiB) (address) */
 #define VS_ADDR 0xD018
 /* screen address ($\times$ 1KiB) (bit mask) */
-#define VIC2_VS_MASK 240
+#define VIC2_VS_MASK 0b11110000
 /* screen address ($\times$ 1KiB) (bit mask) */
-#define VS_MASK 240
+#define VS_MASK 0b11110000
 /* raster compare indicate or acknowledge (address) */
 #define VIC2_RIRQ_ADDR 0xD019
 /* raster compare indicate or acknowledge (address) */
 #define RIRQ_ADDR 0xD019
 /* raster compare indicate or acknowledge (bit mask) */
-#define VIC2_RIRQ_MASK 1
+#define VIC2_RIRQ_MASK 0b00000001
 /* raster compare indicate or acknowledge (bit mask) */
-#define RIRQ_MASK 1
+#define RIRQ_MASK 0b00000001
 /* sprite:bitmap collision indicate or acknowledge (address) */
 #define VIC2_ISBC_ADDR 0xD019
 /* sprite:bitmap collision indicate or acknowledge (address) */
 #define ISBC_ADDR 0xD019
 /* sprite:bitmap collision indicate or acknowledge (bit mask) */
-#define VIC2_ISBC_MASK 2
+#define VIC2_ISBC_MASK 0b00000010
 /* sprite:bitmap collision indicate or acknowledge (bit mask) */
-#define ISBC_MASK 2
+#define ISBC_MASK 0b00000010
 /* sprite:sprite collision indicate or acknowledge (address) */
 #define VIC2_ISSC_ADDR 0xD019
 /* sprite:sprite collision indicate or acknowledge (address) */
 #define ISSC_ADDR 0xD019
 /* sprite:sprite collision indicate or acknowledge (bit mask) */
-#define VIC2_ISSC_MASK 4
+#define VIC2_ISSC_MASK 0b00000100
 /* sprite:sprite collision indicate or acknowledge (bit mask) */
-#define ISSC_MASK 4
+#define ISSC_MASK 0b00000100
 /* light pen indicate or acknowledge (address) */
 #define VIC2_ILP_ADDR 0xD019
 /* light pen indicate or acknowledge (address) */
 #define ILP_ADDR 0xD019
 /* light pen indicate or acknowledge (bit mask) */
-#define VIC2_ILP_MASK 8
+#define VIC2_ILP_MASK 0b00001000
 /* light pen indicate or acknowledge (bit mask) */
-#define ILP_MASK 8
+#define ILP_MASK 0b00001000
 /* mask raster IRQ (address) */
 #define VIC2_MRIRQ_ADDR 0xD01A
 /* mask raster IRQ (address) */
 #define MRIRQ_ADDR 0xD01A
 /* mask raster IRQ (bit mask) */
-#define VIC2_MRIRQ_MASK 1
+#define VIC2_MRIRQ_MASK 0b00000001
 /* mask raster IRQ (bit mask) */
-#define MRIRQ_MASK 1
+#define MRIRQ_MASK 0b00000001
 /* mask sprite:bitmap collision IRQ (address) */
 #define VIC2_MISBC_ADDR 0xD01A
 /* mask sprite:bitmap collision IRQ (address) */
 #define MISBC_ADDR 0xD01A
 /* mask sprite:bitmap collision IRQ (bit mask) */
-#define VIC2_MISBC_MASK 2
+#define VIC2_MISBC_MASK 0b00000010
 /* mask sprite:bitmap collision IRQ (bit mask) */
-#define MISBC_MASK 2
+#define MISBC_MASK 0b00000010
 /* mask sprite:sprite collision IRQ (address) */
 #define VIC2_MISSC_ADDR 0xD01A
 /* mask sprite:sprite collision IRQ (address) */
 #define MISSC_ADDR 0xD01A
 /* mask sprite:sprite collision IRQ (bit mask) */
-#define VIC2_MISSC_MASK 4
+#define VIC2_MISSC_MASK 0b00000100
 /* mask sprite:sprite collision IRQ (bit mask) */
-#define MISSC_MASK 4
+#define MISSC_MASK 0b00000100
 /* sprite background priority bits */
 #define VIC2_BSP 0xD01B
 /* sprite background priority bits */
@@ -280,63 +280,63 @@
 /* display border colour (16 colour) (address) */
 #define VIC2_BORDERCOL_ADDR 0xD020
 /* display border colour (16 colour) (bit mask) */
-#define VIC2_BORDERCOL_MASK 15
+#define VIC2_BORDERCOL_MASK 0b00001111
 /* display border colour (256 colour) (address) */
 #define VIC3_BORDERCOL_ADDR 0xD020
 /* display border colour (256 colour) (bit mask) */
-#define VIC3_BORDERCOL_MASK 255
+#define VIC3_BORDERCOL_MASK 0b11111111
 /* display border colour (256 colour) (address) */
 #define VIC4_BORDERCOL_ADDR 0xD020
 /* display border colour (256 colour) (bit mask) */
-#define VIC4_BORDERCOL_MASK 255
+#define VIC4_BORDERCOL_MASK 0b11111111
 /* screen colour (16 colour) (address) */
 #define VIC2_SCREENCOL_ADDR 0xD021
 /* screen colour (16 colour) (bit mask) */
-#define VIC2_SCREENCOL_MASK 15
+#define VIC2_SCREENCOL_MASK 0b00001111
 /* screen colour (256 colour) (address) */
 #define VIC3_SCREENCOL_ADDR 0xD021
 /* screen colour (256 colour) (bit mask) */
-#define VIC3_SCREENCOL_MASK 255
+#define VIC3_SCREENCOL_MASK 0b11111111
 /* screen colour (256 colour) (address) */
 #define VIC4_SCREENCOL_ADDR 0xD021
 /* screen colour (256 colour) (bit mask) */
-#define VIC4_SCREENCOL_MASK 255
+#define VIC4_SCREENCOL_MASK 0b11111111
 /* multi-colour 1 (16 colour) (address) */
 #define VIC2_MC1_ADDR 0xD022
 /* multi-colour 1 (16 colour) (bit mask) */
-#define VIC2_MC1_MASK 15
+#define VIC2_MC1_MASK 0b00001111
 /* multi-colour 1 (256 colour) (address) */
 #define VIC3_MC1_ADDR 0xD022
 /* multi-colour 1 (256 colour) (bit mask) */
-#define VIC3_MC1_MASK 255
+#define VIC3_MC1_MASK 0b11111111
 /* multi-colour 1 (256 colour) (address) */
 #define VIC4_MC1_ADDR 0xD022
 /* multi-colour 1 (256 colour) (bit mask) */
-#define VIC4_MC1_MASK 255
+#define VIC4_MC1_MASK 0b11111111
 /* multi-colour 2 (16 colour) (address) */
 #define VIC2_MC2_ADDR 0xD023
 /* multi-colour 2 (16 colour) (bit mask) */
-#define VIC2_MC2_MASK 15
+#define VIC2_MC2_MASK 0b00001111
 /* multi-colour 2 (256 colour) (address) */
 #define VIC3_MC2_ADDR 0xD023
 /* multi-colour 2 (256 colour) (bit mask) */
-#define VIC3_MC2_MASK 255
+#define VIC3_MC2_MASK 0b11111111
 /* multi-colour 2 (256 colour) (address) */
 #define VIC4_MC2_ADDR 0xD023
 /* multi-colour 2 (256 colour) (bit mask) */
-#define VIC4_MC2_MASK 255
+#define VIC4_MC2_MASK 0b11111111
 /* multi-colour 3 (16 colour) (address) */
 #define VIC2_MC3_ADDR 0xD024
 /* multi-colour 3 (16 colour) (bit mask) */
-#define VIC2_MC3_MASK 15
+#define VIC2_MC3_MASK 0b00001111
 /* multi-colour 3 (256 colour) (address) */
 #define VIC3_MC3_ADDR 0xD024
 /* multi-colour 3 (256 colour) (bit mask) */
-#define VIC3_MC3_MASK 255
+#define VIC3_MC3_MASK 0b11111111
 /* multi-colour 3 (256 colour) (address) */
 #define VIC4_MC3_ADDR 0xD024
 /* multi-colour 3 (256 colour) (bit mask) */
-#define VIC4_MC3_MASK 255
+#define VIC4_MC3_MASK 0b11111111
 /* Sprite multi-colour 0 */
 #define VIC2_SPRMC0 0xD025
 /* Sprite multi-colour 0 (8-bit for selection of any palette colour) */
@@ -394,73 +394,73 @@
 /* 2MHz select (for C128 2MHz emulation) (address) */
 #define C128_FAST_ADDR 0xD030
 /* 2MHz select (for C128 2MHz emulation) (bit mask) */
-#define VIC2_C128_FAST_MASK 1
+#define VIC2_C128_FAST_MASK 0b00000001
 /* 2MHz select (for C128 2MHz emulation) (bit mask) */
-#define C128_FAST_MASK 1
+#define C128_FAST_MASK 0b00000001
 /* Map 2nd KB of colour RAM @ $DC00-$DFFF (address) */
 #define VIC3_CRAM2K_ADDR 0xD030
 /* Map 2nd KB of colour RAM @ $DC00-$DFFF (address) */
 #define CRAM2K_ADDR 0xD030
 /* Map 2nd KB of colour RAM @ $DC00-$DFFF (bit mask) */
-#define VIC3_CRAM2K_MASK 1
+#define VIC3_CRAM2K_MASK 0b00000001
 /* Map 2nd KB of colour RAM @ $DC00-$DFFF (bit mask) */
-#define CRAM2K_MASK 1
+#define CRAM2K_MASK 0b00000001
 /* Enable external video sync (genlock input) (address) */
 #define VIC3_EXTSYNC_ADDR 0xD030
 /* Enable external video sync (genlock input) (address) */
 #define EXTSYNC_ADDR 0xD030
 /* Enable external video sync (genlock input) (bit mask) */
-#define VIC3_EXTSYNC_MASK 2
+#define VIC3_EXTSYNC_MASK 0b00000010
 /* Enable external video sync (genlock input) (bit mask) */
-#define EXTSYNC_MASK 2
+#define EXTSYNC_MASK 0b00000010
 /* Use PALETTE ROM (0) or RAM (1) entries for colours 0 - 15 (address) */
 #define VIC3_PAL_ADDR 0xD030
 /* Use PALETTE ROM (0) or RAM (1) entries for colours 0 - 15 (address) */
 #define PAL_ADDR 0xD030
 /* Use PALETTE ROM (0) or RAM (1) entries for colours 0 - 15 (bit mask) */
-#define VIC3_PAL_MASK 4
+#define VIC3_PAL_MASK 0b00000100
 /* Use PALETTE ROM (0) or RAM (1) entries for colours 0 - 15 (bit mask) */
-#define PAL_MASK 4
+#define PAL_MASK 0b00000100
 /* Map C65 ROM @ $8000 (address) */
 #define VIC3_ROM8_ADDR 0xD030
 /* Map C65 ROM @ $8000 (address) */
 #define ROM8_ADDR 0xD030
 /* Map C65 ROM @ $8000 (bit mask) */
-#define VIC3_ROM8_MASK 8
+#define VIC3_ROM8_MASK 0b00001000
 /* Map C65 ROM @ $8000 (bit mask) */
-#define ROM8_MASK 8
+#define ROM8_MASK 0b00001000
 /* Map C65 ROM @ $A000 (address) */
 #define VIC3_ROMA_ADDR 0xD030
 /* Map C65 ROM @ $A000 (address) */
 #define ROMA_ADDR 0xD030
 /* Map C65 ROM @ $A000 (bit mask) */
-#define VIC3_ROMA_MASK 16
+#define VIC3_ROMA_MASK 0b00010000
 /* Map C65 ROM @ $A000 (bit mask) */
-#define ROMA_MASK 16
+#define ROMA_MASK 0b00010000
 /* Map C65 ROM @ $C000 (address) */
 #define VIC3_ROMC_ADDR 0xD030
 /* Map C65 ROM @ $C000 (address) */
 #define ROMC_ADDR 0xD030
 /* Map C65 ROM @ $C000 (bit mask) */
-#define VIC3_ROMC_MASK 32
+#define VIC3_ROMC_MASK 0b00100000
 /* Map C65 ROM @ $C000 (bit mask) */
-#define ROMC_MASK 32
+#define ROMC_MASK 0b00100000
 /* Select between C64 and C65 charset. (address) */
 #define VIC3_CROM9_ADDR 0xD030
 /* Select between C64 and C65 charset. (address) */
 #define CROM9_ADDR 0xD030
 /* Select between C64 and C65 charset. (bit mask) */
-#define VIC3_CROM9_MASK 64
+#define VIC3_CROM9_MASK 0b01000000
 /* Select between C64 and C65 charset. (bit mask) */
-#define CROM9_MASK 64
+#define CROM9_MASK 0b01000000
 /* Map C65 ROM @ $E000 (address) */
 #define VIC3_ROME_ADDR 0xD030
 /* Map C65 ROM @ $E000 (address) */
 #define ROME_ADDR 0xD030
 /* Map C65 ROM @ $E000 (bit mask) */
-#define VIC3_ROME_MASK 128
+#define VIC3_ROME_MASK 0b10000000
 /* Map C65 ROM @ $E000 (bit mask) */
-#define ROME_MASK 128
+#define ROME_MASK 0b10000000
 /* Control Register B */
 #define C65_SUMMARY_VIC_III 0xD031
 /* Enable VIC-III interlaced mode (address) */
@@ -468,193 +468,193 @@
 /* Enable VIC-III interlaced mode (address) */
 #define INT_ADDR 0xD031
 /* Enable VIC-III interlaced mode (bit mask) */
-#define VIC3_INT_MASK 1
+#define VIC3_INT_MASK 0b00000001
 /* Enable VIC-III interlaced mode (bit mask) */
-#define INT_MASK 1
+#define INT_MASK 0b00000001
 /* Enable VIC-III MONO video output (not implemented) (address) */
 #define VIC3_MONO_ADDR 0xD031
 /* Enable VIC-III MONO video output (not implemented) (address) */
 #define MONO_ADDR 0xD031
 /* Enable VIC-III MONO video output (not implemented) (bit mask) */
-#define VIC3_MONO_MASK 2
+#define VIC3_MONO_MASK 0b00000010
 /* Enable VIC-III MONO video output (not implemented) (bit mask) */
-#define MONO_MASK 2
+#define MONO_MASK 0b00000010
 /* Enable 1280 horizontal pixels (not implemented) (address) */
 #define VIC3_H1280_ADDR 0xD031
 /* Enable 1280 horizontal pixels (not implemented) (address) */
 #define H1280_ADDR 0xD031
 /* Enable 1280 horizontal pixels (not implemented) (bit mask) */
-#define VIC3_H1280_MASK 4
+#define VIC3_H1280_MASK 0b00000100
 /* Enable 1280 horizontal pixels (not implemented) (bit mask) */
-#define H1280_MASK 4
+#define H1280_MASK 0b00000100
 /* Enable 400 vertical pixels (address) */
 #define VIC3_V400_ADDR 0xD031
 /* Enable 400 vertical pixels (address) */
 #define V400_ADDR 0xD031
 /* Enable 400 vertical pixels (bit mask) */
-#define VIC3_V400_MASK 8
+#define VIC3_V400_MASK 0b00001000
 /* Enable 400 vertical pixels (bit mask) */
-#define V400_MASK 8
+#define V400_MASK 0b00001000
 /* Bit-Plane Mode (address) */
 #define VIC3_BPM_ADDR 0xD031
 /* Bit-Plane Mode (address) */
 #define BPM_ADDR 0xD031
 /* Bit-Plane Mode (bit mask) */
-#define VIC3_BPM_MASK 16
+#define VIC3_BPM_MASK 0b00010000
 /* Bit-Plane Mode (bit mask) */
-#define BPM_MASK 16
+#define BPM_MASK 0b00010000
 /* Enable extended attributes and 8 bit colour entries (address) */
 #define VIC3_ATTR_ADDR 0xD031
 /* Enable extended attributes and 8 bit colour entries (address) */
 #define ATTR_ADDR 0xD031
 /* Enable extended attributes and 8 bit colour entries (bit mask) */
-#define VIC3_ATTR_MASK 32
+#define VIC3_ATTR_MASK 0b00100000
 /* Enable extended attributes and 8 bit colour entries (bit mask) */
-#define ATTR_MASK 32
+#define ATTR_MASK 0b00100000
 /* Enable C65 FAST mode (~3.5MHz) (address) */
 #define VIC3_FAST_ADDR 0xD031
 /* Enable C65 FAST mode (~3.5MHz) (address) */
 #define FAST_ADDR 0xD031
 /* Enable C65 FAST mode (~3.5MHz) (bit mask) */
-#define VIC3_FAST_MASK 64
+#define VIC3_FAST_MASK 0b01000000
 /* Enable C65 FAST mode (~3.5MHz) (bit mask) */
-#define FAST_MASK 64
+#define FAST_MASK 0b01000000
 /* Enable C64 640 horizontal pixels / 80 column mode (address) */
 #define VIC3_H640_ADDR 0xD031
 /* Enable C64 640 horizontal pixels / 80 column mode (address) */
 #define H640_ADDR 0xD031
 /* Enable C64 640 horizontal pixels / 80 column mode (bit mask) */
-#define VIC3_H640_MASK 128
+#define VIC3_H640_MASK 0b10000000
 /* Enable C64 640 horizontal pixels / 80 column mode (bit mask) */
-#define H640_MASK 128
+#define H640_MASK 0b10000000
 /* Bitplane X address, even lines (address) */
 #define VIC3_B0ADEVN_ADDR 0xD033
 /* Bitplane X address, even lines (address) */
 #define B0ADEVN_ADDR 0xD033
 /* Bitplane X address, even lines (bit mask) */
-#define VIC3_B0ADEVN_MASK 14
+#define VIC3_B0ADEVN_MASK 0b00001110
 /* Bitplane X address, even lines (bit mask) */
-#define B0ADEVN_MASK 14
+#define B0ADEVN_MASK 0b00001110
 /* Bitplane X address, odd lines (address) */
 #define VIC3_B0ADODD_ADDR 0xD033
 /* Bitplane X address, odd lines (address) */
 #define B0ADODD_ADDR 0xD033
 /* Bitplane X address, odd lines (bit mask) */
-#define VIC3_B0ADODD_MASK 224
+#define VIC3_B0ADODD_MASK 0b11100000
 /* Bitplane X address, odd lines (bit mask) */
-#define B0ADODD_MASK 224
+#define B0ADODD_MASK 0b11100000
 /* @BXADEVN (address) */
 #define VIC3_B1ADEVN_ADDR 0xD034
 /* @BXADEVN (address) */
 #define B1ADEVN_ADDR 0xD034
 /* @BXADEVN (bit mask) */
-#define VIC3_B1ADEVN_MASK 14
+#define VIC3_B1ADEVN_MASK 0b00001110
 /* @BXADEVN (bit mask) */
-#define B1ADEVN_MASK 14
+#define B1ADEVN_MASK 0b00001110
 /* @BXADODD (address) */
 #define VIC3_B1ADODD_ADDR 0xD034
 /* @BXADODD (address) */
 #define B1ADODD_ADDR 0xD034
 /* @BXADODD (bit mask) */
-#define VIC3_B1ADODD_MASK 224
+#define VIC3_B1ADODD_MASK 0b11100000
 /* @BXADODD (bit mask) */
-#define B1ADODD_MASK 224
+#define B1ADODD_MASK 0b11100000
 /* @BXADEVN (address) */
 #define VIC3_B2ADEVN_ADDR 0xD035
 /* @BXADEVN (address) */
 #define B2ADEVN_ADDR 0xD035
 /* @BXADEVN (bit mask) */
-#define VIC3_B2ADEVN_MASK 14
+#define VIC3_B2ADEVN_MASK 0b00001110
 /* @BXADEVN (bit mask) */
-#define B2ADEVN_MASK 14
+#define B2ADEVN_MASK 0b00001110
 /* @BXADODD (address) */
 #define VIC3_B2ADODD_ADDR 0xD035
 /* @BXADODD (address) */
 #define B2ADODD_ADDR 0xD035
 /* @BXADODD (bit mask) */
-#define VIC3_B2ADODD_MASK 224
+#define VIC3_B2ADODD_MASK 0b11100000
 /* @BXADODD (bit mask) */
-#define B2ADODD_MASK 224
+#define B2ADODD_MASK 0b11100000
 /* @BXADEVN (address) */
 #define VIC3_B3ADEVN_ADDR 0xD036
 /* @BXADEVN (address) */
 #define B3ADEVN_ADDR 0xD036
 /* @BXADEVN (bit mask) */
-#define VIC3_B3ADEVN_MASK 14
+#define VIC3_B3ADEVN_MASK 0b00001110
 /* @BXADEVN (bit mask) */
-#define B3ADEVN_MASK 14
+#define B3ADEVN_MASK 0b00001110
 /* @BXADODD (address) */
 #define VIC3_B3ADODD_ADDR 0xD036
 /* @BXADODD (address) */
 #define B3ADODD_ADDR 0xD036
 /* @BXADODD (bit mask) */
-#define VIC3_B3ADODD_MASK 224
+#define VIC3_B3ADODD_MASK 0b11100000
 /* @BXADODD (bit mask) */
-#define B3ADODD_MASK 224
+#define B3ADODD_MASK 0b11100000
 /* @BXADEVN (address) */
 #define VIC3_B4ADEVN_ADDR 0xD037
 /* @BXADEVN (address) */
 #define B4ADEVN_ADDR 0xD037
 /* @BXADEVN (bit mask) */
-#define VIC3_B4ADEVN_MASK 14
+#define VIC3_B4ADEVN_MASK 0b00001110
 /* @BXADEVN (bit mask) */
-#define B4ADEVN_MASK 14
+#define B4ADEVN_MASK 0b00001110
 /* @BXADODD (address) */
 #define VIC3_B4ADODD_ADDR 0xD037
 /* @BXADODD (address) */
 #define B4ADODD_ADDR 0xD037
 /* @BXADODD (bit mask) */
-#define VIC3_B4ADODD_MASK 224
+#define VIC3_B4ADODD_MASK 0b11100000
 /* @BXADODD (bit mask) */
-#define B4ADODD_MASK 224
+#define B4ADODD_MASK 0b11100000
 /* @BXADEVN (address) */
 #define VIC3_B5ADEVN_ADDR 0xD038
 /* @BXADEVN (address) */
 #define B5ADEVN_ADDR 0xD038
 /* @BXADEVN (bit mask) */
-#define VIC3_B5ADEVN_MASK 14
+#define VIC3_B5ADEVN_MASK 0b00001110
 /* @BXADEVN (bit mask) */
-#define B5ADEVN_MASK 14
+#define B5ADEVN_MASK 0b00001110
 /* @BXADODD (address) */
 #define VIC3_B5ADODD_ADDR 0xD038
 /* @BXADODD (address) */
 #define B5ADODD_ADDR 0xD038
 /* @BXADODD (bit mask) */
-#define VIC3_B5ADODD_MASK 224
+#define VIC3_B5ADODD_MASK 0b11100000
 /* @BXADODD (bit mask) */
-#define B5ADODD_MASK 224
+#define B5ADODD_MASK 0b11100000
 /* @BXADEVN (address) */
 #define VIC3_B6ADEVN_ADDR 0xD039
 /* @BXADEVN (address) */
 #define B6ADEVN_ADDR 0xD039
 /* @BXADEVN (bit mask) */
-#define VIC3_B6ADEVN_MASK 14
+#define VIC3_B6ADEVN_MASK 0b00001110
 /* @BXADEVN (bit mask) */
-#define B6ADEVN_MASK 14
+#define B6ADEVN_MASK 0b00001110
 /* @BXADODD (address) */
 #define VIC3_B6ADODD_ADDR 0xD039
 /* @BXADODD (address) */
 #define B6ADODD_ADDR 0xD039
 /* @BXADODD (bit mask) */
-#define VIC3_B6ADODD_MASK 224
+#define VIC3_B6ADODD_MASK 0b11100000
 /* @BXADODD (bit mask) */
-#define B6ADODD_MASK 224
+#define B6ADODD_MASK 0b11100000
 /* @BXADEVN (address) */
 #define VIC3_B7ADEVN_ADDR 0xD03A
 /* @BXADEVN (address) */
 #define B7ADEVN_ADDR 0xD03A
 /* @BXADEVN (bit mask) */
-#define VIC3_B7ADEVN_MASK 14
+#define VIC3_B7ADEVN_MASK 0b00001110
 /* @BXADEVN (bit mask) */
-#define B7ADEVN_MASK 14
+#define B7ADEVN_MASK 0b00001110
 /* @BXADODD (address) */
 #define VIC3_B7ADODD_ADDR 0xD03A
 /* @BXADODD (address) */
 #define B7ADODD_ADDR 0xD03A
 /* @BXADODD (bit mask) */
-#define VIC3_B7ADODD_MASK 224
+#define VIC3_B7ADODD_MASK 0b11100000
 /* @BXADODD (bit mask) */
-#define B7ADODD_MASK 224
+#define B7ADODD_MASK 0b11100000
 /* Complement bitplane flags */
 #define VIC3_BPCOMP 0xD03B
 /* Complement bitplane flags */
@@ -716,13 +716,13 @@
 /* top border position MSB (address) */
 #define TBDRPOS_ADDR 0xD049
 /* top border position MSB (bit mask) */
-#define VIC4_TBDRPOS_MASK 15
+#define VIC4_TBDRPOS_MASK 0b00001111
 /* top border position MSB (bit mask) */
-#define TBDRPOS_MASK 15
+#define TBDRPOS_MASK 0b00001111
 /* Sprite bitplane-modify-mode enables (address) */
 #define VIC4_SPRBPMEN_ADDR 0xD049
 /* Sprite bitplane-modify-mode enables (bit mask) */
-#define VIC4_SPRBPMEN_MASK 240
+#define VIC4_SPRBPMEN_MASK 0b11110000
 /* bottom border position */
 #define VIC4_BBDRPOS 0xD04A
 /* bottom border position */
@@ -732,13 +732,13 @@
 /* bottom border position (address) */
 #define BBDRPOS_ADDR 0xD04B
 /* bottom border position (bit mask) */
-#define VIC4_BBDRPOS_MASK 15
+#define VIC4_BBDRPOS_MASK 0b00001111
 /* bottom border position (bit mask) */
-#define BBDRPOS_MASK 15
+#define BBDRPOS_MASK 0b00001111
 /* Sprite bitplane-modify-mode enables (address) */
 #define GS_VIC4_SPRBPMEN_ADDR 0xD04B
 /* Sprite bitplane-modify-mode enables (bit mask) */
-#define GS_VIC4_SPRBPMEN_MASK 240
+#define GS_VIC4_SPRBPMEN_MASK 0b11110000
 /* character generator horizontal position */
 #define VIC4_TEXTXPOS 0xD04C
 /* character generator horizontal position */
@@ -748,13 +748,13 @@
 /* character generator horizontal position (address) */
 #define TEXTXPOS_ADDR 0xD04D
 /* character generator horizontal position (bit mask) */
-#define VIC4_TEXTXPOS_MASK 15
+#define VIC4_TEXTXPOS_MASK 0b00001111
 /* character generator horizontal position (bit mask) */
-#define TEXTXPOS_MASK 15
+#define TEXTXPOS_MASK 0b00001111
 /* Sprite horizontal tile enables. (address) */
 #define VIC4_SPRTILEN_ADDR 0xD04D
 /* Sprite horizontal tile enables. (bit mask) */
-#define VIC4_SPRTILEN_MASK 240
+#define VIC4_SPRTILEN_MASK 0b11110000
 /* Character generator vertical position */
 #define VIC4_TEXTYPOS 0xD04E
 /* Character generator vertical position */
@@ -764,13 +764,13 @@
 /* Character generator vertical position (address) */
 #define TEXTYPOS_ADDR 0xD04F
 /* Character generator vertical position (bit mask) */
-#define VIC4_TEXTYPOS_MASK 15
+#define VIC4_TEXTYPOS_MASK 0b00001111
 /* Character generator vertical position (bit mask) */
-#define TEXTYPOS_MASK 15
+#define TEXTYPOS_MASK 0b00001111
 /* Sprite 7-4 horizontal tile enables (address) */
 #define GS_VIC4_SPRTILEN_ADDR 0xD04F
 /* Sprite 7-4 horizontal tile enables (bit mask) */
-#define GS_VIC4_SPRTILEN_MASK 240
+#define GS_VIC4_SPRTILEN_MASK 0b11110000
 /* Read horizontal raster scan position LSB */
 #define VIC4_XPOSLSB 0xD050
 /* Read horizontal raster scan position LSB */
@@ -780,25 +780,25 @@
 /* Read horizontal raster scan position MSB (address) */
 #define XPOSMSB_ADDR 0xD051
 /* Read horizontal raster scan position MSB (bit mask) */
-#define VIC4_XPOSMSB_MASK 63
+#define VIC4_XPOSMSB_MASK 0b00111111
 /* Read horizontal raster scan position MSB (bit mask) */
-#define XPOSMSB_MASK 63
+#define XPOSMSB_MASK 0b00111111
 /* When set, the Raster Rewrite Buffer is only updated every 2nd raster line, limiting resolution to V200, but allowing more cycles for Raster-Rewrite actions. (address) */
 #define VIC4_DBLRR_ADDR 0xD051
 /* When set, the Raster Rewrite Buffer is only updated every 2nd raster line, limiting resolution to V200, but allowing more cycles for Raster-Rewrite actions. (address) */
 #define DBLRR_ADDR 0xD051
 /* When set, the Raster Rewrite Buffer is only updated every 2nd raster line, limiting resolution to V200, but allowing more cycles for Raster-Rewrite actions. (bit mask) */
-#define VIC4_DBLRR_MASK 64
+#define VIC4_DBLRR_MASK 0b01000000
 /* When set, the Raster Rewrite Buffer is only updated every 2nd raster line, limiting resolution to V200, but allowing more cycles for Raster-Rewrite actions. (bit mask) */
-#define DBLRR_MASK 64
+#define DBLRR_MASK 0b01000000
 /* When clear, raster rewrite double buffering is used (address) */
 #define VIC4_NORRDEL_ADDR 0xD051
 /* When clear, raster rewrite double buffering is used (address) */
 #define NORRDEL_ADDR 0xD051
 /* When clear, raster rewrite double buffering is used (bit mask) */
-#define VIC4_NORRDEL_MASK 128
+#define VIC4_NORRDEL_MASK 0b10000000
 /* When clear, raster rewrite double buffering is used (bit mask) */
-#define NORRDEL_MASK 128
+#define NORRDEL_MASK 0b10000000
 /* Read physical raster position */
 #define VIC4_FNRASTERLSB 0xD052
 /* Read physical raster position */
@@ -808,25 +808,25 @@
 /* Read physical raster position (address) */
 #define FN_RASTER_MSB_ADDR 0xD053
 /* Read physical raster position (bit mask) */
-#define VIC4_FN_RASTER_MSB_MASK 7
+#define VIC4_FN_RASTER_MSB_MASK 0b00000111
 /* Read physical raster position (bit mask) */
-#define FN_RASTER_MSB_MASK 7
+#define FN_RASTER_MSB_MASK 0b00000111
 /* Enable simulated shadow-mask (PALEMU must also be enabled) (address) */
 #define VIC4_SHDEMU_ADDR 0xD053
 /* Enable simulated shadow-mask (PALEMU must also be enabled) (address) */
 #define SHDEMU_ADDR 0xD053
 /* Enable simulated shadow-mask (PALEMU must also be enabled) (bit mask) */
-#define VIC4_SHDEMU_MASK 64
+#define VIC4_SHDEMU_MASK 0b01000000
 /* Enable simulated shadow-mask (PALEMU must also be enabled) (bit mask) */
-#define SHDEMU_MASK 64
+#define SHDEMU_MASK 0b01000000
 /* Raster compare source (0=VIC-IV fine raster, 1=VIC-II raster) (address) */
 #define VIC4_FNRST_ADDR 0xD053
 /* Raster compare source (0=VIC-IV fine raster, 1=VIC-II raster) (address) */
 #define FNRST_ADDR 0xD053
 /* Raster compare source (0=VIC-IV fine raster, 1=VIC-II raster) (bit mask) */
-#define VIC4_FNRST_MASK 128
+#define VIC4_FNRST_MASK 0b10000000
 /* Raster compare source (0=VIC-IV fine raster, 1=VIC-II raster) (bit mask) */
-#define FNRST_MASK 128
+#define FNRST_MASK 0b10000000
 /* Control register C */
 #define SUMMARY_VIC_IV 0xD054
 /* Control register C */
@@ -836,65 +836,65 @@
 /* enable 16-bit character numbers (two screen bytes per character) (address) */
 #define CHR16_ADDR 0xD054
 /* enable 16-bit character numbers (two screen bytes per character) (bit mask) */
-#define VIC4_CHR16_MASK 1
+#define VIC4_CHR16_MASK 0b00000001
 /* enable 16-bit character numbers (two screen bytes per character) (bit mask) */
-#define CHR16_MASK 1
+#define CHR16_MASK 0b00000001
 /* enable full-colour mode for character numbers <=$FF (address) */
 #define VIC4_FCLRLO_ADDR 0xD054
 /* enable full-colour mode for character numbers <=$FF (address) */
 #define FCLRLO_ADDR 0xD054
 /* enable full-colour mode for character numbers <=$FF (bit mask) */
-#define VIC4_FCLRLO_MASK 2
+#define VIC4_FCLRLO_MASK 0b00000010
 /* enable full-colour mode for character numbers <=$FF (bit mask) */
-#define FCLRLO_MASK 2
+#define FCLRLO_MASK 0b00000010
 /* enable full-colour mode for character numbers >$FF (address) */
 #define VIC4_FCLRHI_ADDR 0xD054
 /* enable full-colour mode for character numbers >$FF (address) */
 #define FCLRHI_ADDR 0xD054
 /* enable full-colour mode for character numbers >$FF (bit mask) */
-#define VIC4_FCLRHI_MASK 4
+#define VIC4_FCLRHI_MASK 0b00000100
 /* enable full-colour mode for character numbers >$FF (bit mask) */
-#define FCLRHI_MASK 4
+#define FCLRHI_MASK 0b00000100
 /* video output horizontal smoothing enable (address) */
 #define VIC4_SMTH_ADDR 0xD054
 /* video output horizontal smoothing enable (address) */
 #define SMTH_ADDR 0xD054
 /* video output horizontal smoothing enable (bit mask) */
-#define VIC4_SMTH_MASK 8
+#define VIC4_SMTH_MASK 0b00001000
 /* video output horizontal smoothing enable (bit mask) */
-#define SMTH_MASK 8
+#define SMTH_MASK 0b00001000
 /* Sprite H640 enable; (address) */
 #define VIC4_SPR640_ADDR 0xD054
 /* Sprite H640 enable; (address) */
 #define SPR640_ADDR 0xD054
 /* Sprite H640 enable; (bit mask) */
-#define VIC4_SPR640_MASK 16
+#define VIC4_SPR640_MASK 0b00010000
 /* Sprite H640 enable; (bit mask) */
-#define SPR640_MASK 16
+#define SPR640_MASK 0b00010000
 /* Enable PAL CRT-like scan-line emulation (address) */
 #define VIC4_PALEMU_ADDR 0xD054
 /* Enable PAL CRT-like scan-line emulation (address) */
 #define PALEMU_ADDR 0xD054
 /* Enable PAL CRT-like scan-line emulation (bit mask) */
-#define VIC4_PALEMU_MASK 32
+#define VIC4_PALEMU_MASK 0b00100000
 /* Enable PAL CRT-like scan-line emulation (bit mask) */
-#define PALEMU_MASK 32
+#define PALEMU_MASK 0b00100000
 /* C65GS FAST mode (48MHz) (address) */
 #define VIC4_VFAST_ADDR 0xD054
 /* C65GS FAST mode (48MHz) (address) */
 #define VFAST_ADDR 0xD054
 /* C65GS FAST mode (48MHz) (bit mask) */
-#define VIC4_VFAST_MASK 64
+#define VIC4_VFAST_MASK 0b01000000
 /* C65GS FAST mode (48MHz) (bit mask) */
-#define VFAST_MASK 64
+#define VFAST_MASK 0b01000000
 /* Alpha compositor enable (address) */
 #define VIC4_ALPHEN_ADDR 0xD054
 /* Alpha compositor enable (address) */
 #define ALPHEN_ADDR 0xD054
 /* Alpha compositor enable (bit mask) */
-#define VIC4_ALPHEN_MASK 128
+#define VIC4_ALPHEN_MASK 0b10000000
 /* Alpha compositor enable (bit mask) */
-#define ALPHEN_MASK 128
+#define ALPHEN_MASK 0b10000000
 /* sprite extended height enable (one bit per sprite) */
 #define VIC4_SPRHGTEN 0xD055
 /* sprite extended height enable (one bit per sprite) */
@@ -932,25 +932,25 @@
 /* side border width (MSB) (address) */
 #define SDBDRWD_MSB_ADDR 0xD05D
 /* side border width (MSB) (bit mask) */
-#define VIC4_SDBDRWD_MSB_MASK 63
+#define VIC4_SDBDRWD_MSB_MASK 0b00111111
 /* side border width (MSB) (bit mask) */
-#define SDBDRWD_MSB_MASK 63
+#define SDBDRWD_MSB_MASK 0b00111111
 /* Enable raster delay (delays raster counter and interrupts by one line to match output pipeline latency) (address) */
 #define VIC4_RST_DELEN_ADDR 0xD05D
 /* Enable raster delay (delays raster counter and interrupts by one line to match output pipeline latency) (address) */
 #define RST_DELEN_ADDR 0xD05D
 /* Enable raster delay (delays raster counter and interrupts by one line to match output pipeline latency) (bit mask) */
-#define VIC4_RST_DELEN_MASK 64
+#define VIC4_RST_DELEN_MASK 0b01000000
 /* Enable raster delay (delays raster counter and interrupts by one line to match output pipeline latency) (bit mask) */
-#define RST_DELEN_MASK 64
+#define RST_DELEN_MASK 0b01000000
 /* Enable VIC-II hot registers. When enabled, touching many VIC-II registers causes the VIC-IV to recalculate display parameters, such as border positions and sizes (address) */
 #define VIC4_HOTREG_ADDR 0xD05D
 /* Enable VIC-II hot registers. When enabled, touching many VIC-II registers causes the VIC-IV to recalculate display parameters, such as border positions and sizes (address) */
 #define HOTREG_ADDR 0xD05D
 /* Enable VIC-II hot registers. When enabled, touching many VIC-II registers causes the VIC-IV to recalculate display parameters, such as border positions and sizes (bit mask) */
-#define VIC4_HOTREG_MASK 128
+#define VIC4_HOTREG_MASK 0b10000000
 /* Enable VIC-II hot registers. When enabled, touching many VIC-II registers causes the VIC-IV to recalculate display parameters, such as border positions and sizes (bit mask) */
-#define HOTREG_MASK 128
+#define HOTREG_MASK 0b10000000
 /* Number of characters to display per row (LSB) */
 #define VIC4_CHRCOUNT 0xD05E
 /* Number of characters to display per row (LSB) */
@@ -976,25 +976,25 @@
 /* screen RAM precise base address (bits 31 - 24) (address) */
 #define SCRNPTRMB_ADDR 0xD063
 /* screen RAM precise base address (bits 31 - 24) (bit mask) */
-#define VIC4_SCRNPTRMB_MASK 15
+#define VIC4_SCRNPTRMB_MASK 0b00001111
 /* screen RAM precise base address (bits 31 - 24) (bit mask) */
-#define SCRNPTRMB_MASK 15
+#define SCRNPTRMB_MASK 0b00001111
 /* Number of characters to display per (address) */
 #define VIC4_CHRCOUNT_ADDR 0xD063
 /* Number of characters to display per (address) */
 #define CHRCOUNT_ADDR 0xD063
 /* Number of characters to display per (bit mask) */
-#define VIC4_CHRCOUNT_MASK 48
+#define VIC4_CHRCOUNT_MASK 0b00110000
 /* Number of characters to display per (bit mask) */
-#define CHRCOUNT_MASK 48
+#define CHRCOUNT_MASK 0b00110000
 /* source full-colour character data from expansion RAM (address) */
 #define VIC4_EXGLYPH_ADDR 0xD063
 /* source full-colour character data from expansion RAM (address) */
 #define EXGLYPH_ADDR 0xD063
 /* source full-colour character data from expansion RAM (bit mask) */
-#define VIC4_EXGLYPH_MASK 128
+#define VIC4_EXGLYPH_MASK 0b10000000
 /* source full-colour character data from expansion RAM (bit mask) */
-#define EXGLYPH_MASK 128
+#define EXGLYPH_MASK 0b10000000
 /* colour RAM base address (bits 0 - 7) */
 #define VIC4_COLPTRLSB 0xD064
 /* colour RAM base address (bits 0 - 7) */
@@ -1036,73 +1036,73 @@
 /* sprite pointer address (bits 23 - 16) (address) */
 #define SPRPTRBNK_ADDR 0xD06E
 /* sprite pointer address (bits 23 - 16) (bit mask) */
-#define VIC4_SPRPTRBNK_MASK 127
+#define VIC4_SPRPTRBNK_MASK 0b01111111
 /* sprite pointer address (bits 23 - 16) (bit mask) */
-#define SPRPTRBNK_MASK 127
+#define SPRPTRBNK_MASK 0b01111111
 /* 16-bit sprite pointer mode (allows sprites to be located on any 64 byte boundary in chip RAM) (address) */
 #define VIC4_SPR_PTR16_ADDR 0xD06E
 /* 16-bit sprite pointer mode (allows sprites to be located on any 64 byte boundary in chip RAM) (address) */
 #define SPR_PTR16_ADDR 0xD06E
 /* 16-bit sprite pointer mode (allows sprites to be located on any 64 byte boundary in chip RAM) (bit mask) */
-#define VIC4_SPR_PTR16_MASK 128
+#define VIC4_SPR_PTR16_MASK 0b10000000
 /* 16-bit sprite pointer mode (allows sprites to be located on any 64 byte boundary in chip RAM) (bit mask) */
-#define SPR_PTR16_MASK 128
+#define SPR_PTR16_MASK 0b10000000
 /* first VIC-II raster line (address) */
 #define VIC4_RASLINE0_ADDR 0xD06F
 /* first VIC-II raster line (address) */
 #define RASLINE0_ADDR 0xD06F
 /* first VIC-II raster line (bit mask) */
-#define VIC4_RASLINE0_MASK 63
+#define VIC4_RASLINE0_MASK 0b00111111
 /* first VIC-II raster line (bit mask) */
-#define RASLINE0_MASK 63
+#define RASLINE0_MASK 0b00111111
 /* Select more VGA-compatible mode if set, instead of HDMI/HDTV VIC-II cycle-exact frame timing. May help to produce a functional display on older VGA monitors. (address) */
 #define VIC4_VGAHDTV_ADDR 0xD06F
 /* Select more VGA-compatible mode if set, instead of HDMI/HDTV VIC-II cycle-exact frame timing. May help to produce a functional display on older VGA monitors. (address) */
 #define VGAHDTV_ADDR 0xD06F
 /* Select more VGA-compatible mode if set, instead of HDMI/HDTV VIC-II cycle-exact frame timing. May help to produce a functional display on older VGA monitors. (bit mask) */
-#define VIC4_VGAHDTV_MASK 64
+#define VIC4_VGAHDTV_MASK 0b01000000
 /* Select more VGA-compatible mode if set, instead of HDMI/HDTV VIC-II cycle-exact frame timing. May help to produce a functional display on older VGA monitors. (bit mask) */
-#define VGAHDTV_MASK 64
+#define VGAHDTV_MASK 0b01000000
 /* NTSC emulation mode (max raster = 262) (address) */
 #define VIC4_PALNTSC_ADDR 0xD06F
 /* NTSC emulation mode (max raster = 262) (address) */
 #define PALNTSC_ADDR 0xD06F
 /* NTSC emulation mode (max raster = 262) (bit mask) */
-#define VIC4_PALNTSC_MASK 128
+#define VIC4_PALNTSC_MASK 0b10000000
 /* NTSC emulation mode (max raster = 262) (bit mask) */
-#define PALNTSC_MASK 128
+#define PALNTSC_MASK 0b10000000
 /* VIC-IV bitmap/text palette bank (alternate palette) (address) */
 #define VIC4_ABTPALSEL_ADDR 0xD070
 /* VIC-IV bitmap/text palette bank (alternate palette) (address) */
 #define ABTPALSEL_ADDR 0xD070
 /* VIC-IV bitmap/text palette bank (alternate palette) (bit mask) */
-#define VIC4_ABTPALSEL_MASK 3
+#define VIC4_ABTPALSEL_MASK 0b00000011
 /* VIC-IV bitmap/text palette bank (alternate palette) (bit mask) */
-#define ABTPALSEL_MASK 3
+#define ABTPALSEL_MASK 0b00000011
 /* sprite palette bank (address) */
 #define VIC4_SPRPALSEL_ADDR 0xD070
 /* sprite palette bank (address) */
 #define SPRPALSEL_ADDR 0xD070
 /* sprite palette bank (bit mask) */
-#define VIC4_SPRPALSEL_MASK 12
+#define VIC4_SPRPALSEL_MASK 0b00001100
 /* sprite palette bank (bit mask) */
-#define SPRPALSEL_MASK 12
+#define SPRPALSEL_MASK 0b00001100
 /* bitmap/text palette bank (address) */
 #define VIC4_BTPALSEL_ADDR 0xD070
 /* bitmap/text palette bank (address) */
 #define BTPALSEL_ADDR 0xD070
 /* bitmap/text palette bank (bit mask) */
-#define VIC4_BTPALSEL_MASK 48
+#define VIC4_BTPALSEL_MASK 0b00110000
 /* bitmap/text palette bank (bit mask) */
-#define BTPALSEL_MASK 48
+#define BTPALSEL_MASK 0b00110000
 /* palette bank mapped at $D100-$D3FF (address) */
 #define VIC4_MAPEDPAL_ADDR 0xD070
 /* palette bank mapped at $D100-$D3FF (address) */
 #define MAPEDPAL_ADDR 0xD070
 /* palette bank mapped at $D100-$D3FF (bit mask) */
-#define VIC4_MAPEDPAL_MASK 192
+#define VIC4_MAPEDPAL_MASK 0b11000000
 /* palette bank mapped at $D100-$D3FF (bit mask) */
-#define MAPEDPAL_MASK 192
+#define MAPEDPAL_MASK 0b11000000
 /* VIC-IV 16-colour bitplane enable flags */
 #define VIC4_BP16ENS 0xD071
 /* VIC-IV 16-colour bitplane enable flags */
@@ -1116,17 +1116,17 @@
 /* Alpha delay for compositor (address) */
 #define ALPHADELAY_ADDR 0xD073
 /* Alpha delay for compositor (bit mask) */
-#define VIC4_ALPHADELAY_MASK 15
+#define VIC4_ALPHADELAY_MASK 0b00001111
 /* Alpha delay for compositor (bit mask) */
-#define ALPHADELAY_MASK 15
+#define ALPHADELAY_MASK 0b00001111
 /* physical rasters per VIC-II raster (1 to 16) (address) */
 #define VIC4_RASTERHEIGHT_ADDR 0xD073
 /* physical rasters per VIC-II raster (1 to 16) (address) */
 #define RASTERHEIGHT_ADDR 0xD073
 /* physical rasters per VIC-II raster (1 to 16) (bit mask) */
-#define VIC4_RASTERHEIGHT_MASK 240
+#define VIC4_RASTERHEIGHT_MASK 0b11110000
 /* physical rasters per VIC-II raster (1 to 16) (bit mask) */
-#define RASTERHEIGHT_MASK 240
+#define RASTERHEIGHT_MASK 0b11110000
 /* Sprite alpha-blend enable */
 #define VIC4_SPRENALPHA 0xD074
 /* Sprite alpha-blend enable */
@@ -1156,37 +1156,37 @@
 /* Raster compare value MSB (address) */
 #define RSTCMP_ADDR 0xD07A
 /* Raster compare value MSB (bit mask) */
-#define VIC4_RSTCMP_MASK 7
+#define VIC4_RSTCMP_MASK 0b00000111
 /* Raster compare value MSB (bit mask) */
-#define RSTCMP_MASK 7
+#define RSTCMP_MASK 0b00000111
 /* Continuously monitor sprite pointer, to allow changing sprite data source while a sprite is being drawn (address) */
 #define VIC4_SPTR_CONT_ADDR 0xD07A
 /* Continuously monitor sprite pointer, to allow changing sprite data source while a sprite is being drawn (address) */
 #define SPTR_CONT_ADDR 0xD07A
 /* Continuously monitor sprite pointer, to allow changing sprite data source while a sprite is being drawn (bit mask) */
-#define VIC4_SPTR_CONT_MASK 8
+#define VIC4_SPTR_CONT_MASK 0b00001000
 /* Continuously monitor sprite pointer, to allow changing sprite data source while a sprite is being drawn (bit mask) */
-#define SPTR_CONT_MASK 8
+#define SPTR_CONT_MASK 0b00001000
 /* Reserved. (address) */
 #define VIC4_RESV_ADDR 0xD07A
 /* Reserved. (bit mask) */
-#define VIC4_RESV_MASK 48
+#define VIC4_RESV_MASK 0b00110000
 /* Enable additional IRQ sources, e.g., raster X position. (address) */
 #define VIC4_EXTIRQS_ADDR 0xD07A
 /* Enable additional IRQ sources, e.g., raster X position. (address) */
 #define EXTIRQS_ADDR 0xD07A
 /* Enable additional IRQ sources, e.g., raster X position. (bit mask) */
-#define VIC4_EXTIRQS_MASK 64
+#define VIC4_EXTIRQS_MASK 0b01000000
 /* Enable additional IRQ sources, e.g., raster X position. (bit mask) */
-#define EXTIRQS_MASK 64
+#define EXTIRQS_MASK 0b01000000
 /* Raster compare is in physical rasters if set, or VIC-II raster if clear (address) */
 #define VIC4_FNRST_CMP_ADDR 0xD07A
 /* Raster compare is in physical rasters if set, or VIC-II raster if clear (address) */
 #define FNRST_CMP_ADDR 0xD07A
 /* Raster compare is in physical rasters if set, or VIC-II raster if clear (bit mask) */
-#define VIC4_FNRST_CMP_MASK 128
+#define VIC4_FNRST_CMP_MASK 0b10000000
 /* Raster compare is in physical rasters if set, or VIC-II raster if clear (bit mask) */
-#define FNRST_CMP_MASK 128
+#define FNRST_CMP_MASK 0b10000000
 /* of text rows to display */
 #define VIC4_Number 0xD07B
 /* of text rows to display */
@@ -1196,37 +1196,37 @@
 /* Set which 128KB bank bitplanes (address) */
 #define BIT_PBANK_ADDR 0xD07C
 /* Set which 128KB bank bitplanes (bit mask) */
-#define VIC4_BIT_PBANK_MASK 7
+#define VIC4_BIT_PBANK_MASK 0b00000111
 /* Set which 128KB bank bitplanes (bit mask) */
-#define BIT_PBANK_MASK 7
+#define BIT_PBANK_MASK 0b00000111
 /* @RESV (address) */
 #define GS_VIC4_RESV_ADDR 0xD07C
 /* @RESV (bit mask) */
-#define GS_VIC4_RESV_MASK 8
+#define GS_VIC4_RESV_MASK 0b00001000
 /* hsync polarity (address) */
 #define VIC4_HSYNCP_ADDR 0xD07C
 /* hsync polarity (address) */
 #define HSYNCP_ADDR 0xD07C
 /* hsync polarity (bit mask) */
-#define VIC4_HSYNCP_MASK 16
+#define VIC4_HSYNCP_MASK 0b00010000
 /* hsync polarity (bit mask) */
-#define HSYNCP_MASK 16
+#define HSYNCP_MASK 0b00010000
 /* vsync polarity (address) */
 #define VIC4_VSYNCP_ADDR 0xD07C
 /* vsync polarity (address) */
 #define VSYNCP_ADDR 0xD07C
 /* vsync polarity (bit mask) */
-#define VIC4_VSYNCP_MASK 32
+#define VIC4_VSYNCP_MASK 0b00100000
 /* vsync polarity (bit mask) */
-#define VSYNCP_MASK 32
+#define VSYNCP_MASK 0b00100000
 /* VIC-IV debug pixel select red(01), green(10) or blue(11) channel visible in $D07D (address) */
 #define VIC4_DEBUGC_ADDR 0xD07C
 /* VIC-IV debug pixel select red(01), green(10) or blue(11) channel visible in $D07D (address) */
 #define DEBUGC_ADDR 0xD07C
 /* VIC-IV debug pixel select red(01), green(10) or blue(11) channel visible in $D07D (bit mask) */
-#define VIC4_DEBUGC_MASK 192
+#define VIC4_DEBUGC_MASK 0b11000000
 /* VIC-IV debug pixel select red(01), green(10) or blue(11) channel visible in $D07D (bit mask) */
-#define DEBUGC_MASK 192
+#define DEBUGC_MASK 0b11000000
 /* VIC-IV debug value read-back (read only) */
 #define DEBUG_DEBUGOUT 0xD07D
 /* VIC-IV debug value read-back (read only) */
@@ -1244,65 +1244,65 @@
 /* VIC-IV debug X position (MSB) (address) */
 #define DEBUGX_ADDR 0xD07F
 /* VIC-IV debug X position (MSB) (bit mask) */
-#define DEBUG_DEBUGX_MASK 15
+#define DEBUG_DEBUGX_MASK 0b00001111
 /* VIC-IV debug X position (MSB) (bit mask) */
-#define DEBUGX_MASK 15
+#define DEBUGX_MASK 0b00001111
 /* VIC-IV debug Y position (MSB) (address) */
 #define DEBUG_DEBUGY_ADDR 0xD07F
 /* VIC-IV debug Y position (MSB) (address) */
 #define DEBUGY_ADDR 0xD07F
 /* VIC-IV debug Y position (MSB) (bit mask) */
-#define DEBUG_DEBUGY_MASK 240
+#define DEBUG_DEBUGY_MASK 0b11110000
 /* VIC-IV debug Y position (MSB) (bit mask) */
-#define DEBUGY_MASK 240
+#define DEBUGY_MASK 0b11110000
 /* VIC-IV debug out-of-frame signal enable (address) */
 #define DEBUG_DEBUGOOF_ADDR 0xD07F
 /* VIC-IV debug out-of-frame signal enable (address) */
 #define DEBUGOOF_ADDR 0xD07F
 /* VIC-IV debug out-of-frame signal enable (bit mask) */
-#define DEBUG_DEBUGOOF_MASK 128
+#define DEBUG_DEBUGOOF_MASK 0b10000000
 /* VIC-IV debug out-of-frame signal enable (bit mask) */
-#define DEBUGOOF_MASK 128
+#define DEBUGOOF_MASK 0b10000000
 /* Drive select (0 to 7). Internal drive is 0. Second floppy drive on internal cable is 1. Other values reserved for C1565 external drive interface. (address) */
 #define FDC_DS_ADDR 0xD080
 /* Drive select (0 to 7). Internal drive is 0. Second floppy drive on internal cable is 1. Other values reserved for C1565 external drive interface. (address) */
 #define DS_ADDR 0xD080
 /* Drive select (0 to 7). Internal drive is 0. Second floppy drive on internal cable is 1. Other values reserved for C1565 external drive interface. (bit mask) */
-#define FDC_DS_MASK 7
+#define FDC_DS_MASK 0b00000111
 /* Drive select (0 to 7). Internal drive is 0. Second floppy drive on internal cable is 1. Other values reserved for C1565 external drive interface. (bit mask) */
-#define DS_MASK 7
+#define DS_MASK 0b00000111
 /* Directly controls the SIDE signal to the floppy drive, i.e., selecting which side of the media is active. (address) */
 #define FDC_SIDE_ADDR 0xD080
 /* Directly controls the SIDE signal to the floppy drive, i.e., selecting which side of the media is active. (address) */
 #define SIDE_ADDR 0xD080
 /* Directly controls the SIDE signal to the floppy drive, i.e., selecting which side of the media is active. (bit mask) */
-#define FDC_SIDE_MASK 8
+#define FDC_SIDE_MASK 0b00001000
 /* Directly controls the SIDE signal to the floppy drive, i.e., selecting which side of the media is active. (bit mask) */
-#define SIDE_MASK 8
+#define SIDE_MASK 0b00001000
 /* Swap upper and lower halves of data buffer (i.e. invert bit 8 of the sector buffer) (address) */
 #define FDC_SWAP_ADDR 0xD080
 /* Swap upper and lower halves of data buffer (i.e. invert bit 8 of the sector buffer) (address) */
 #define SWAP_ADDR 0xD080
 /* Swap upper and lower halves of data buffer (i.e. invert bit 8 of the sector buffer) (bit mask) */
-#define FDC_SWAP_MASK 16
+#define FDC_SWAP_MASK 0b00010000
 /* Swap upper and lower halves of data buffer (i.e. invert bit 8 of the sector buffer) (bit mask) */
-#define SWAP_MASK 16
+#define SWAP_MASK 0b00010000
 /* Activates drive motor and LED (unless LED signal is also set, causing the drive LED to blink) (address) */
 #define FDC_MOTOR_ADDR 0xD080
 /* Activates drive motor and LED (unless LED signal is also set, causing the drive LED to blink) (address) */
 #define MOTOR_ADDR 0xD080
 /* Activates drive motor and LED (unless LED signal is also set, causing the drive LED to blink) (bit mask) */
-#define FDC_MOTOR_MASK 32
+#define FDC_MOTOR_MASK 0b00100000
 /* Activates drive motor and LED (unless LED signal is also set, causing the drive LED to blink) (bit mask) */
-#define MOTOR_MASK 32
+#define MOTOR_MASK 0b00100000
 /* Drive LED blinks when set (address) */
 #define FDC_LED_ADDR 0xD080
 /* Drive LED blinks when set (bit mask) */
-#define FDC_LED_MASK 64
+#define FDC_LED_MASK 0b01000000
 /* When set, enables interrupts to occur. Clearing clears any pending interrupt and disables interrupts until set again. (address) */
 #define FDC_IRQ_ADDR 0xD080
 /* When set, enables interrupts to occur. Clearing clears any pending interrupt and disables interrupts until set again. (bit mask) */
-#define FDC_IRQ_MASK 128
+#define FDC_IRQ_MASK 0b10000000
 /* F011 FDC command register */
 #define FDC_COMMAND 0xD081
 /* Reset the sector buffer read/write pointers (address) */
@@ -1310,189 +1310,189 @@
 /* Reset the sector buffer read/write pointers (address) */
 #define NOBUF_ADDR 0xD081
 /* Reset the sector buffer read/write pointers (bit mask) */
-#define FDC_NOBUF_MASK 1
+#define FDC_NOBUF_MASK 0b00000001
 /* Reset the sector buffer read/write pointers (bit mask) */
-#define NOBUF_MASK 1
+#define NOBUF_MASK 0b00000001
 /* Selects alternate DPLL read recovery method (not implemented) (address) */
 #define FDC_ALT_ADDR 0xD081
 /* Selects alternate DPLL read recovery method (not implemented) (address) */
 #define ALT_ADDR 0xD081
 /* Selects alternate DPLL read recovery method (not implemented) (bit mask) */
-#define FDC_ALT_MASK 2
+#define FDC_ALT_MASK 0b00000010
 /* Selects alternate DPLL read recovery method (not implemented) (bit mask) */
-#define ALT_MASK 2
+#define ALT_MASK 0b00000010
 /* Selects reading and writing algorithm (currently ignored). (address) */
 #define FDC_ALGO_ADDR 0xD081
 /* Selects reading and writing algorithm (currently ignored). (address) */
 #define ALGO_ADDR 0xD081
 /* Selects reading and writing algorithm (currently ignored). (bit mask) */
-#define FDC_ALGO_MASK 4
+#define FDC_ALGO_MASK 0b00000100
 /* Selects reading and writing algorithm (currently ignored). (bit mask) */
-#define ALGO_MASK 4
+#define ALGO_MASK 0b00000100
 /* Sets the stepping direction (inward vs (address) */
 #define FDC_DIR_ADDR 0xD081
 /* Sets the stepping direction (inward vs (address) */
 #define DIR_ADDR 0xD081
 /* Sets the stepping direction (inward vs (bit mask) */
-#define FDC_DIR_MASK 8
+#define FDC_DIR_MASK 0b00001000
 /* Sets the stepping direction (inward vs (bit mask) */
-#define DIR_MASK 8
+#define DIR_MASK 0b00001000
 /* Writing 1 causes the head to step in the indicated direction (address) */
 #define FDC_STEP_ADDR 0xD081
 /* Writing 1 causes the head to step in the indicated direction (address) */
 #define STEP_ADDR 0xD081
 /* Writing 1 causes the head to step in the indicated direction (bit mask) */
-#define FDC_STEP_MASK 16
+#define FDC_STEP_MASK 0b00010000
 /* Writing 1 causes the head to step in the indicated direction (bit mask) */
-#define STEP_MASK 16
+#define STEP_MASK 0b00010000
 /* Command is a free-format (low level) operation (address) */
 #define FDC_FREE_ADDR 0xD081
 /* Command is a free-format (low level) operation (address) */
 #define FREE_ADDR 0xD081
 /* Command is a free-format (low level) operation (bit mask) */
-#define FDC_FREE_MASK 32
+#define FDC_FREE_MASK 0b00100000
 /* Command is a free-format (low level) operation (bit mask) */
-#define FREE_MASK 32
+#define FREE_MASK 0b00100000
 /* Command is a read operation if set (address) */
 #define FDC_RDCMD_ADDR 0xD081
 /* Command is a read operation if set (address) */
 #define RDCMD_ADDR 0xD081
 /* Command is a read operation if set (bit mask) */
-#define FDC_RDCMD_MASK 64
+#define FDC_RDCMD_MASK 0b01000000
 /* Command is a read operation if set (bit mask) */
-#define RDCMD_MASK 64
+#define RDCMD_MASK 0b01000000
 /* Command is a write operation if set (address) */
 #define FDC_WRCMD_ADDR 0xD081
 /* Command is a write operation if set (address) */
 #define WRCMD_ADDR 0xD081
 /* Command is a write operation if set (bit mask) */
-#define FDC_WRCMD_MASK 128
+#define FDC_WRCMD_MASK 0b10000000
 /* Command is a write operation if set (bit mask) */
-#define WRCMD_MASK 128
+#define WRCMD_MASK 0b10000000
 /* F011 Head is over track 0 flag (read only) (address) */
 #define FDC_TK0_ADDR 0xD082
 /* F011 Head is over track 0 flag (read only) (address) */
 #define TK0_ADDR 0xD082
 /* F011 Head is over track 0 flag (read only) (bit mask) */
-#define FDC_TK0_MASK 1
+#define FDC_TK0_MASK 0b00000001
 /* F011 Head is over track 0 flag (read only) (bit mask) */
-#define TK0_MASK 1
+#define TK0_MASK 0b00000001
 /* F011 Disk write protect flag (read only) (address) */
 #define FDC_PROT_ADDR 0xD082
 /* F011 Disk write protect flag (read only) (address) */
 #define PROT_ADDR 0xD082
 /* F011 Disk write protect flag (read only) (bit mask) */
-#define FDC_PROT_MASK 2
+#define FDC_PROT_MASK 0b00000010
 /* F011 Disk write protect flag (read only) (bit mask) */
-#define PROT_MASK 2
+#define PROT_MASK 0b00000010
 /* F011 LOST flag (data was lost during transfer, i.e., CPU did not read data fast enough) (read only) (address) */
 #define FDC_LOST_ADDR 0xD082
 /* F011 LOST flag (data was lost during transfer, i.e., CPU did not read data fast enough) (read only) (address) */
 #define LOST_ADDR 0xD082
 /* F011 LOST flag (data was lost during transfer, i.e., CPU did not read data fast enough) (read only) (bit mask) */
-#define FDC_LOST_MASK 4
+#define FDC_LOST_MASK 0b00000100
 /* F011 LOST flag (data was lost during transfer, i.e., CPU did not read data fast enough) (read only) (bit mask) */
-#define LOST_MASK 4
+#define LOST_MASK 0b00000100
 /* F011 FDC CRC check failure flag (read only) (address) */
 #define FDC_CRC_ADDR 0xD082
 /* F011 FDC CRC check failure flag (read only) (address) */
 #define CRC_ADDR 0xD082
 /* F011 FDC CRC check failure flag (read only) (bit mask) */
-#define FDC_CRC_MASK 8
+#define FDC_CRC_MASK 0b00001000
 /* F011 FDC CRC check failure flag (read only) (bit mask) */
-#define CRC_MASK 8
+#define CRC_MASK 0b00001000
 /* F011 FDC Request Not Found (RNF), i.e., a sector read or write operation did not find the requested sector (read only) (address) */
 #define FDC_RNF_ADDR 0xD082
 /* F011 FDC Request Not Found (RNF), i.e., a sector read or write operation did not find the requested sector (read only) (address) */
 #define RNF_ADDR 0xD082
 /* F011 FDC Request Not Found (RNF), i.e., a sector read or write operation did not find the requested sector (read only) (bit mask) */
-#define FDC_RNF_MASK 16
+#define FDC_RNF_MASK 0b00010000
 /* F011 FDC Request Not Found (RNF), i.e., a sector read or write operation did not find the requested sector (read only) (bit mask) */
-#define RNF_MASK 16
+#define RNF_MASK 0b00010000
 /* F011 FDC CPU and disk pointers to sector buffer are equal, indicating that the sector buffer is either full or empty. (read only) (address) */
 #define FDC_EQ_ADDR 0xD082
 /* F011 FDC CPU and disk pointers to sector buffer are equal, indicating that the sector buffer is either full or empty. (read only) (address) */
 #define EQ_ADDR 0xD082
 /* F011 FDC CPU and disk pointers to sector buffer are equal, indicating that the sector buffer is either full or empty. (read only) (bit mask) */
-#define FDC_EQ_MASK 32
+#define FDC_EQ_MASK 0b00100000
 /* F011 FDC CPU and disk pointers to sector buffer are equal, indicating that the sector buffer is either full or empty. (read only) (bit mask) */
-#define EQ_MASK 32
+#define EQ_MASK 0b00100000
 /* F011 FDC DRQ flag (one or more bytes of data are ready) (read only) (address) */
 #define FDC_DRQ_ADDR 0xD082
 /* F011 FDC DRQ flag (one or more bytes of data are ready) (read only) (address) */
 #define DRQ_ADDR 0xD082
 /* F011 FDC DRQ flag (one or more bytes of data are ready) (read only) (bit mask) */
-#define FDC_DRQ_MASK 64
+#define FDC_DRQ_MASK 0b01000000
 /* F011 FDC DRQ flag (one or more bytes of data are ready) (read only) (bit mask) */
-#define DRQ_MASK 64
+#define DRQ_MASK 0b01000000
 /* F011 FDC busy flag (command is being executed) (read only) (address) */
 #define FDC_BUSY_ADDR 0xD082
 /* F011 FDC busy flag (command is being executed) (read only) (address) */
 #define BUSY_ADDR 0xD082
 /* F011 FDC busy flag (command is being executed) (read only) (bit mask) */
-#define FDC_BUSY_MASK 128
+#define FDC_BUSY_MASK 0b10000000
 /* F011 FDC busy flag (command is being executed) (read only) (bit mask) */
-#define BUSY_MASK 128
+#define BUSY_MASK 0b10000000
 /* F011 disk change sense (read only) (address) */
 #define FDC_DSKCHG_ADDR 0xD083
 /* F011 disk change sense (read only) (address) */
 #define DSKCHG_ADDR 0xD083
 /* F011 disk change sense (read only) (bit mask) */
-#define FDC_DSKCHG_MASK 1
+#define FDC_DSKCHG_MASK 0b00000001
 /* F011 disk change sense (read only) (bit mask) */
-#define DSKCHG_MASK 1
+#define DSKCHG_MASK 0b00000001
 /* The floppy controller has generated an interrupt (read only). Note that interrupts are not currently implemented on the 45GS27. (address) */
 #define C65_FDC_IRQ_ADDR 0xD083
 /* The floppy controller has generated an interrupt (read only). Note that interrupts are not currently implemented on the 45GS27. (bit mask) */
-#define C65_FDC_IRQ_MASK 2
+#define C65_FDC_IRQ_MASK 0b00000010
 /* F011 Index hole sense (read only) (address) */
 #define FDC_INDEX_ADDR 0xD083
 /* F011 Index hole sense (read only) (address) */
 #define INDEX_ADDR 0xD083
 /* F011 Index hole sense (read only) (bit mask) */
-#define FDC_INDEX_MASK 4
+#define FDC_INDEX_MASK 0b00000100
 /* F011 Index hole sense (read only) (bit mask) */
-#define INDEX_MASK 4
+#define INDEX_MASK 0b00000100
 /* F011 Disk sense (read only) (address) */
 #define FDC_DISKIN_ADDR 0xD083
 /* F011 Disk sense (read only) (address) */
 #define DISKIN_ADDR 0xD083
 /* F011 Disk sense (read only) (bit mask) */
-#define FDC_DISKIN_MASK 8
+#define FDC_DISKIN_MASK 0b00001000
 /* F011 Disk sense (read only) (bit mask) */
-#define DISKIN_MASK 8
+#define DISKIN_MASK 0b00001000
 /* F011 write gate flag. Indicates that the drive is currently writing to media. Bad things may happen if a write transaction is aborted (read only) (address) */
 #define FDC_WGATE_ADDR 0xD083
 /* F011 write gate flag. Indicates that the drive is currently writing to media. Bad things may happen if a write transaction is aborted (read only) (address) */
 #define WGATE_ADDR 0xD083
 /* F011 write gate flag. Indicates that the drive is currently writing to media. Bad things may happen if a write transaction is aborted (read only) (bit mask) */
-#define FDC_WGATE_MASK 16
+#define FDC_WGATE_MASK 0b00010000
 /* F011 write gate flag. Indicates that the drive is currently writing to media. Bad things may happen if a write transaction is aborted (read only) (bit mask) */
-#define WGATE_MASK 16
+#define WGATE_MASK 0b00010000
 /* F011 Successive match. A synonym of RDREQ on the 45IO47 (read only) (address) */
 #define FDC_RUN_ADDR 0xD083
 /* F011 Successive match. A synonym of RDREQ on the 45IO47 (read only) (address) */
 #define RUN_ADDR 0xD083
 /* F011 Successive match. A synonym of RDREQ on the 45IO47 (read only) (bit mask) */
-#define FDC_RUN_MASK 32
+#define FDC_RUN_MASK 0b00100000
 /* F011 Successive match. A synonym of RDREQ on the 45IO47 (read only) (bit mask) */
-#define RUN_MASK 32
+#define RUN_MASK 0b00100000
 /* F011 Write Request flag, i.e., the requested sector was found during a write operation (read only) (address) */
 #define FDC_WTREQ_ADDR 0xD083
 /* F011 Write Request flag, i.e., the requested sector was found during a write operation (read only) (address) */
 #define WTREQ_ADDR 0xD083
 /* F011 Write Request flag, i.e., the requested sector was found during a write operation (read only) (bit mask) */
-#define FDC_WTREQ_MASK 64
+#define FDC_WTREQ_MASK 0b01000000
 /* F011 Write Request flag, i.e., the requested sector was found during a write operation (read only) (bit mask) */
-#define WTREQ_MASK 64
+#define WTREQ_MASK 0b01000000
 /* F011 Read Request flag, i.e., the requested sector was found during a read operation (read only) (address) */
 #define FDC_RDREQ_ADDR 0xD083
 /* F011 Read Request flag, i.e., the requested sector was found during a read operation (read only) (address) */
 #define RDREQ_ADDR 0xD083
 /* F011 Read Request flag, i.e., the requested sector was found during a read operation (read only) (bit mask) */
-#define FDC_RDREQ_MASK 128
+#define FDC_RDREQ_MASK 0b10000000
 /* F011 Read Request flag, i.e., the requested sector was found during a read operation (read only) (bit mask) */
-#define RDREQ_MASK 128
+#define RDREQ_MASK 0b10000000
 /* F011 FDC track selection register */
 #define FDC_TRACK 0xD084
 /* F011 FDC track selection register */
@@ -1546,81 +1546,81 @@
 /* UART RX byte ready flag (clear by reading \$D600) (address) */
 #define RXRDY_ADDR 0xD601
 /* UART RX byte ready flag (clear by reading \$D600) (bit mask) */
-#define UART_RXRDY_MASK 1
+#define UART_RXRDY_MASK 0b00000001
 /* UART RX byte ready flag (clear by reading \$D600) (bit mask) */
-#define RXRDY_MASK 1
+#define RXRDY_MASK 0b00000001
 /* UART RX overrun flag (clear by reading \$D600) (address) */
 #define UART_RXOVRRUN_ADDR 0xD601
 /* UART RX overrun flag (clear by reading \$D600) (address) */
 #define RXOVRRUN_ADDR 0xD601
 /* UART RX overrun flag (clear by reading \$D600) (bit mask) */
-#define UART_RXOVRRUN_MASK 2
+#define UART_RXOVRRUN_MASK 0b00000010
 /* UART RX overrun flag (clear by reading \$D600) (bit mask) */
-#define RXOVRRUN_MASK 2
+#define RXOVRRUN_MASK 0b00000010
 /* UART RX parity error flag (clear by reading \$D600) (address) */
 #define UART_PTYERR_ADDR 0xD601
 /* UART RX parity error flag (clear by reading \$D600) (address) */
 #define PTYERR_ADDR 0xD601
 /* UART RX parity error flag (clear by reading \$D600) (bit mask) */
-#define UART_PTYERR_MASK 4
+#define UART_PTYERR_MASK 0b00000100
 /* UART RX parity error flag (clear by reading \$D600) (bit mask) */
-#define PTYERR_MASK 4
+#define PTYERR_MASK 0b00000100
 /* UART RX framing error flag (clear by reading \$D600) (address) */
 #define UART_FRMERR_ADDR 0xD601
 /* UART RX framing error flag (clear by reading \$D600) (address) */
 #define FRMERR_ADDR 0xD601
 /* UART RX framing error flag (clear by reading \$D600) (bit mask) */
-#define UART_FRMERR_MASK 8
+#define UART_FRMERR_MASK 0b00001000
 /* UART RX framing error flag (clear by reading \$D600) (bit mask) */
-#define FRMERR_MASK 8
+#define FRMERR_MASK 0b00001000
 /* UART Parity: 1=even, 0=odd (address) */
 #define UART_PTYEVEN_ADDR 0xD602
 /* UART Parity: 1=even, 0=odd (address) */
 #define PTYEVEN_ADDR 0xD602
 /* UART Parity: 1=even, 0=odd (bit mask) */
-#define UART_PTYEVEN_MASK 1
+#define UART_PTYEVEN_MASK 0b00000001
 /* UART Parity: 1=even, 0=odd (bit mask) */
-#define PTYEVEN_MASK 1
+#define PTYEVEN_MASK 0b00000001
 /* UART Parity enable: 1=enabled (address) */
 #define UART_PTYEN_ADDR 0xD602
 /* UART Parity enable: 1=enabled (address) */
 #define PTYEN_ADDR 0xD602
 /* UART Parity enable: 1=enabled (bit mask) */
-#define UART_PTYEN_MASK 2
+#define UART_PTYEN_MASK 0b00000010
 /* UART Parity enable: 1=enabled (bit mask) */
-#define PTYEN_MASK 2
+#define PTYEN_MASK 0b00000010
 /* UART character size: 00=8, 01=7, 10=6, 11=5 bits per byte (address) */
 #define UART_CHARSZ_ADDR 0xD602
 /* UART character size: 00=8, 01=7, 10=6, 11=5 bits per byte (address) */
 #define CHARSZ_ADDR 0xD602
 /* UART character size: 00=8, 01=7, 10=6, 11=5 bits per byte (bit mask) */
-#define UART_CHARSZ_MASK 12
+#define UART_CHARSZ_MASK 0b00001100
 /* UART character size: 00=8, 01=7, 10=6, 11=5 bits per byte (bit mask) */
-#define CHARSZ_MASK 12
+#define CHARSZ_MASK 0b00001100
 /* UART synchronisation mode flags (00=RX \& TX both async, 01=RX sync, TX async, 1x=TX sync, RX async (unused on the MEGA65) (address) */
 #define UART_SYNCMOD_ADDR 0xD602
 /* UART synchronisation mode flags (00=RX \& TX both async, 01=RX sync, TX async, 1x=TX sync, RX async (unused on the MEGA65) (address) */
 #define SYNCMOD_ADDR 0xD602
 /* UART synchronisation mode flags (00=RX \& TX both async, 01=RX sync, TX async, 1x=TX sync, RX async (unused on the MEGA65) (bit mask) */
-#define UART_SYNCMOD_MASK 48
+#define UART_SYNCMOD_MASK 0b00110000
 /* UART synchronisation mode flags (00=RX \& TX both async, 01=RX sync, TX async, 1x=TX sync, RX async (unused on the MEGA65) (bit mask) */
-#define SYNCMOD_MASK 48
+#define SYNCMOD_MASK 0b00110000
 /* UART enable receive (address) */
 #define UART_RXEN_ADDR 0xD602
 /* UART enable receive (address) */
 #define RXEN_ADDR 0xD602
 /* UART enable receive (bit mask) */
-#define UART_RXEN_MASK 64
+#define UART_RXEN_MASK 0b01000000
 /* UART enable receive (bit mask) */
-#define RXEN_MASK 64
+#define RXEN_MASK 0b01000000
 /* UART enable transmit (address) */
 #define UART_TXEN_ADDR 0xD602
 /* UART enable transmit (address) */
 #define TXEN_ADDR 0xD602
 /* UART enable transmit (bit mask) */
-#define UART_TXEN_MASK 128
+#define UART_TXEN_MASK 0b10000000
 /* UART enable transmit (bit mask) */
-#define TXEN_MASK 128
+#define TXEN_MASK 0b10000000
 /* UART baud rate divisor (16 bit). Baud rate = 7.09375MHz / DIVISOR, unless MEGA65 fast UART mode is enabled, in which case baud rate = 80MHz / DIVISOR */
 #define UART_DIVISOR 0xD603
 /* UART baud rate divisor (16 bit). Baud rate = 7.09375MHz / DIVISOR, unless MEGA65 fast UART mode is enabled, in which case baud rate = 80MHz / DIVISOR */
@@ -1630,193 +1630,193 @@
 /* UART interrupt mask: NMI on RX (not yet implemented on the MEGA65) (address) */
 #define IMRXNMI_ADDR 0xD605
 /* UART interrupt mask: NMI on RX (not yet implemented on the MEGA65) (bit mask) */
-#define UART_IMRXNMI_MASK 16
+#define UART_IMRXNMI_MASK 0b00010000
 /* UART interrupt mask: NMI on RX (not yet implemented on the MEGA65) (bit mask) */
-#define IMRXNMI_MASK 16
+#define IMRXNMI_MASK 0b00010000
 /* UART interrupt mask: NMI on TX (not yet implemented on the MEGA65) (address) */
 #define UART_IMTXNMI_ADDR 0xD605
 /* UART interrupt mask: NMI on TX (not yet implemented on the MEGA65) (address) */
 #define IMTXNMI_ADDR 0xD605
 /* UART interrupt mask: NMI on TX (not yet implemented on the MEGA65) (bit mask) */
-#define UART_IMTXNMI_MASK 32
+#define UART_IMTXNMI_MASK 0b00100000
 /* UART interrupt mask: NMI on TX (not yet implemented on the MEGA65) (bit mask) */
-#define IMTXNMI_MASK 32
+#define IMTXNMI_MASK 0b00100000
 /* UART interrupt mask: IRQ on RX (not yet implemented on the MEGA65) (address) */
 #define UART_IMRXIRQ_ADDR 0xD605
 /* UART interrupt mask: IRQ on RX (not yet implemented on the MEGA65) (address) */
 #define IMRXIRQ_ADDR 0xD605
 /* UART interrupt mask: IRQ on RX (not yet implemented on the MEGA65) (bit mask) */
-#define UART_IMRXIRQ_MASK 64
+#define UART_IMRXIRQ_MASK 0b01000000
 /* UART interrupt mask: IRQ on RX (not yet implemented on the MEGA65) (bit mask) */
-#define IMRXIRQ_MASK 64
+#define IMRXIRQ_MASK 0b01000000
 /* UART interrupt mask: IRQ on TX (not yet implemented on the MEGA65) (address) */
 #define UART_IMTXIRQ_ADDR 0xD605
 /* UART interrupt mask: IRQ on TX (not yet implemented on the MEGA65) (address) */
 #define IMTXIRQ_ADDR 0xD605
 /* UART interrupt mask: IRQ on TX (not yet implemented on the MEGA65) (bit mask) */
-#define UART_IMTXIRQ_MASK 128
+#define UART_IMTXIRQ_MASK 0b10000000
 /* UART interrupt mask: IRQ on TX (not yet implemented on the MEGA65) (bit mask) */
-#define IMTXIRQ_MASK 128
+#define IMTXIRQ_MASK 0b10000000
 /* UART interrupt flag: NMI on RX (not yet implemented on the MEGA65) (address) */
 #define UART_IFRXNMI_ADDR 0xD606
 /* UART interrupt flag: NMI on RX (not yet implemented on the MEGA65) (address) */
 #define IFRXNMI_ADDR 0xD606
 /* UART interrupt flag: NMI on RX (not yet implemented on the MEGA65) (bit mask) */
-#define UART_IFRXNMI_MASK 16
+#define UART_IFRXNMI_MASK 0b00010000
 /* UART interrupt flag: NMI on RX (not yet implemented on the MEGA65) (bit mask) */
-#define IFRXNMI_MASK 16
+#define IFRXNMI_MASK 0b00010000
 /* UART interrupt flag: NMI on TX (not yet implemented on the MEGA65) (address) */
 #define UART_IFTXNMI_ADDR 0xD606
 /* UART interrupt flag: NMI on TX (not yet implemented on the MEGA65) (address) */
 #define IFTXNMI_ADDR 0xD606
 /* UART interrupt flag: NMI on TX (not yet implemented on the MEGA65) (bit mask) */
-#define UART_IFTXNMI_MASK 32
+#define UART_IFTXNMI_MASK 0b00100000
 /* UART interrupt flag: NMI on TX (not yet implemented on the MEGA65) (bit mask) */
-#define IFTXNMI_MASK 32
+#define IFTXNMI_MASK 0b00100000
 /* UART interrupt flag: IRQ on RX (not yet implemented on the MEGA65) (address) */
 #define UART_IFRXIRQ_ADDR 0xD606
 /* UART interrupt flag: IRQ on RX (not yet implemented on the MEGA65) (address) */
 #define IFRXIRQ_ADDR 0xD606
 /* UART interrupt flag: IRQ on RX (not yet implemented on the MEGA65) (bit mask) */
-#define UART_IFRXIRQ_MASK 64
+#define UART_IFRXIRQ_MASK 0b01000000
 /* UART interrupt flag: IRQ on RX (not yet implemented on the MEGA65) (bit mask) */
-#define IFRXIRQ_MASK 64
+#define IFRXIRQ_MASK 0b01000000
 /* UART interrupt flag: IRQ on TX (not yet implemented on the MEGA65) (address) */
 #define UART_IFTXIRQ_ADDR 0xD606
 /* UART interrupt flag: IRQ on TX (not yet implemented on the MEGA65) (address) */
 #define IFTXIRQ_ADDR 0xD606
 /* UART interrupt flag: IRQ on TX (not yet implemented on the MEGA65) (bit mask) */
-#define UART_IFTXIRQ_MASK 128
+#define UART_IFTXIRQ_MASK 0b10000000
 /* UART interrupt flag: IRQ on TX (not yet implemented on the MEGA65) (bit mask) */
-#define IFTXIRQ_MASK 128
+#define IFTXIRQ_MASK 0b10000000
 /* C65 capslock key sense (address) */
 #define UART_CAPLOCK_ADDR 0xD607
 /* C65 capslock key sense (address) */
 #define CAPLOCK_ADDR 0xD607
 /* C65 capslock key sense (bit mask) */
-#define UART_CAPLOCK_MASK 1
+#define UART_CAPLOCK_MASK 0b00000001
 /* C65 capslock key sense (bit mask) */
-#define CAPLOCK_MASK 1
+#define CAPLOCK_MASK 0b00000001
 /* C65 keyboard column 8 select (address) */
 #define UART_KEYCOL8_ADDR 0xD607
 /* C65 keyboard column 8 select (address) */
 #define KEYCOL8_ADDR 0xD607
 /* C65 keyboard column 8 select (bit mask) */
-#define UART_KEYCOL8_MASK 2
+#define UART_KEYCOL8_MASK 0b00000010
 /* C65 keyboard column 8 select (bit mask) */
-#define KEYCOL8_MASK 2
+#define KEYCOL8_MASK 0b00000010
 /* C65 keyboard extra lines Data Direction Register (DDR) (address) */
 #define UART_PORTEDDR_ADDR 0xD608
 /* C65 keyboard extra lines Data Direction Register (DDR) (address) */
 #define PORTEDDR_ADDR 0xD608
 /* C65 keyboard extra lines Data Direction Register (DDR) (bit mask) */
-#define UART_PORTEDDR_MASK 3
+#define UART_PORTEDDR_MASK 0b00000011
 /* C65 keyboard extra lines Data Direction Register (DDR) (bit mask) */
-#define PORTEDDR_MASK 3
+#define PORTEDDR_MASK 0b00000011
 /* C65 UART BAUD clock source: 1 = 7.09375MHz, 0 = 80MHz (VIC-IV pixel clock) (address) */
 #define UARTMISC_UFAST_ADDR 0xD609
 /* C65 UART BAUD clock source: 1 = 7.09375MHz, 0 = 80MHz (VIC-IV pixel clock) (address) */
 #define UFAST_ADDR 0xD609
 /* C65 UART BAUD clock source: 1 = 7.09375MHz, 0 = 80MHz (VIC-IV pixel clock) (bit mask) */
-#define UARTMISC_UFAST_MASK 1
+#define UARTMISC_UFAST_MASK 0b00000001
 /* C65 UART BAUD clock source: 1 = 7.09375MHz, 0 = 80MHz (VIC-IV pixel clock) (bit mask) */
-#define UFAST_MASK 1
+#define UFAST_MASK 0b00000001
 /* PMOD port A on FPGA board (data) (Nexys4 boards only) (address) */
 #define UARTMISC_PORTF_ADDR 0xD60B
 /* PMOD port A on FPGA board (data) (Nexys4 boards only) (address) */
 #define PORTF_ADDR 0xD60B
 /* PMOD port A on FPGA board (data) (Nexys4 boards only) (bit mask) */
-#define UARTMISC_PORTF_MASK 63
+#define UARTMISC_PORTF_MASK 0b00111111
 /* PMOD port A on FPGA board (data) (Nexys4 boards only) (bit mask) */
-#define PORTF_MASK 63
+#define PORTF_MASK 0b00111111
 /* Display hardware zoom of region under first touch point always (address) */
 #define UARTMISC_OSKZON_ADDR 0xD60B
 /* Display hardware zoom of region under first touch point always (address) */
 #define OSKZON_ADDR 0xD60B
 /* Display hardware zoom of region under first touch point always (bit mask) */
-#define UARTMISC_OSKZON_MASK 64
+#define UARTMISC_OSKZON_MASK 0b01000000
 /* Display hardware zoom of region under first touch point always (bit mask) */
-#define OSKZON_MASK 64
+#define OSKZON_MASK 0b01000000
 /* Display hardware zoom of region under first touch point for on-screen keyboard (address) */
 #define UARTMISC_OSKZEN_ADDR 0xD60B
 /* Display hardware zoom of region under first touch point for on-screen keyboard (address) */
 #define OSKZEN_ADDR 0xD60B
 /* Display hardware zoom of region under first touch point for on-screen keyboard (bit mask) */
-#define UARTMISC_OSKZEN_MASK 128
+#define UARTMISC_OSKZEN_MASK 0b10000000
 /* Display hardware zoom of region under first touch point for on-screen keyboard (bit mask) */
-#define OSKZEN_MASK 128
+#define OSKZEN_MASK 0b10000000
 /* PMOD port A on FPGA board (DDR) (address) */
 #define UARTMISC_PORTFDDR_ADDR 0xD60C
 /* PMOD port A on FPGA board (DDR) (bit mask) */
-#define UARTMISC_PORTFDDR_MASK 63
+#define UARTMISC_PORTFDDR_MASK 0b00111111
 /* On Screen Keyboard (OSK) Zoom Control Data Direction Register (DDR). Must be set to output to control these features. (address) */
 #define GS_UARTMISC_PORTFDDR_ADDR 0xD60C
 /* On Screen Keyboard (OSK) Zoom Control Data Direction Register (DDR). Must be set to output to control these features. (bit mask) */
-#define GS_UARTMISC_PORTFDDR_MASK 192
+#define GS_UARTMISC_PORTFDDR_MASK 0b11000000
 /* Internal 1541 drive connect (1=connect internal 1541 drive to IEC bus) (address) */
 #define UARTMISC_CONN41_ADDR 0xD60D
 /* Internal 1541 drive connect (1=connect internal 1541 drive to IEC bus) (address) */
 #define CONN41_ADDR 0xD60D
 /* Internal 1541 drive connect (1=connect internal 1541 drive to IEC bus) (bit mask) */
-#define UARTMISC_CONN41_MASK 1
+#define UARTMISC_CONN41_MASK 0b00000001
 /* Internal 1541 drive connect (1=connect internal 1541 drive to IEC bus) (bit mask) */
-#define CONN41_MASK 1
+#define CONN41_MASK 0b00000001
 /* Internal 1541 drive reset (1=reset, 0=operate) (address) */
 #define UARTMISC_RST41_ADDR 0xD60D
 /* Internal 1541 drive reset (1=reset, 0=operate) (address) */
 #define RST41_ADDR 0xD60D
 /* Internal 1541 drive reset (1=reset, 0=operate) (bit mask) */
-#define UARTMISC_RST41_MASK 2
+#define UARTMISC_RST41_MASK 0b00000010
 /* Internal 1541 drive reset (1=reset, 0=operate) (bit mask) */
-#define RST41_MASK 2
+#define RST41_MASK 0b00000010
 /* SD card MOSI/MISO (address) */
 #define UARTMISC_SDDATA_ADDR 0xD60D
 /* SD card MOSI/MISO (address) */
 #define SDDATA_ADDR 0xD60D
 /* SD card MOSI/MISO (bit mask) */
-#define UARTMISC_SDDATA_MASK 4
+#define UARTMISC_SDDATA_MASK 0b00000100
 /* SD card MOSI/MISO (bit mask) */
-#define SDDATA_MASK 4
+#define SDDATA_MASK 0b00000100
 /* SD card SCLK (address) */
 #define UARTMISC_SDCLK_ADDR 0xD60D
 /* SD card SCLK (address) */
 #define SDCLK_ADDR 0xD60D
 /* SD card SCLK (bit mask) */
-#define UARTMISC_SDCLK_MASK 8
+#define UARTMISC_SDCLK_MASK 0b00001000
 /* SD card SCLK (bit mask) */
-#define SDCLK_MASK 8
+#define SDCLK_MASK 0b00001000
 /* SD card CS_BO (address) */
 #define UARTMISC_SDCS_ADDR 0xD60D
 /* SD card CS_BO (address) */
 #define SDCS_ADDR 0xD60D
 /* SD card CS_BO (bit mask) */
-#define UARTMISC_SDCS_MASK 16
+#define UARTMISC_SDCS_MASK 0b00010000
 /* SD card CS_BO (bit mask) */
-#define SDCS_MASK 16
+#define SDCS_MASK 0b00010000
 /* Enable SD card bitbash mode (address) */
 #define UARTMISC_SDBSH_ADDR 0xD60D
 /* Enable SD card bitbash mode (address) */
 #define SDBSH_ADDR 0xD60D
 /* Enable SD card bitbash mode (bit mask) */
-#define UARTMISC_SDBSH_MASK 32
+#define UARTMISC_SDBSH_MASK 0b00100000
 /* Enable SD card bitbash mode (bit mask) */
-#define SDBSH_MASK 32
+#define SDBSH_MASK 0b00100000
 /* HDMI I2C control interface SDA data line (address) */
 #define UARTMISC_HDSDA_ADDR 0xD60D
 /* HDMI I2C control interface SDA data line (address) */
 #define HDSDA_ADDR 0xD60D
 /* HDMI I2C control interface SDA data line (bit mask) */
-#define UARTMISC_HDSDA_MASK 64
+#define UARTMISC_HDSDA_MASK 0b01000000
 /* HDMI I2C control interface SDA data line (bit mask) */
-#define HDSDA_MASK 64
+#define HDSDA_MASK 0b01000000
 /* HDMI I2C control interface SCL clock (address) */
 #define UARTMISC_HDSCL_ADDR 0xD60D
 /* HDMI I2C control interface SCL clock (address) */
 #define HDSCL_ADDR 0xD60D
 /* HDMI I2C control interface SCL clock (bit mask) */
-#define UARTMISC_HDSCL_MASK 128
+#define UARTMISC_HDSCL_MASK 0b10000000
 /* HDMI I2C control interface SCL clock (bit mask) */
-#define HDSCL_MASK 128
+#define HDSCL_MASK 0b10000000
 /* Data Direction Register (DDR) for \$D60D bit bashing port. */
 #define UARTMISC_BASHDDR 0xD60E
 /* Data Direction Register (DDR) for \$D60D bit bashing port. */
@@ -1826,41 +1826,41 @@
 /* Directly read C65 Cursor left key (address) */
 #define KEYLEFT_ADDR 0xD60F
 /* Directly read C65 Cursor left key (bit mask) */
-#define UARTMISC_KEYLEFT_MASK 1
+#define UARTMISC_KEYLEFT_MASK 0b00000001
 /* Directly read C65 Cursor left key (bit mask) */
-#define KEYLEFT_MASK 1
+#define KEYLEFT_MASK 0b00000001
 /* Directly read C65 Cursor up key (address) */
 #define UARTMISC_KEYUP_ADDR 0xD60F
 /* Directly read C65 Cursor up key (address) */
 #define KEYUP_ADDR 0xD60F
 /* Directly read C65 Cursor up key (bit mask) */
-#define UARTMISC_KEYUP_MASK 2
+#define UARTMISC_KEYUP_MASK 0b00000010
 /* Directly read C65 Cursor up key (bit mask) */
-#define KEYUP_MASK 2
+#define KEYUP_MASK 0b00000010
 /* Set to 1 if the MEGA65 is running on real hardware, set to 0 if emulated (Xemu) or simulated (ghdl) (address) */
 #define UARTMISC_REALHW_ADDR 0xD60F
 /* Set to 1 if the MEGA65 is running on real hardware, set to 0 if emulated (Xemu) or simulated (ghdl) (address) */
 #define REALHW_ADDR 0xD60F
 /* Set to 1 if the MEGA65 is running on real hardware, set to 0 if emulated (Xemu) or simulated (ghdl) (bit mask) */
-#define UARTMISC_REALHW_MASK 32
+#define UARTMISC_REALHW_MASK 0b00100000
 /* Set to 1 if the MEGA65 is running on real hardware, set to 0 if emulated (Xemu) or simulated (ghdl) (bit mask) */
-#define REALHW_MASK 32
+#define REALHW_MASK 0b00100000
 /* Light or heavy dimming of background material behind on-screen keyboard (address) */
 #define UARTMISC_OSKDIM_ADDR 0xD60F
 /* Light or heavy dimming of background material behind on-screen keyboard (address) */
 #define OSKDIM_ADDR 0xD60F
 /* Light or heavy dimming of background material behind on-screen keyboard (bit mask) */
-#define UARTMISC_OSKDIM_MASK 64
+#define UARTMISC_OSKDIM_MASK 0b01000000
 /* Light or heavy dimming of background material behind on-screen keyboard (bit mask) */
-#define OSKDIM_MASK 64
+#define OSKDIM_MASK 0b01000000
 /* Enable accessible keyboard input via joystick port 2 fire button (address) */
 #define UARTMISC_ACCESSKEY_ADDR 0xD60F
 /* Enable accessible keyboard input via joystick port 2 fire button (address) */
 #define ACCESSKEY_ADDR 0xD60F
 /* Enable accessible keyboard input via joystick port 2 fire button (bit mask) */
-#define UARTMISC_ACCESSKEY_MASK 128
+#define UARTMISC_ACCESSKEY_MASK 0b10000000
 /* Enable accessible keyboard input via joystick port 2 fire button (bit mask) */
-#define ACCESSKEY_MASK 128
+#define ACCESSKEY_MASK 0b10000000
 /* Last key press as ASCII (hardware accelerated keyboard scanner). Write to clear event ready for next. */
 #define UARTMISC_ASCIIKEY 0xD610
 /* Last key press as ASCII (hardware accelerated keyboard scanner). Write to clear event ready for next. */
@@ -1870,129 +1870,129 @@
 /* Right shift key state (hardware accelerated keyboard scanner). (address) */
 #define MRSHFT_ADDR 0xD611
 /* Right shift key state (hardware accelerated keyboard scanner). (bit mask) */
-#define UARTMISC_MRSHFT_MASK 1
+#define UARTMISC_MRSHFT_MASK 0b00000001
 /* Right shift key state (hardware accelerated keyboard scanner). (bit mask) */
-#define MRSHFT_MASK 1
+#define MRSHFT_MASK 0b00000001
 /* Left shift key state (hardware accelerated keyboard scanner). (address) */
 #define UARTMISC_MLSHFT_ADDR 0xD611
 /* Left shift key state (hardware accelerated keyboard scanner). (address) */
 #define MLSHFT_ADDR 0xD611
 /* Left shift key state (hardware accelerated keyboard scanner). (bit mask) */
-#define UARTMISC_MLSHFT_MASK 2
+#define UARTMISC_MLSHFT_MASK 0b00000010
 /* Left shift key state (hardware accelerated keyboard scanner). (bit mask) */
-#define MLSHFT_MASK 2
+#define MLSHFT_MASK 0b00000010
 /* CTRL key state (hardware accelerated keyboard scanner). (address) */
 #define UARTMISC_MCTRL_ADDR 0xD611
 /* CTRL key state (hardware accelerated keyboard scanner). (address) */
 #define MCTRL_ADDR 0xD611
 /* CTRL key state (hardware accelerated keyboard scanner). (bit mask) */
-#define UARTMISC_MCTRL_MASK 4
+#define UARTMISC_MCTRL_MASK 0b00000100
 /* CTRL key state (hardware accelerated keyboard scanner). (bit mask) */
-#define MCTRL_MASK 4
+#define MCTRL_MASK 0b00000100
 /* MEGA/C= key state (hardware accelerated keyboard scanner). (address) */
 #define UARTMISC_MMEGA_ADDR 0xD611
 /* MEGA/C= key state (hardware accelerated keyboard scanner). (address) */
 #define MMEGA_ADDR 0xD611
 /* MEGA/C= key state (hardware accelerated keyboard scanner). (bit mask) */
-#define UARTMISC_MMEGA_MASK 8
+#define UARTMISC_MMEGA_MASK 0b00001000
 /* MEGA/C= key state (hardware accelerated keyboard scanner). (bit mask) */
-#define MMEGA_MASK 8
+#define MMEGA_MASK 0b00001000
 /* ALT key state (hardware accelerated keyboard scanner). (address) */
 #define UARTMISC_MALT_ADDR 0xD611
 /* ALT key state (hardware accelerated keyboard scanner). (address) */
 #define MALT_ADDR 0xD611
 /* ALT key state (hardware accelerated keyboard scanner). (bit mask) */
-#define UARTMISC_MALT_MASK 16
+#define UARTMISC_MALT_MASK 0b00010000
 /* ALT key state (hardware accelerated keyboard scanner). (bit mask) */
-#define MALT_MASK 16
+#define MALT_MASK 0b00010000
 /* NOSCRL key state (hardware accelerated keyboard scanner). (address) */
 #define UARTMISC_MSCRL_ADDR 0xD611
 /* NOSCRL key state (hardware accelerated keyboard scanner). (address) */
 #define MSCRL_ADDR 0xD611
 /* NOSCRL key state (hardware accelerated keyboard scanner). (bit mask) */
-#define UARTMISC_MSCRL_MASK 32
+#define UARTMISC_MSCRL_MASK 0b00100000
 /* NOSCRL key state (hardware accelerated keyboard scanner). (bit mask) */
-#define MSCRL_MASK 32
+#define MSCRL_MASK 0b00100000
 /* CAPS LOCK key state (hardware accelerated keyboard scanner). (address) */
 #define UARTMISC_MCAPS_ADDR 0xD611
 /* CAPS LOCK key state (hardware accelerated keyboard scanner). (address) */
 #define MCAPS_ADDR 0xD611
 /* CAPS LOCK key state (hardware accelerated keyboard scanner). (bit mask) */
-#define UARTMISC_MCAPS_MASK 64
+#define UARTMISC_MCAPS_MASK 0b01000000
 /* CAPS LOCK key state (hardware accelerated keyboard scanner). (bit mask) */
-#define MCAPS_MASK 64
+#define MCAPS_MASK 0b01000000
 /* Enable widget board keyboard/joystick input (address) */
 #define UARTMISC_WGTKEY_ADDR 0xD612
 /* Enable widget board keyboard/joystick input (address) */
 #define WGTKEY_ADDR 0xD612
 /* Enable widget board keyboard/joystick input (bit mask) */
-#define UARTMISC_WGTKEY_MASK 1
+#define UARTMISC_WGTKEY_MASK 0b00000001
 /* Enable widget board keyboard/joystick input (bit mask) */
-#define WGTKEY_MASK 1
+#define WGTKEY_MASK 0b00000001
 /* Enable ps2 keyboard/joystick input (address) */
 #define UARTMISC_PS2KEY_ADDR 0xD612
 /* Enable ps2 keyboard/joystick input (address) */
 #define PS2KEY_ADDR 0xD612
 /* Enable ps2 keyboard/joystick input (bit mask) */
-#define UARTMISC_PS2KEY_MASK 2
+#define UARTMISC_PS2KEY_MASK 0b00000010
 /* Enable ps2 keyboard/joystick input (bit mask) */
-#define PS2KEY_MASK 2
+#define PS2KEY_MASK 0b00000010
 /* Enable physical keyboard input (address) */
 #define UARTMISC_PHYKEY_ADDR 0xD612
 /* Enable physical keyboard input (address) */
 #define PHYKEY_ADDR 0xD612
 /* Enable physical keyboard input (bit mask) */
-#define UARTMISC_PHYKEY_MASK 4
+#define UARTMISC_PHYKEY_MASK 0b00000100
 /* Enable physical keyboard input (bit mask) */
-#define PHYKEY_MASK 4
+#define PHYKEY_MASK 0b00000100
 /* Enable virtual/snythetic keyboard input (address) */
 #define UARTMISC_VRTKEY_ADDR 0xD612
 /* Enable virtual/snythetic keyboard input (address) */
 #define VRTKEY_ADDR 0xD612
 /* Enable virtual/snythetic keyboard input (bit mask) */
-#define UARTMISC_VRTKEY_MASK 8
+#define UARTMISC_VRTKEY_MASK 0b00001000
 /* Enable virtual/snythetic keyboard input (bit mask) */
-#define VRTKEY_MASK 8
+#define VRTKEY_MASK 0b00001000
 /* Debug OSK overlay (WRITE ONLY) (address) */
 #define UARTMISC_OSKDEBUG_ADDR 0xD612
 /* Debug OSK overlay (WRITE ONLY) (address) */
 #define OSKDEBUG_ADDR 0xD612
 /* Debug OSK overlay (WRITE ONLY) (bit mask) */
-#define UARTMISC_OSKDEBUG_MASK 16
+#define UARTMISC_OSKDEBUG_MASK 0b00010000
 /* Debug OSK overlay (WRITE ONLY) (bit mask) */
-#define OSKDEBUG_MASK 16
+#define OSKDEBUG_MASK 0b00010000
 /* Enable PS/2 / USB keyboard simulated joystick input (address) */
 #define UARTMISC_PS2JOY_ADDR 0xD612
 /* Enable PS/2 / USB keyboard simulated joystick input (address) */
 #define PS2JOY_ADDR 0xD612
 /* Enable PS/2 / USB keyboard simulated joystick input (bit mask) */
-#define UARTMISC_PS2JOY_MASK 16
+#define UARTMISC_PS2JOY_MASK 0b00010000
 /* Enable PS/2 / USB keyboard simulated joystick input (bit mask) */
-#define PS2JOY_MASK 16
+#define PS2JOY_MASK 0b00010000
 /* Exchange joystick ports 1 \& 2 (address) */
 #define UARTMISC_JOYSWAP_ADDR 0xD612
 /* Exchange joystick ports 1 \& 2 (address) */
 #define JOYSWAP_ADDR 0xD612
 /* Exchange joystick ports 1 \& 2 (bit mask) */
-#define UARTMISC_JOYSWAP_MASK 32
+#define UARTMISC_JOYSWAP_MASK 0b00100000
 /* Exchange joystick ports 1 \& 2 (bit mask) */
-#define JOYSWAP_MASK 32
+#define JOYSWAP_MASK 0b00100000
 /* Rotate inputs of joystick A by 180 degrees (for left handed use) (address) */
 #define UARTMISC_LJOYA_ADDR 0xD612
 /* Rotate inputs of joystick A by 180 degrees (for left handed use) (address) */
 #define LJOYA_ADDR 0xD612
 /* Rotate inputs of joystick A by 180 degrees (for left handed use) (bit mask) */
-#define UARTMISC_LJOYA_MASK 64
+#define UARTMISC_LJOYA_MASK 0b01000000
 /* Rotate inputs of joystick A by 180 degrees (for left handed use) (bit mask) */
-#define LJOYA_MASK 64
+#define LJOYA_MASK 0b01000000
 /* Rotate inputs of joystick B by 180 degrees (for left handed use) (address) */
 #define UARTMISC_LJOYB_ADDR 0xD612
 /* Rotate inputs of joystick B by 180 degrees (for left handed use) (address) */
 #define LJOYB_ADDR 0xD612
 /* Rotate inputs of joystick B by 180 degrees (for left handed use) (bit mask) */
-#define UARTMISC_LJOYB_MASK 128
+#define UARTMISC_LJOYB_MASK 0b10000000
 /* Rotate inputs of joystick B by 180 degrees (for left handed use) (bit mask) */
-#define LJOYB_MASK 128
+#define LJOYB_MASK 0b10000000
 /* Count of cartridge port memory accesses (read only) */
 #define DEBUG_CRTACSCNT 0xD613
 /* Count of cartridge port memory accesses (read only) */
@@ -2006,49 +2006,49 @@
 /* Set to \$7F for no key down, else specify virtual key press. (address) */
 #define VIRTKEY1_ADDR 0xD615
 /* Set to \$7F for no key down, else specify virtual key press. (bit mask) */
-#define UARTMISC_VIRTKEY1_MASK 127
+#define UARTMISC_VIRTKEY1_MASK 0b01111111
 /* Set to \$7F for no key down, else specify virtual key press. (bit mask) */
-#define VIRTKEY1_MASK 127
+#define VIRTKEY1_MASK 0b01111111
 /* Enable display of on-screen keyboard composited overlay (address) */
 #define UARTMISC_OSKEN_ADDR 0xD615
 /* Enable display of on-screen keyboard composited overlay (address) */
 #define OSKEN_ADDR 0xD615
 /* Enable display of on-screen keyboard composited overlay (bit mask) */
-#define UARTMISC_OSKEN_MASK 128
+#define UARTMISC_OSKEN_MASK 0b10000000
 /* Enable display of on-screen keyboard composited overlay (bit mask) */
-#define OSKEN_MASK 128
+#define OSKEN_MASK 0b10000000
 /* Set to \$7F for no key down, else specify 2nd virtual key press. (address) */
 #define UARTMISC_VIRTKEY2_ADDR 0xD616
 /* Set to \$7F for no key down, else specify 2nd virtual key press. (address) */
 #define VIRTKEY2_ADDR 0xD616
 /* Set to \$7F for no key down, else specify 2nd virtual key press. (bit mask) */
-#define UARTMISC_VIRTKEY2_MASK 127
+#define UARTMISC_VIRTKEY2_MASK 0b01111111
 /* Set to \$7F for no key down, else specify 2nd virtual key press. (bit mask) */
-#define VIRTKEY2_MASK 127
+#define VIRTKEY2_MASK 0b01111111
 /* Display alternate on-screen keyboard layout (typically dial pad for MEGA65 telephone) (address) */
 #define UARTMISC_OSKALT_ADDR 0xD616
 /* Display alternate on-screen keyboard layout (typically dial pad for MEGA65 telephone) (address) */
 #define OSKALT_ADDR 0xD616
 /* Display alternate on-screen keyboard layout (typically dial pad for MEGA65 telephone) (bit mask) */
-#define UARTMISC_OSKALT_MASK 128
+#define UARTMISC_OSKALT_MASK 0b10000000
 /* Display alternate on-screen keyboard layout (typically dial pad for MEGA65 telephone) (bit mask) */
-#define OSKALT_MASK 128
+#define OSKALT_MASK 0b10000000
 /* Set to \$7F for no key down, else specify 3nd virtual key press. (address) */
 #define UARTMISC_VIRTKEY3_ADDR 0xD617
 /* Set to \$7F for no key down, else specify 3nd virtual key press. (address) */
 #define VIRTKEY3_ADDR 0xD617
 /* Set to \$7F for no key down, else specify 3nd virtual key press. (bit mask) */
-#define UARTMISC_VIRTKEY3_MASK 127
+#define UARTMISC_VIRTKEY3_MASK 0b01111111
 /* Set to \$7F for no key down, else specify 3nd virtual key press. (bit mask) */
-#define VIRTKEY3_MASK 127
+#define VIRTKEY3_MASK 0b01111111
 /* 1=Display on-screen keyboard at top, 0=Disply on-screen keyboard at bottom of screen. (address) */
 #define UARTMISC_OSKTOP_ADDR 0xD617
 /* 1=Display on-screen keyboard at top, 0=Disply on-screen keyboard at bottom of screen. (address) */
 #define OSKTOP_ADDR 0xD617
 /* 1=Display on-screen keyboard at top, 0=Disply on-screen keyboard at bottom of screen. (bit mask) */
-#define UARTMISC_OSKTOP_MASK 128
+#define UARTMISC_OSKTOP_MASK 0b10000000
 /* 1=Display on-screen keyboard at top, 0=Disply on-screen keyboard at bottom of screen. (bit mask) */
-#define OSKTOP_MASK 128
+#define OSKTOP_MASK 0b10000000
 /* Physical keyboard scan rate (\$00=50MHz, \$FF=~200KHz) */
 #define UARTMISC_KSCNRATE 0xD618
 /* Physical keyboard scan rate (\$00=50MHz, \$FF=~200KHz) */
@@ -2066,45 +2066,45 @@
 /* Mute digital video audio (MEGA65 R2 only) (address) */
 #define AUDMUTE_ADDR 0xD61A
 /* Mute digital video audio (MEGA65 R2 only) (bit mask) */
-#define SYSCTL_AUDMUTE_MASK 1
+#define SYSCTL_AUDMUTE_MASK 0b00000001
 /* Mute digital video audio (MEGA65 R2 only) (bit mask) */
-#define AUDMUTE_MASK 1
+#define AUDMUTE_MASK 0b00000001
 /* Control digital video as DVI (disables audio) (address) */
 #define SYSCTL_DVI_ADDR 0xD61A
 /* Control digital video as DVI (disables audio) (address) */
 #define DVI_ADDR 0xD61A
 /* Control digital video as DVI (disables audio) (bit mask) */
-#define SYSCTL_DVI_MASK 2
+#define SYSCTL_DVI_MASK 0b00000010
 /* Control digital video as DVI (disables audio) (bit mask) */
-#define DVI_MASK 2
+#define DVI_MASK 0b00000010
 /* Visualise audio samples (DEBUG) (address) */
 #define SYSCTL_AUDDBG_ADDR 0xD61A
 /* Visualise audio samples (DEBUG) (address) */
 #define AUDDBG_ADDR 0xD61A
 /* Visualise audio samples (DEBUG) (bit mask) */
-#define SYSCTL_AUDDBG_MASK 4
+#define SYSCTL_AUDDBG_MASK 0b00000100
 /* Visualise audio samples (DEBUG) (bit mask) */
-#define AUDDBG_MASK 4
+#define AUDDBG_MASK 0b00000100
 /* Select 48KHz or 44.1KHz digital video audio sample rate (address) */
 #define SYSCTL_AUD48K_ADDR 0xD61A
 /* Select 48KHz or 44.1KHz digital video audio sample rate (address) */
 #define AUD48K_ADDR 0xD61A
 /* Select 48KHz or 44.1KHz digital video audio sample rate (bit mask) */
-#define SYSCTL_AUD48K_MASK 8
+#define SYSCTL_AUD48K_MASK 0b00001000
 /* Select 48KHz or 44.1KHz digital video audio sample rate (bit mask) */
-#define AUD48K_MASK 8
+#define AUD48K_MASK 0b00001000
 /* Control LED next to U1 on mother board (address) */
 #define SYSCTL_LED_ADDR 0xD61A
 /* Control LED next to U1 on mother board (bit mask) */
-#define SYSCTL_LED_MASK 16
+#define SYSCTL_LED_MASK 0b00010000
 /* Invert digital video audio sample values (address) */
 #define SYSCTL_AUDINV_ADDR 0xD61A
 /* Invert digital video audio sample values (address) */
 #define AUDINV_ADDR 0xD61A
 /* Invert digital video audio sample values (bit mask) */
-#define SYSCTL_AUDINV_MASK 128
+#define SYSCTL_AUDINV_MASK 0b10000000
 /* Invert digital video audio sample values (bit mask) */
-#define AUDINV_MASK 128
+#define AUDINV_MASK 0b10000000
 /* READ 1351/amiga mouse auto detection DEBUG */
 #define DEBUG_AMIMOUSDETECT 0xD61B
 /* READ 1351/amiga mouse auto detection DEBUG */
@@ -2116,11 +2116,11 @@
 /* LED register select (R,G,B channels x 4 = 0 to 11) (address) */
 #define UARTMISC_Keyboard_ADDR 0xD61D
 /* LED register select (R,G,B channels x 4 = 0 to 11) (bit mask) */
-#define UARTMISC_Keyboard_MASK 127
+#define UARTMISC_Keyboard_MASK 0b01111111
 /* LED control enable (address) */
 #define GS_UARTMISC_Keyboard_ADDR 0xD61D
 /* LED control enable (bit mask) */
-#define GS_UARTMISC_Keyboard_MASK 128
+#define GS_UARTMISC_Keyboard_MASK 0b10000000
 /* register value (write only) */
 #define UARTMISC_Keyboard 0xD61E
 /* register value (write only) */
@@ -2212,25 +2212,25 @@
 /* Select SID mode: 0=6581, 1=8580 (address) */
 #define SIDMODE_ADDR 0xD63C
 /* Select SID mode: 0=6581, 1=8580 (bit mask) */
-#define SID_SIDMODE_MASK 15
+#define SID_SIDMODE_MASK 0b00001111
 /* Select SID mode: 0=6581, 1=8580 (bit mask) */
-#define SIDMODE_MASK 15
+#define SIDMODE_MASK 0b00001111
 /* Enable DC offset subtraction in audio mixer (address) */
 #define AUDIOMIX_DCTRKEN_ADDR 0xD63C
 /* Enable DC offset subtraction in audio mixer (address) */
 #define DCTRKEN_ADDR 0xD63C
 /* Enable DC offset subtraction in audio mixer (bit mask) */
-#define AUDIOMIX_DCTRKEN_MASK 16
+#define AUDIOMIX_DCTRKEN_MASK 0b00010000
 /* Enable DC offset subtraction in audio mixer (bit mask) */
-#define DCTRKEN_MASK 16
+#define DCTRKEN_MASK 0b00010000
 /* Source of last CPU reset (address) */
 #define DEBUG_RESETSRC_ADDR 0xD63C
 /* Source of last CPU reset (address) */
 #define RESETSRC_ADDR 0xD63C
 /* Source of last CPU reset (bit mask) */
-#define DEBUG_RESETSRC_MASK 224
+#define DEBUG_RESETSRC_MASK 0b11100000
 /* Source of last CPU reset (bit mask) */
-#define RESETSRC_MASK 224
+#define RESETSRC_MASK 0b11100000
 /* Audio mixer DC-estimation time step. Lower values = faster updating of DC estimation, at the cost of making low-frequencies quieter. */
 #define AUDIOMIX_DCTIME 0xD63D
 /* Audio mixer DC-estimation time step. Lower values = faster updating of DC estimation, at the cost of making low-frequencies quieter. */
@@ -2376,17 +2376,17 @@
 /* VIC-II/VIC-III/VIC-IV mode select (address) */
 #define VICMODE_ADDR 0xD652
 /* VIC-II/VIC-III/VIC-IV mode select (bit mask) */
-#define HCPU_VICMODE_MASK 3
+#define HCPU_VICMODE_MASK 0b00000011
 /* VIC-II/VIC-III/VIC-IV mode select (bit mask) */
-#define VICMODE_MASK 3
+#define VICMODE_MASK 0b00000011
 /* 0=Use internal SIDs, 1=Use external(1) SIDs (address) */
 #define HCPU_EXSID_ADDR 0xD652
 /* 0=Use internal SIDs, 1=Use external(1) SIDs (address) */
 #define EXSID_ADDR 0xD652
 /* 0=Use internal SIDs, 1=Use external(1) SIDs (bit mask) */
-#define HCPU_EXSID_MASK 4
+#define HCPU_EXSID_MASK 0b00000100
 /* 0=Use internal SIDs, 1=Use external(1) SIDs (bit mask) */
-#define EXSID_MASK 4
+#define EXSID_MASK 0b00000100
 /* @HTRAPXX */
 #define CPU_HTRAP13 0xD653
 /* @HTRAPXX */
@@ -2434,11 +2434,11 @@
 /* 1=Virtualise SD/Floppy0 access (usually for access via serial debugger interface) (address) */
 #define HCPU_VFLOP_ADDR 0xD659
 /* 1=Virtualise SD/Floppy0 access (usually for access via serial debugger interface) (bit mask) */
-#define HCPU_VFLOP_MASK 1
+#define HCPU_VFLOP_MASK 0b00000001
 /* 1=Virtualise SD/Floppy1 access (usually for access via serial debugger interface) (address) */
 #define GS_HCPU_VFLOP_ADDR 0xD659
 /* 1=Virtualise SD/Floppy1 access (usually for access via serial debugger interface) (bit mask) */
-#define GS_HCPU_VFLOP_MASK 2
+#define GS_HCPU_VFLOP_MASK 0b00000010
 /* @HTRAPXX */
 #define CPU_HTRAP1A 0xD65A
 /* @HTRAPXX */
@@ -2552,9 +2552,9 @@
 /* Enable composited Matrix Mode, and disable UART access to serial monitor. (address) */
 #define MATRIXEN_ADDR 0xD672
 /* Enable composited Matrix Mode, and disable UART access to serial monitor. (bit mask) */
-#define HCPU_MATRIXEN_MASK 64
+#define HCPU_MATRIXEN_MASK 0b01000000
 /* Enable composited Matrix Mode, and disable UART access to serial monitor. (bit mask) */
-#define MATRIXEN_MASK 64
+#define MATRIXEN_MASK 0b01000000
 /* @HTRAPXX */
 #define CPU_HTRAP33 0xD673
 /* @HTRAPXX */
@@ -2600,9 +2600,9 @@
 /* (write) Hypervisor write serial output to UART monitor (address) */
 #define UARTDATA_ADDR 0xD67C
 /* (write) Hypervisor write serial output to UART monitor (bit mask) */
-#define HCPU_UARTDATA_MASK 255
+#define HCPU_UARTDATA_MASK 0b11111111
 /* (write) Hypervisor write serial output to UART monitor (bit mask) */
-#define UARTDATA_MASK 255
+#define UARTDATA_MASK 0b11111111
 /* @HTRAPXX */
 #define CPU_HTRAP3D 0xD67D
 /* @HTRAPXX */
@@ -2616,65 +2616,65 @@
 /* RESERVED (address) */
 #define RSVD_ADDR 0xD67D
 /* RESERVED (bit mask) */
-#define HCPU_RSVD_MASK 1
+#define HCPU_RSVD_MASK 0b00000001
 /* RESERVED (bit mask) */
-#define RSVD_MASK 1
+#define RSVD_MASK 0b00000001
 /* Hypervisor enable 32-bit JMP/JSR etc (address) */
 #define HCPU_JMP32EN_ADDR 0xD67D
 /* Hypervisor enable 32-bit JMP/JSR etc (address) */
 #define JMP32EN_ADDR 0xD67D
 /* Hypervisor enable 32-bit JMP/JSR etc (bit mask) */
-#define HCPU_JMP32EN_MASK 2
+#define HCPU_JMP32EN_MASK 0b00000010
 /* Hypervisor enable 32-bit JMP/JSR etc (bit mask) */
-#define JMP32EN_MASK 2
+#define JMP32EN_MASK 0b00000010
 /* Hypervisor write protect C65 ROM \$20000-\$3FFFF (address) */
 #define HCPU_ROMPROT_ADDR 0xD67D
 /* Hypervisor write protect C65 ROM \$20000-\$3FFFF (address) */
 #define ROMPROT_ADDR 0xD67D
 /* Hypervisor write protect C65 ROM \$20000-\$3FFFF (bit mask) */
-#define HCPU_ROMPROT_MASK 4
+#define HCPU_ROMPROT_MASK 0b00000100
 /* Hypervisor write protect C65 ROM \$20000-\$3FFFF (bit mask) */
-#define ROMPROT_MASK 4
+#define ROMPROT_MASK 0b00000100
 /* Hypervisor enable ASC/DIN CAPS LOCK key to enable/disable CPU slow-down in C64/C128/C65 modes (address) */
 #define HCPU_ASCFAST_ADDR 0xD67D
 /* Hypervisor enable ASC/DIN CAPS LOCK key to enable/disable CPU slow-down in C64/C128/C65 modes (address) */
 #define ASCFAST_ADDR 0xD67D
 /* Hypervisor enable ASC/DIN CAPS LOCK key to enable/disable CPU slow-down in C64/C128/C65 modes (bit mask) */
-#define HCPU_ASCFAST_MASK 8
+#define HCPU_ASCFAST_MASK 0b00001000
 /* Hypervisor enable ASC/DIN CAPS LOCK key to enable/disable CPU slow-down in C64/C128/C65 modes (bit mask) */
-#define ASCFAST_MASK 8
+#define ASCFAST_MASK 0b00001000
 /* Hypervisor force CPU to 48MHz for userland (userland can override via POKE0) (address) */
 #define HCPU_CPUFAST_ADDR 0xD67D
 /* Hypervisor force CPU to 48MHz for userland (userland can override via POKE0) (address) */
 #define CPUFAST_ADDR 0xD67D
 /* Hypervisor force CPU to 48MHz for userland (userland can override via POKE0) (bit mask) */
-#define HCPU_CPUFAST_MASK 16
+#define HCPU_CPUFAST_MASK 0b00010000
 /* Hypervisor force CPU to 48MHz for userland (userland can override via POKE0) (bit mask) */
-#define CPUFAST_MASK 16
+#define CPUFAST_MASK 0b00010000
 /* Hypervisor force CPU to 4502 personality, even in C64 IO mode. (address) */
 #define HCPU_F4502_ADDR 0xD67D
 /* Hypervisor force CPU to 4502 personality, even in C64 IO mode. (address) */
 #define F4502_ADDR 0xD67D
 /* Hypervisor force CPU to 4502 personality, even in C64 IO mode. (bit mask) */
-#define HCPU_F4502_MASK 32
+#define HCPU_F4502_MASK 0b00100000
 /* Hypervisor force CPU to 4502 personality, even in C64 IO mode. (bit mask) */
-#define F4502_MASK 32
+#define F4502_MASK 0b00100000
 /* Hypervisor flag to indicate if an IRQ is pending on exit from the hypervisor / set 1 to force IRQ/NMI deferal for 1,024 cycles on exit from hypervisor. (address) */
 #define HCPU_PIRQ_ADDR 0xD67D
 /* Hypervisor flag to indicate if an IRQ is pending on exit from the hypervisor / set 1 to force IRQ/NMI deferal for 1,024 cycles on exit from hypervisor. (address) */
 #define PIRQ_ADDR 0xD67D
 /* Hypervisor flag to indicate if an IRQ is pending on exit from the hypervisor / set 1 to force IRQ/NMI deferal for 1,024 cycles on exit from hypervisor. (bit mask) */
-#define HCPU_PIRQ_MASK 64
+#define HCPU_PIRQ_MASK 0b01000000
 /* Hypervisor flag to indicate if an IRQ is pending on exit from the hypervisor / set 1 to force IRQ/NMI deferal for 1,024 cycles on exit from hypervisor. (bit mask) */
-#define PIRQ_MASK 64
+#define PIRQ_MASK 0b01000000
 /* Hypervisor flag to indicate if an NMI is pending on exit from the hypervisor. (address) */
 #define HCPU_PNMI_ADDR 0xD67D
 /* Hypervisor flag to indicate if an NMI is pending on exit from the hypervisor. (address) */
 #define PNMI_ADDR 0xD67D
 /* Hypervisor flag to indicate if an NMI is pending on exit from the hypervisor. (bit mask) */
-#define HCPU_PNMI_MASK 128
+#define HCPU_PNMI_MASK 0b10000000
 /* Hypervisor flag to indicate if an NMI is pending on exit from the hypervisor. (bit mask) */
-#define PNMI_MASK 128
+#define PNMI_MASK 0b10000000
 /* @HTRAPXX */
 #define CPU_HTRAP3E 0xD67E
 /* @HTRAPXX */
@@ -2720,157 +2720,157 @@
 /* (read only) reads bit 8 of the sector buffer pointer (address) */
 #define BUFBIT8_ADDR 0xD689
 /* (read only) reads bit 8 of the sector buffer pointer (bit mask) */
-#define SD_BUFBIT8_MASK 1
+#define SD_BUFBIT8_MASK 0b00000001
 /* (read only) reads bit 8 of the sector buffer pointer (bit mask) */
-#define BUFBIT8_MASK 1
+#define BUFBIT8_MASK 0b00000001
 /* (read only) if set, indicates that the sector buffer is full and has not yet been read (address) */
 #define SD_BUFFFULL_ADDR 0xD689
 /* (read only) if set, indicates that the sector buffer is full and has not yet been read (address) */
 #define BUFFFULL_ADDR 0xD689
 /* (read only) if set, indicates that the sector buffer is full and has not yet been read (bit mask) */
-#define SD_BUFFFULL_MASK 2
+#define SD_BUFFFULL_MASK 0b00000010
 /* (read only) if set, indicates that the sector buffer is full and has not yet been read (bit mask) */
-#define BUFFFULL_MASK 2
+#define BUFFFULL_MASK 0b00000010
 /* Set/read SD card sd_handshake signal (address) */
 #define SD_HNDSHK_ADDR 0xD689
 /* Set/read SD card sd_handshake signal (address) */
 #define HNDSHK_ADDR 0xD689
 /* Set/read SD card sd_handshake signal (bit mask) */
-#define SD_HNDSHK_MASK 4
+#define SD_HNDSHK_MASK 0b00000100
 /* Set/read SD card sd_handshake signal (bit mask) */
-#define HNDSHK_MASK 4
+#define HNDSHK_MASK 0b00000100
 /* SD Card Data Ready indication (address) */
 #define SD_DRDY_ADDR 0xD689
 /* SD Card Data Ready indication (address) */
 #define DRDY_ADDR 0xD689
 /* SD Card Data Ready indication (bit mask) */
-#define SD_DRDY_MASK 8
+#define SD_DRDY_MASK 0b00001000
 /* SD Card Data Ready indication (bit mask) */
-#define DRDY_MASK 8
+#define DRDY_MASK 0b00001000
 /* Reserved (address) */
 #define SD_RESERVED_ADDR 0xD689
 /* Reserved (bit mask) */
-#define SD_RESERVED_MASK 16
+#define SD_RESERVED_MASK 0b00010000
 /* Set to swap floppy drive 0 (the internal drive) and drive 1 (the drive on the 2nd position on the internal floppy cable). (address) */
 #define SD_FDCSWAP_ADDR 0xD689
 /* Set to swap floppy drive 0 (the internal drive) and drive 1 (the drive on the 2nd position on the internal floppy cable). (address) */
 #define FDCSWAP_ADDR 0xD689
 /* Set to swap floppy drive 0 (the internal drive) and drive 1 (the drive on the 2nd position on the internal floppy cable). (bit mask) */
-#define SD_FDCSWAP_MASK 32
+#define SD_FDCSWAP_MASK 0b00100000
 /* Set to swap floppy drive 0 (the internal drive) and drive 1 (the drive on the 2nd position on the internal floppy cable). (bit mask) */
-#define FDCSWAP_MASK 32
+#define FDCSWAP_MASK 0b00100000
 /* Set to switch sector buffer to view SD card direct access, clear for access to the F011 FDC sector buffer. (address) */
 #define SD_BUFFSEL_ADDR 0xD689
 /* Set to switch sector buffer to view SD card direct access, clear for access to the F011 FDC sector buffer. (address) */
 #define BUFFSEL_ADDR 0xD689
 /* Set to switch sector buffer to view SD card direct access, clear for access to the F011 FDC sector buffer. (bit mask) */
-#define SD_BUFFSEL_MASK 128
+#define SD_BUFFSEL_MASK 0b10000000
 /* Set to switch sector buffer to view SD card direct access, clear for access to the F011 FDC sector buffer. (bit mask) */
-#define BUFFSEL_MASK 128
+#define BUFFSEL_MASK 0b10000000
 /* (read only) Set if colour RAM at $DC00 (address) */
 #define SD_CDC00_ADDR 0xD68A
 /* (read only) Set if colour RAM at $DC00 (address) */
 #define CDC00_ADDR 0xD68A
 /* (read only) Set if colour RAM at $DC00 (bit mask) */
-#define SD_CDC00_MASK 1
+#define SD_CDC00_MASK 0b00000001
 /* (read only) Set if colour RAM at $DC00 (bit mask) */
-#define CDC00_MASK 1
+#define CDC00_MASK 0b00000001
 /* (read only) Set if VIC-IV or ethernet IO bank visible (address) */
 #define SD_VICIII_ADDR 0xD68A
 /* (read only) Set if VIC-IV or ethernet IO bank visible (address) */
 #define VICIII_ADDR 0xD68A
 /* (read only) Set if VIC-IV or ethernet IO bank visible (bit mask) */
-#define SD_VICIII_MASK 2
+#define SD_VICIII_MASK 0b00000010
 /* (read only) Set if VIC-IV or ethernet IO bank visible (bit mask) */
-#define VICIII_MASK 2
+#define VICIII_MASK 0b00000010
 /* (read only) Set if drive 0 is virtualised (sectors delivered via serial monitor interface) (address) */
 #define SD_VFDC0_ADDR 0xD68A
 /* (read only) Set if drive 0 is virtualised (sectors delivered via serial monitor interface) (address) */
 #define VFDC0_ADDR 0xD68A
 /* (read only) Set if drive 0 is virtualised (sectors delivered via serial monitor interface) (bit mask) */
-#define SD_VFDC0_MASK 4
+#define SD_VFDC0_MASK 0b00000100
 /* (read only) Set if drive 0 is virtualised (sectors delivered via serial monitor interface) (bit mask) */
-#define VFDC0_MASK 4
+#define VFDC0_MASK 0b00000100
 /* (read only) Set if drive 1 is virtualised (sectors delivered via serial monitor interface) (address) */
 #define SD_VFDC1_ADDR 0xD68A
 /* (read only) Set if drive 1 is virtualised (sectors delivered via serial monitor interface) (address) */
 #define VFDC1_ADDR 0xD68A
 /* (read only) Set if drive 1 is virtualised (sectors delivered via serial monitor interface) (bit mask) */
-#define SD_VFDC1_MASK 8
+#define SD_VFDC1_MASK 0b00001000
 /* (read only) Set if drive 1 is virtualised (sectors delivered via serial monitor interface) (bit mask) */
-#define VFDC1_MASK 8
+#define VFDC1_MASK 0b00001000
 /* F011 drive 0 use disk image if set, otherwise use real floppy drive. (address) */
 #define SDFDC_D0IMG_ADDR 0xD68B
 /* F011 drive 0 use disk image if set, otherwise use real floppy drive. (address) */
 #define D0IMG_ADDR 0xD68B
 /* F011 drive 0 use disk image if set, otherwise use real floppy drive. (bit mask) */
-#define SDFDC_D0IMG_MASK 1
+#define SDFDC_D0IMG_MASK 0b00000001
 /* F011 drive 0 use disk image if set, otherwise use real floppy drive. (bit mask) */
-#define D0IMG_MASK 1
+#define D0IMG_MASK 0b00000001
 /* F011 drive 0 media present (address) */
 #define SDFDC_D0P_ADDR 0xD68B
 /* F011 drive 0 media present (address) */
 #define D0P_ADDR 0xD68B
 /* F011 drive 0 media present (bit mask) */
-#define SDFDC_D0P_MASK 2
+#define SDFDC_D0P_MASK 0b00000010
 /* F011 drive 0 media present (bit mask) */
-#define D0P_MASK 2
+#define D0P_MASK 0b00000010
 /* Write enable F011 drive 0 (address) */
 #define SDFDC_D0WP_ADDR 0xD68B
 /* Write enable F011 drive 0 (address) */
 #define D0WP_ADDR 0xD68B
 /* Write enable F011 drive 0 (bit mask) */
-#define SDFDC_D0WP_MASK 4
+#define SDFDC_D0WP_MASK 0b00000100
 /* Write enable F011 drive 0 (bit mask) */
-#define D0WP_MASK 4
+#define D0WP_MASK 0b00000100
 /* F011 drive 1 use disk image if set, otherwise use real floppy drive. (address) */
 #define SDFDC_D1IMG_ADDR 0xD68B
 /* F011 drive 1 use disk image if set, otherwise use real floppy drive. (address) */
 #define D1IMG_ADDR 0xD68B
 /* F011 drive 1 use disk image if set, otherwise use real floppy drive. (bit mask) */
-#define SDFDC_D1IMG_MASK 8
+#define SDFDC_D1IMG_MASK 0b00001000
 /* F011 drive 1 use disk image if set, otherwise use real floppy drive. (bit mask) */
-#define D1IMG_MASK 8
+#define D1IMG_MASK 0b00001000
 /* F011 drive 1 media present (address) */
 #define SDFDC_D1P_ADDR 0xD68B
 /* F011 drive 1 media present (address) */
 #define D1P_ADDR 0xD68B
 /* F011 drive 1 media present (bit mask) */
-#define SDFDC_D1P_MASK 16
+#define SDFDC_D1P_MASK 0b00010000
 /* F011 drive 1 media present (bit mask) */
-#define D1P_MASK 16
+#define D1P_MASK 0b00010000
 /* Write enable F011 drive 1 (address) */
 #define SDFDC_D1WP_ADDR 0xD68B
 /* Write enable F011 drive 1 (address) */
 #define D1WP_ADDR 0xD68B
 /* Write enable F011 drive 1 (bit mask) */
-#define SDFDC_D1WP_MASK 32
+#define SDFDC_D1WP_MASK 0b00100000
 /* Write enable F011 drive 1 (bit mask) */
-#define D1WP_MASK 32
+#define D1WP_MASK 0b00100000
 /* Enable 64MiB ``MEGA Disk'' for F011 emulated drive 0 (address) */
 #define F011_MDISK0_ADDR 0xD68B
 /* Enable 64MiB ``MEGA Disk'' for F011 emulated drive 0 (bit mask) */
-#define F011_MDISK0_MASK 64
+#define F011_MDISK0_MASK 0b01000000
 /* F011 drive 0 disk image is 64MiB mega image if set (otherwise 800KiB 1581 image) (address) */
 #define SDFDC_D0MD_ADDR 0xD68B
 /* F011 drive 0 disk image is 64MiB mega image if set (otherwise 800KiB 1581 image) (address) */
 #define D0MD_ADDR 0xD68B
 /* F011 drive 0 disk image is 64MiB mega image if set (otherwise 800KiB 1581 image) (bit mask) */
-#define SDFDC_D0MD_MASK 64
+#define SDFDC_D0MD_MASK 0b01000000
 /* F011 drive 0 disk image is 64MiB mega image if set (otherwise 800KiB 1581 image) (bit mask) */
-#define D0MD_MASK 64
+#define D0MD_MASK 0b01000000
 /* Enable 64MiB ``MEGA Disk'' for F011 emulated drive 1 (address) */
 #define GS_F011_MDISK0_ADDR 0xD68B
 /* Enable 64MiB ``MEGA Disk'' for F011 emulated drive 1 (bit mask) */
-#define GS_F011_MDISK0_MASK 128
+#define GS_F011_MDISK0_MASK 0b10000000
 /* F011 drive 1 disk image is 64MiB mega image if set (otherwise 800KiB 1581 image) (address) */
 #define SDFDC_D1MD_ADDR 0xD68B
 /* F011 drive 1 disk image is 64MiB mega image if set (otherwise 800KiB 1581 image) (address) */
 #define D1MD_ADDR 0xD68B
 /* F011 drive 1 disk image is 64MiB mega image if set (otherwise 800KiB 1581 image) (bit mask) */
-#define SDFDC_D1MD_MASK 128
+#define SDFDC_D1MD_MASK 0b10000000
 /* F011 drive 1 disk image is 64MiB mega image if set (otherwise 800KiB 1581 image) (bit mask) */
-#define D1MD_MASK 128
+#define D1MD_MASK 0b10000000
 /* Diskimage sector number (bits 0-7) */
 #define F011_DISKADDR0 0xD68C
 /* Diskimage sector number (bits 0-7) */
@@ -2958,91 +2958,91 @@
 /* Control floppy drive SIDE1 line (address) */
 #define FDC_DBGWGATE_ADDR 0xD6A0
 /* Control floppy drive SIDE1 line (bit mask) */
-#define FDC_DBGWGATE_MASK 1
+#define FDC_DBGWGATE_MASK 0b00000001
 /* Control floppy drive WGATE line (address) */
 #define GS_FDC_DBGWGATE_ADDR 0xD6A0
 /* Control floppy drive WGATE line (bit mask) */
-#define GS_FDC_DBGWGATE_MASK 2
+#define GS_FDC_DBGWGATE_MASK 0b00000010
 /* Control floppy drive WDATA line (address) */
 #define FDC_DBGWDATA_ADDR 0xD6A0
 /* Control floppy drive WDATA line (address) */
 #define DBGWDATA_ADDR 0xD6A0
 /* Control floppy drive WDATA line (bit mask) */
-#define FDC_DBGWDATA_MASK 4
+#define FDC_DBGWDATA_MASK 0b00000100
 /* Control floppy drive WDATA line (bit mask) */
-#define DBGWDATA_MASK 4
+#define DBGWDATA_MASK 0b00000100
 /* Control floppy drive STEP line (address) */
 #define FDC_DBGDIR_ADDR 0xD6A0
 /* Control floppy drive STEP line (bit mask) */
-#define FDC_DBGDIR_MASK 8
+#define FDC_DBGDIR_MASK 0b00001000
 /* Control floppy drive STEPDIR line (address) */
 #define GS_FDC_DBGDIR_ADDR 0xD6A0
 /* Control floppy drive STEPDIR line (bit mask) */
-#define GS_FDC_DBGDIR_MASK 16
+#define GS_FDC_DBGDIR_MASK 0b00010000
 /* Control floppy drive SELECT line (address) */
 #define FDC_DBGMOTORA_ADDR 0xD6A0
 /* Control floppy drive SELECT line (bit mask) */
-#define FDC_DBGMOTORA_MASK 32
+#define FDC_DBGMOTORA_MASK 0b00100000
 /* Control floppy drive MOTOR line (address) */
 #define GS_FDC_DBGMOTORA_ADDR 0xD6A0
 /* Control floppy drive MOTOR line (bit mask) */
-#define GS_FDC_DBGMOTORA_MASK 64
+#define GS_FDC_DBGMOTORA_MASK 0b01000000
 /* Control floppy drive density select line (address) */
 #define FDC_DENSITY_ADDR 0xD6A0
 /* Control floppy drive density select line (address) */
 #define DENSITY_ADDR 0xD6A0
 /* Control floppy drive density select line (bit mask) */
-#define FDC_DENSITY_MASK 128
+#define FDC_DENSITY_MASK 0b10000000
 /* Control floppy drive density select line (bit mask) */
-#define DENSITY_MASK 128
+#define DENSITY_MASK 0b10000000
 /* Use real floppy drive instead of SD card for 1st floppy drive (address) */
 #define F011_DRV0EN_ADDR 0xD6A1
 /* Use real floppy drive instead of SD card for 1st floppy drive (address) */
 #define DRV0EN_ADDR 0xD6A1
 /* Use real floppy drive instead of SD card for 1st floppy drive (bit mask) */
-#define F011_DRV0EN_MASK 1
+#define F011_DRV0EN_MASK 0b00000001
 /* Use real floppy drive instead of SD card for 1st floppy drive (bit mask) */
-#define DRV0EN_MASK 1
+#define DRV0EN_MASK 0b00000001
 /* Use real floppy drive for drive 0 if set (read-only, except for from hypervisor) (address) */
 #define SDFDC_USEREAL0_ADDR 0xD6A1
 /* Use real floppy drive for drive 0 if set (read-only, except for from hypervisor) (address) */
 #define USEREAL0_ADDR 0xD6A1
 /* Use real floppy drive for drive 0 if set (read-only, except for from hypervisor) (bit mask) */
-#define SDFDC_USEREAL0_MASK 1
+#define SDFDC_USEREAL0_MASK 0b00000001
 /* Use real floppy drive for drive 0 if set (read-only, except for from hypervisor) (bit mask) */
-#define USEREAL0_MASK 1
+#define USEREAL0_MASK 0b00000001
 /* Read next sector under head if set, ignoring the requested side, track and sector number. (address) */
 #define SDFDC_TARGANY_ADDR 0xD6A1
 /* Read next sector under head if set, ignoring the requested side, track and sector number. (address) */
 #define TARGANY_ADDR 0xD6A1
 /* Read next sector under head if set, ignoring the requested side, track and sector number. (bit mask) */
-#define SDFDC_TARGANY_MASK 2
+#define SDFDC_TARGANY_MASK 0b00000010
 /* Read next sector under head if set, ignoring the requested side, track and sector number. (bit mask) */
-#define TARGANY_MASK 2
+#define TARGANY_MASK 0b00000010
 /* Use real floppy drive instead of SD card for 2nd floppy drive (address) */
 #define F011_DRV2EN_ADDR 0xD6A1
 /* Use real floppy drive instead of SD card for 2nd floppy drive (address) */
 #define DRV2EN_ADDR 0xD6A1
 /* Use real floppy drive instead of SD card for 2nd floppy drive (bit mask) */
-#define F011_DRV2EN_MASK 4
+#define F011_DRV2EN_MASK 0b00000100
 /* Use real floppy drive instead of SD card for 2nd floppy drive (bit mask) */
-#define DRV2EN_MASK 4
+#define DRV2EN_MASK 0b00000100
 /* Use real floppy drive for drive 1 if set (read-only, except for from hypervisor) (address) */
 #define SDFDC_USEREAL1_ADDR 0xD6A1
 /* Use real floppy drive for drive 1 if set (read-only, except for from hypervisor) (address) */
 #define USEREAL1_ADDR 0xD6A1
 /* Use real floppy drive for drive 1 if set (read-only, except for from hypervisor) (bit mask) */
-#define SDFDC_USEREAL1_MASK 4
+#define SDFDC_USEREAL1_MASK 0b00000100
 /* Use real floppy drive for drive 1 if set (read-only, except for from hypervisor) (bit mask) */
-#define USEREAL1_MASK 4
+#define USEREAL1_MASK 0b00000100
 /* Disable floppy spinning and tracking for SD card operations. (address) */
 #define SDFDC_SILENT_ADDR 0xD6A1
 /* Disable floppy spinning and tracking for SD card operations. (address) */
 #define SILENT_ADDR 0xD6A1
 /* Disable floppy spinning and tracking for SD card operations. (bit mask) */
-#define SDFDC_SILENT_MASK 8
+#define SDFDC_SILENT_MASK 0b00001000
 /* Disable floppy spinning and tracking for SD card operations. (bit mask) */
-#define SILENT_MASK 8
+#define SILENT_MASK 0b00001000
 /* Set number of bus cycles per floppy magnetic interval (decrease to increase data rate) */
 #define FDC_DATARATE 0xD6A2
 /* Set number of bus cycles per floppy magnetic interval (decrease to increase data rate) */
@@ -3052,177 +3052,177 @@
 /* Select audio channel volume to be set by thumb wheel #3 (address) */
 #define WHEEL3TARGET_ADDR 0xD6AC
 /* Select audio channel volume to be set by thumb wheel #3 (bit mask) */
-#define MISCIO_WHEEL3TARGET_MASK 15
+#define MISCIO_WHEEL3TARGET_MASK 0b00001111
 /* Select audio channel volume to be set by thumb wheel #3 (bit mask) */
-#define WHEEL3TARGET_MASK 15
+#define WHEEL3TARGET_MASK 0b00001111
 /* Enable control of LCD panel brightness via thumb wheel (address) */
 #define MISCIO_WHEELBRIGHTEN_ADDR 0xD6AC
 /* Enable control of LCD panel brightness via thumb wheel (address) */
 #define WHEELBRIGHTEN_ADDR 0xD6AC
 /* Enable control of LCD panel brightness via thumb wheel (bit mask) */
-#define MISCIO_WHEELBRIGHTEN_MASK 128
+#define MISCIO_WHEELBRIGHTEN_MASK 0b10000000
 /* Enable control of LCD panel brightness via thumb wheel (bit mask) */
-#define WHEELBRIGHTEN_MASK 128
+#define WHEELBRIGHTEN_MASK 0b10000000
 /* Select audio channel volume to be set by thumb wheel #1 (address) */
 #define MISCIO_WHEEL1TARGET_ADDR 0xD6AD
 /* Select audio channel volume to be set by thumb wheel #1 (address) */
 #define WHEEL1TARGET_ADDR 0xD6AD
 /* Select audio channel volume to be set by thumb wheel #1 (bit mask) */
-#define MISCIO_WHEEL1TARGET_MASK 15
+#define MISCIO_WHEEL1TARGET_MASK 0b00001111
 /* Select audio channel volume to be set by thumb wheel #1 (bit mask) */
-#define WHEEL1TARGET_MASK 15
+#define WHEEL1TARGET_MASK 0b00001111
 /* Select audio channel volume to be set by thumb wheel #2 (address) */
 #define MISCIO_WHEEL2TARGET_ADDR 0xD6AD
 /* Select audio channel volume to be set by thumb wheel #2 (address) */
 #define WHEEL2TARGET_ADDR 0xD6AD
 /* Select audio channel volume to be set by thumb wheel #2 (bit mask) */
-#define MISCIO_WHEEL2TARGET_MASK 240
+#define MISCIO_WHEEL2TARGET_MASK 0b11110000
 /* Select audio channel volume to be set by thumb wheel #2 (bit mask) */
-#define WHEEL2TARGET_MASK 240
+#define WHEEL2TARGET_MASK 0b11110000
 /* Select floppy encoding (0=MFM, 1=RLL2,7, F=Raw encoding) (address) */
 #define SD_FDC_ENC_ADDR 0xD6AE
 /* Select floppy encoding (0=MFM, 1=RLL2,7, F=Raw encoding) (address) */
 #define FDC_ENC_ADDR 0xD6AE
 /* Select floppy encoding (0=MFM, 1=RLL2,7, F=Raw encoding) (bit mask) */
-#define SD_FDC_ENC_MASK 15
+#define SD_FDC_ENC_MASK 0b00001111
 /* Select floppy encoding (0=MFM, 1=RLL2,7, F=Raw encoding) (bit mask) */
-#define FDC_ENC_MASK 15
+#define FDC_ENC_MASK 0b00001111
 /* Automatically select DD or HD decoder for last sector display (address) */
 #define SD_AUTO_2XSEL_ADDR 0xD6AE
 /* Automatically select DD or HD decoder for last sector display (address) */
 #define AUTO_2XSEL_ADDR 0xD6AE
 /* Automatically select DD or HD decoder for last sector display (bit mask) */
-#define SD_AUTO_2XSEL_MASK 16
+#define SD_AUTO_2XSEL_MASK 0b00010000
 /* Automatically select DD or HD decoder for last sector display (bit mask) */
-#define AUTO_2XSEL_MASK 16
+#define AUTO_2XSEL_MASK 0b00010000
 /* Enable automatic variable speed selection for floppy controller using Track Information Blocks on MEGA65 HD floppies (address) */
 #define SD_FDC_VARSPD_ADDR 0xD6AE
 /* Enable automatic variable speed selection for floppy controller using Track Information Blocks on MEGA65 HD floppies (address) */
 #define FDC_VARSPD_ADDR 0xD6AE
 /* Enable automatic variable speed selection for floppy controller using Track Information Blocks on MEGA65 HD floppies (bit mask) */
-#define SD_FDC_VARSPD_MASK 32
+#define SD_FDC_VARSPD_MASK 0b00100000
 /* Enable automatic variable speed selection for floppy controller using Track Information Blocks on MEGA65 HD floppies (bit mask) */
-#define FDC_VARSPD_MASK 32
+#define FDC_VARSPD_MASK 0b00100000
 /* Select HD decoder for last sector display (address) */
 #define SD_FDC_2XSEL_ADDR 0xD6AE
 /* Select HD decoder for last sector display (address) */
 #define FDC_2XSEL_ADDR 0xD6AE
 /* Select HD decoder for last sector display (bit mask) */
-#define SD_FDC_2XSEL_MASK 64
+#define SD_FDC_2XSEL_MASK 0b01000000
 /* Select HD decoder for last sector display (bit mask) */
-#define FDC_2XSEL_MASK 64
+#define FDC_2XSEL_MASK 0b01000000
 /* Enable use of Track Info Block settings (address) */
 #define SD_FDC_TIBEN_ADDR 0xD6AE
 /* Enable use of Track Info Block settings (address) */
 #define FDC_TIBEN_ADDR 0xD6AE
 /* Enable use of Track Info Block settings (bit mask) */
-#define SD_FDC_TIBEN_MASK 128
+#define SD_FDC_TIBEN_MASK 0b10000000
 /* Enable use of Track Info Block settings (bit mask) */
-#define FDC_TIBEN_MASK 128
+#define FDC_TIBEN_MASK 0b10000000
 /* Manually set f011_rsector_found signal (indented for virtual F011 mode only) (address) */
 #define SD_VR_FOUND_ADDR 0xD6AF
 /* Manually set f011_rsector_found signal (indented for virtual F011 mode only) (address) */
 #define VR_FOUND_ADDR 0xD6AF
 /* Manually set f011_rsector_found signal (indented for virtual F011 mode only) (bit mask) */
-#define SD_VR_FOUND_MASK 1
+#define SD_VR_FOUND_MASK 0b00000001
 /* Manually set f011_rsector_found signal (indented for virtual F011 mode only) (bit mask) */
-#define VR_FOUND_MASK 1
+#define VR_FOUND_MASK 0b00000001
 /* Manually set f011_wsector_found signal (indented for virtual F011 mode only) (address) */
 #define SD_VW_FOUND_ADDR 0xD6AF
 /* Manually set f011_wsector_found signal (indented for virtual F011 mode only) (address) */
 #define VW_FOUND_ADDR 0xD6AF
 /* Manually set f011_wsector_found signal (indented for virtual F011 mode only) (bit mask) */
-#define SD_VW_FOUND_MASK 2
+#define SD_VW_FOUND_MASK 0b00000010
 /* Manually set f011_wsector_found signal (indented for virtual F011 mode only) (bit mask) */
-#define VW_FOUND_MASK 2
+#define VW_FOUND_MASK 0b00000010
 /* Manually set f011_eq_inhibit signal (indented for virtual F011 mode only) (address) */
 #define SD_VEQ_INH_ADDR 0xD6AF
 /* Manually set f011_eq_inhibit signal (indented for virtual F011 mode only) (address) */
 #define VEQ_INH_ADDR 0xD6AF
 /* Manually set f011_eq_inhibit signal (indented for virtual F011 mode only) (bit mask) */
-#define SD_VEQ_INH_MASK 4
+#define SD_VEQ_INH_MASK 0b00000100
 /* Manually set f011_eq_inhibit signal (indented for virtual F011 mode only) (bit mask) */
-#define VEQ_INH_MASK 4
+#define VEQ_INH_MASK 0b00000100
 /* Manually set f011_rnf signal (indented for virtual F011 mode only) (address) */
 #define SD_VRNF_ADDR 0xD6AF
 /* Manually set f011_rnf signal (indented for virtual F011 mode only) (address) */
 #define VRNF_ADDR 0xD6AF
 /* Manually set f011_rnf signal (indented for virtual F011 mode only) (bit mask) */
-#define SD_VRNF_MASK 8
+#define SD_VRNF_MASK 0b00001000
 /* Manually set f011_rnf signal (indented for virtual F011 mode only) (bit mask) */
-#define VRNF_MASK 8
+#define VRNF_MASK 0b00001000
 /* Manually set f011_drq signal (indented for virtual F011 mode only) (address) */
 #define SD_VDRQ_ADDR 0xD6AF
 /* Manually set f011_drq signal (indented for virtual F011 mode only) (address) */
 #define VDRQ_ADDR 0xD6AF
 /* Manually set f011_drq signal (indented for virtual F011 mode only) (bit mask) */
-#define SD_VDRQ_MASK 16
+#define SD_VDRQ_MASK 0b00010000
 /* Manually set f011_drq signal (indented for virtual F011 mode only) (bit mask) */
-#define VDRQ_MASK 16
+#define VDRQ_MASK 0b00010000
 /* Manually set f011_lost signal (indented for virtual F011 mode only) (address) */
 #define SD_VLOST_ADDR 0xD6AF
 /* Manually set f011_lost signal (indented for virtual F011 mode only) (address) */
 #define VLOST_ADDR 0xD6AF
 /* Manually set f011_lost signal (indented for virtual F011 mode only) (bit mask) */
-#define SD_VLOST_MASK 32
+#define SD_VLOST_MASK 0b00100000
 /* Manually set f011_lost signal (indented for virtual F011 mode only) (bit mask) */
-#define VLOST_MASK 32
+#define VLOST_MASK 0b00100000
 /* Touch event 1 is valid (address) */
 #define TOUCH_EV1_ADDR 0xD6B0
 /* Touch event 1 is valid (address) */
 #define EV1_ADDR 0xD6B0
 /* Touch event 1 is valid (bit mask) */
-#define TOUCH_EV1_MASK 1
+#define TOUCH_EV1_MASK 0b00000001
 /* Touch event 1 is valid (bit mask) */
-#define EV1_MASK 1
+#define EV1_MASK 0b00000001
 /* Touch event 2 is valid (address) */
 #define TOUCH_EV2_ADDR 0xD6B0
 /* Touch event 2 is valid (address) */
 #define EV2_ADDR 0xD6B0
 /* Touch event 2 is valid (bit mask) */
-#define TOUCH_EV2_MASK 2
+#define TOUCH_EV2_MASK 0b00000010
 /* Touch event 2 is valid (bit mask) */
-#define EV2_MASK 2
+#define EV2_MASK 0b00000010
 /* Touch event 1 up/down state (address) */
 #define TOUCH_UPDN1_ADDR 0xD6B0
 /* Touch event 1 up/down state (address) */
 #define UPDN1_ADDR 0xD6B0
 /* Touch event 1 up/down state (bit mask) */
-#define TOUCH_UPDN1_MASK 12
+#define TOUCH_UPDN1_MASK 0b00001100
 /* Touch event 1 up/down state (bit mask) */
-#define UPDN1_MASK 12
+#define UPDN1_MASK 0b00001100
 /* Touch event 2 up/down state (address) */
 #define TOUCH_UPDN2_ADDR 0xD6B0
 /* Touch event 2 up/down state (address) */
 #define UPDN2_ADDR 0xD6B0
 /* Touch event 2 up/down state (bit mask) */
-#define TOUCH_UPDN2_MASK 48
+#define TOUCH_UPDN2_MASK 0b00110000
 /* Touch event 2 up/down state (bit mask) */
-#define UPDN2_MASK 48
+#define UPDN2_MASK 0b00110000
 /* Flip X axis of touch interface if set (address) */
 #define MISCIO_TCHFLX_ADDR 0xD6B0
 /* Flip X axis of touch interface if set (bit mask) */
-#define MISCIO_TCHFLX_MASK 64
+#define MISCIO_TCHFLX_MASK 0b01000000
 /* Invert horizontal axis (address) */
 #define TOUCH_XINV_ADDR 0xD6B0
 /* Invert horizontal axis (address) */
 #define XINV_ADDR 0xD6B0
 /* Invert horizontal axis (bit mask) */
-#define TOUCH_XINV_MASK 64
+#define TOUCH_XINV_MASK 0b01000000
 /* Invert horizontal axis (bit mask) */
-#define XINV_MASK 64
+#define XINV_MASK 0b01000000
 /* Flip Y axis of touch interface if set (address) */
 #define GS_MISCIO_TCHFLX_ADDR 0xD6B0
 /* Flip Y axis of touch interface if set (bit mask) */
-#define GS_MISCIO_TCHFLX_MASK 128
+#define GS_MISCIO_TCHFLX_MASK 0b10000000
 /* Invert vertical axis (address) */
 #define TOUCH_YINV_ADDR 0xD6B0
 /* Invert vertical axis (address) */
 #define YINV_ADDR 0xD6B0
 /* Invert vertical axis (bit mask) */
-#define TOUCH_YINV_MASK 128
+#define TOUCH_YINV_MASK 0b10000000
 /* Invert vertical axis (bit mask) */
-#define YINV_MASK 128
+#define YINV_MASK 0b10000000
 /* Set X scale value for touch interface (LSB) */
 #define MISCIO_TCHXSCALE 0xD6B1
 /* Touch pad X scaling LSB */
@@ -3280,17 +3280,17 @@
 /* Touch pad touch \#1 X MSBs (address) */
 #define TOUCH1XMSB_ADDR 0xD6BB
 /* Touch pad touch \#1 X MSBs (bit mask) */
-#define TOUCH_TOUCH1XMSB_MASK 3
+#define TOUCH_TOUCH1XMSB_MASK 0b00000011
 /* Touch pad touch \#1 X MSBs (bit mask) */
-#define TOUCH1XMSB_MASK 3
+#define TOUCH1XMSB_MASK 0b00000011
 /* Touch pad touch \#1 Y MSBs (address) */
 #define TOUCH_TOUCH1YMSB_ADDR 0xD6BB
 /* Touch pad touch \#1 Y MSBs (address) */
 #define TOUCH1YMSB_ADDR 0xD6BB
 /* Touch pad touch \#1 Y MSBs (bit mask) */
-#define TOUCH_TOUCH1YMSB_MASK 48
+#define TOUCH_TOUCH1YMSB_MASK 0b00110000
 /* Touch pad touch \#1 Y MSBs (bit mask) */
-#define TOUCH1YMSB_MASK 48
+#define TOUCH1YMSB_MASK 0b00110000
 /* Touch pad touch \#2 X LSB */
 #define TOUCH_TOUCH2XLSB 0xD6BC
 /* Touch pad touch \#2 X LSB */
@@ -3304,49 +3304,49 @@
 /* Touch pad touch \#2 X MSBs (address) */
 #define TOUCH2XMSB_ADDR 0xD6BE
 /* Touch pad touch \#2 X MSBs (bit mask) */
-#define TOUCH_TOUCH2XMSB_MASK 3
+#define TOUCH_TOUCH2XMSB_MASK 0b00000011
 /* Touch pad touch \#2 X MSBs (bit mask) */
-#define TOUCH2XMSB_MASK 3
+#define TOUCH2XMSB_MASK 0b00000011
 /* Touch pad touch \#2 Y MSBs (address) */
 #define TOUCH_TOUCH2YMSB_ADDR 0xD6BE
 /* Touch pad touch \#2 Y MSBs (address) */
 #define TOUCH2YMSB_ADDR 0xD6BE
 /* Touch pad touch \#2 Y MSBs (bit mask) */
-#define TOUCH_TOUCH2YMSB_MASK 48
+#define TOUCH_TOUCH2YMSB_MASK 0b00110000
 /* Touch pad touch \#2 Y MSBs (bit mask) */
-#define TOUCH2YMSB_MASK 48
+#define TOUCH2YMSB_MASK 0b00110000
 /* Select byte number for touch panel communications instrumentation (address) */
 #define MISCIO_TCHBYTENUM_ADDR 0xD6BF
 /* Select byte number for touch panel communications instrumentation (address) */
 #define TCHBYTENUM_ADDR 0xD6BF
 /* Select byte number for touch panel communications instrumentation (bit mask) */
-#define MISCIO_TCHBYTENUM_MASK 127
+#define MISCIO_TCHBYTENUM_MASK 0b01111111
 /* Select byte number for touch panel communications instrumentation (bit mask) */
-#define TCHBYTENUM_MASK 127
+#define TCHBYTENUM_MASK 0b01111111
 /* Enable/disable touch panel I2C communications (address) */
 #define MISCIO_TCHI2CEN_ADDR 0xD6BF
 /* Enable/disable touch panel I2C communications (address) */
 #define TCHI2CEN_ADDR 0xD6BF
 /* Enable/disable touch panel I2C communications (bit mask) */
-#define MISCIO_TCHI2CEN_MASK 128
+#define MISCIO_TCHI2CEN_MASK 0b10000000
 /* Enable/disable touch panel I2C communications (bit mask) */
-#define TCHI2CEN_MASK 128
+#define TCHI2CEN_MASK 0b10000000
 /* Touch pad gesture directions (left,right,up,down) (address) */
 #define TOUCH_GESTUREDIR_ADDR 0xD6C0
 /* Touch pad gesture directions (left,right,up,down) (address) */
 #define GESTUREDIR_ADDR 0xD6C0
 /* Touch pad gesture directions (left,right,up,down) (bit mask) */
-#define TOUCH_GESTUREDIR_MASK 15
+#define TOUCH_GESTUREDIR_MASK 0b00001111
 /* Touch pad gesture directions (left,right,up,down) (bit mask) */
-#define GESTUREDIR_MASK 15
+#define GESTUREDIR_MASK 0b00001111
 /* Touch pad gesture ID (address) */
 #define TOUCH_GESTUREID_ADDR 0xD6C0
 /* Touch pad gesture ID (address) */
 #define GESTUREID_ADDR 0xD6C0
 /* Touch pad gesture ID (bit mask) */
-#define TOUCH_GESTUREID_MASK 240
+#define TOUCH_GESTUREID_MASK 0b11110000
 /* Touch pad gesture ID (bit mask) */
-#define GESTUREID_MASK 240
+#define GESTUREID_MASK 0b11110000
 /* Select ICAPE2 FPGA configuration register for reading WRITE ONLY */
 #define FPGA_REGNUM 0xD6C4
 /* Select ICAPE2 FPGA configuration register for reading WRITE ONLY */
@@ -3380,45 +3380,45 @@
 /* Data bits for QSPI flash interface (read/write) (address) */
 #define DB_ADDR 0xD6CC
 /* Data bits for QSPI flash interface (read/write) (bit mask) */
-#define QSPI_DB_MASK 15
+#define QSPI_DB_MASK 0b00001111
 /* Data bits for QSPI flash interface (read/write) (bit mask) */
-#define DB_MASK 15
+#define DB_MASK 0b00001111
 /* (set to 0) (address) */
 #define QSPI_RESERVED_ADDR 0xD6CC
 /* (set to 0) (bit mask) */
-#define QSPI_RESERVED_MASK 16
+#define QSPI_RESERVED_MASK 0b00010000
 /* Clock output line for QSPI flash (address) */
 #define QSPI_CLOCK_ADDR 0xD6CC
 /* Clock output line for QSPI flash (bit mask) */
-#define QSPI_CLOCK_MASK 32
+#define QSPI_CLOCK_MASK 0b00100000
 /* Active-low chip-select for QSPI flash (address) */
 #define QSPI_CSN_ADDR 0xD6CC
 /* Active-low chip-select for QSPI flash (address) */
 #define CSN_ADDR 0xD6CC
 /* Active-low chip-select for QSPI flash (bit mask) */
-#define QSPI_CSN_MASK 64
+#define QSPI_CSN_MASK 0b01000000
 /* Active-low chip-select for QSPI flash (bit mask) */
-#define CSN_MASK 64
+#define CSN_MASK 0b01000000
 /* Tristate DB0-3 (address) */
 #define QSPI_TRI_ADDR 0xD6CC
 /* Tristate DB0-3 (address) */
 #define TRI_ADDR 0xD6CC
 /* Tristate DB0-3 (bit mask) */
-#define QSPI_TRI_MASK 128
+#define QSPI_TRI_MASK 0b10000000
 /* Tristate DB0-3 (bit mask) */
-#define TRI_MASK 128
+#define TRI_MASK 0b10000000
 /* Set to cause QSPI clock to free run at CPU clock frequency. (address) */
 #define QSPI_CLOCKRUN_ADDR 0xD6CD
 /* Set to cause QSPI clock to free run at CPU clock frequency. (address) */
 #define CLOCKRUN_ADDR 0xD6CD
 /* Set to cause QSPI clock to free run at CPU clock frequency. (bit mask) */
-#define QSPI_CLOCKRUN_MASK 1
+#define QSPI_CLOCKRUN_MASK 0b00000001
 /* Set to cause QSPI clock to free run at CPU clock frequency. (bit mask) */
-#define CLOCKRUN_MASK 1
+#define CLOCKRUN_MASK 0b00000001
 /* Alternate address for direct manipulation of QSPI CLOCK (address) */
 #define GS_QSPI_CLOCK_ADDR 0xD6CD
 /* Alternate address for direct manipulation of QSPI CLOCK (bit mask) */
-#define GS_QSPI_CLOCK_MASK 2
+#define GS_QSPI_CLOCK_MASK 0b00000010
 /* Write $42 to Trigger FPGA reconfiguration to switch to alternate bitstream. */
 #define FPGA_RECONFTRIG 0xD6CF
 /* Write $42 to Trigger FPGA reconfiguration to switch to alternate bitstream. */
@@ -3436,57 +3436,57 @@
 /* I2C reset (address) */
 #define I2CRST_ADDR 0xD6D1
 /* I2C reset (bit mask) */
-#define MISCIO_I2CRST_MASK 1
+#define MISCIO_I2CRST_MASK 0b00000001
 /* I2C reset (bit mask) */
-#define I2CRST_MASK 1
+#define I2CRST_MASK 0b00000001
 /* I2C command latch write strobe (write 1 to trigger command) (address) */
 #define MISCIO_I2CL_ADDR 0xD6D1
 /* I2C command latch write strobe (write 1 to trigger command) (address) */
 #define I2CL_ADDR 0xD6D1
 /* I2C command latch write strobe (write 1 to trigger command) (bit mask) */
-#define MISCIO_I2CL_MASK 2
+#define MISCIO_I2CL_MASK 0b00000010
 /* I2C command latch write strobe (write 1 to trigger command) (bit mask) */
-#define I2CL_MASK 2
+#define I2CL_MASK 0b00000010
 /* I2C Select read (1) or write (0) (address) */
 #define MISCIO_I2CRW_ADDR 0xD6D1
 /* I2C Select read (1) or write (0) (address) */
 #define I2CRW_ADDR 0xD6D1
 /* I2C Select read (1) or write (0) (bit mask) */
-#define MISCIO_I2CRW_MASK 4
+#define MISCIO_I2CRW_MASK 0b00000100
 /* I2C Select read (1) or write (0) (bit mask) */
-#define I2CRW_MASK 4
+#define I2CRW_MASK 0b00000100
 /* I2C bus 1 swap SDA/SCL pins (address) */
 #define MISCIO_I2CSW_ADDR 0xD6D1
 /* I2C bus 1 swap SDA/SCL pins (address) */
 #define I2CSW_ADDR 0xD6D1
 /* I2C bus 1 swap SDA/SCL pins (bit mask) */
-#define MISCIO_I2CSW_MASK 32
+#define MISCIO_I2CSW_MASK 0b00100000
 /* I2C bus 1 swap SDA/SCL pins (bit mask) */
-#define I2CSW_MASK 32
+#define I2CSW_MASK 0b00100000
 /* I2C busy flag (address) */
 #define MISCIO_I2CBSY_ADDR 0xD6D1
 /* I2C busy flag (address) */
 #define I2CBSY_ADDR 0xD6D1
 /* I2C busy flag (bit mask) */
-#define MISCIO_I2CBSY_MASK 64
+#define MISCIO_I2CBSY_MASK 0b01000000
 /* I2C busy flag (bit mask) */
-#define I2CBSY_MASK 64
+#define I2CBSY_MASK 0b01000000
 /* I2C ack error (address) */
 #define MISCIO_I2CERR_ADDR 0xD6D1
 /* I2C ack error (address) */
 #define I2CERR_ADDR 0xD6D1
 /* I2C ack error (bit mask) */
-#define MISCIO_I2CERR_MASK 128
+#define MISCIO_I2CERR_MASK 0b10000000
 /* I2C ack error (bit mask) */
-#define I2CERR_MASK 128
+#define I2CERR_MASK 0b10000000
 /* I2C address (address) */
 #define MISCIO_I2CADDR_ADDR 0xD6D2
 /* I2C address (address) */
 #define I2CADDR_ADDR 0xD6D2
 /* I2C address (bit mask) */
-#define MISCIO_I2CADDR_MASK 254
+#define MISCIO_I2CADDR_MASK 0b11111110
 /* I2C address (bit mask) */
-#define I2CADDR_MASK 254
+#define I2CADDR_MASK 0b11111110
 /* I2C data write register */
 #define MISCIO_I2CWDATA 0xD6D3
 /* I2C data write register */
@@ -3514,103 +3514,103 @@
 /* Write 0 to hold ethernet controller under reset (address) */
 #define ETH_RST_ADDR 0xD6E0
 /* Write 0 to hold ethernet controller under reset (bit mask) */
-#define ETH_RST_MASK 1
+#define ETH_RST_MASK 0b00000001
 /* Write 0 to hold ethernet controller transmit sub-system under reset (address) */
 #define ETH_TXRST_ADDR 0xD6E0
 /* Write 0 to hold ethernet controller transmit sub-system under reset (address) */
 #define TXRST_ADDR 0xD6E0
 /* Write 0 to hold ethernet controller transmit sub-system under reset (bit mask) */
-#define ETH_TXRST_MASK 2
+#define ETH_TXRST_MASK 0b00000010
 /* Write 0 to hold ethernet controller transmit sub-system under reset (bit mask) */
-#define TXRST_MASK 2
+#define TXRST_MASK 0b00000010
 /* Read ethernet RX bits currently on the wire (address) */
 #define ETH_DRXD_ADDR 0xD6E0
 /* Read ethernet RX bits currently on the wire (address) */
 #define DRXD_ADDR 0xD6E0
 /* Read ethernet RX bits currently on the wire (bit mask) */
-#define ETH_DRXD_MASK 4
+#define ETH_DRXD_MASK 0b00000100
 /* Read ethernet RX bits currently on the wire (bit mask) */
-#define DRXD_MASK 4
+#define DRXD_MASK 0b00000100
 /* Read ethernet RX data valid (debug) (address) */
 #define ETH_DRXDV_ADDR 0xD6E0
 /* Read ethernet RX data valid (debug) (address) */
 #define DRXDV_ADDR 0xD6E0
 /* Read ethernet RX data valid (debug) (bit mask) */
-#define ETH_DRXDV_MASK 8
+#define ETH_DRXDV_MASK 0b00001000
 /* Read ethernet RX data valid (debug) (bit mask) */
-#define DRXDV_MASK 8
+#define DRXDV_MASK 0b00001000
 /* Allow remote keyboard input via magic ethernet frames (address) */
 #define ETH_KEYEN_ADDR 0xD6E0
 /* Allow remote keyboard input via magic ethernet frames (address) */
 #define KEYEN_ADDR 0xD6E0
 /* Allow remote keyboard input via magic ethernet frames (bit mask) */
-#define ETH_KEYEN_MASK 16
+#define ETH_KEYEN_MASK 0b00010000
 /* Allow remote keyboard input via magic ethernet frames (bit mask) */
-#define KEYEN_MASK 16
+#define KEYEN_MASK 0b00010000
 /* Indicate if ethernet RX is blocked until RX buffers freed (address) */
 #define ETH_RXBLKD_ADDR 0xD6E0
 /* Indicate if ethernet RX is blocked until RX buffers freed (address) */
 #define RXBLKD_ADDR 0xD6E0
 /* Indicate if ethernet RX is blocked until RX buffers freed (bit mask) */
-#define ETH_RXBLKD_MASK 64
+#define ETH_RXBLKD_MASK 0b01000000
 /* Indicate if ethernet RX is blocked until RX buffers freed (bit mask) */
-#define RXBLKD_MASK 64
+#define RXBLKD_MASK 0b01000000
 /* Ethernet transmit side is idle, i.e., a packet can be sent. (address) */
 #define ETH_TXIDLE_ADDR 0xD6E0
 /* Ethernet transmit side is idle, i.e., a packet can be sent. (address) */
 #define TXIDLE_ADDR 0xD6E0
 /* Ethernet transmit side is idle, i.e., a packet can be sent. (bit mask) */
-#define ETH_TXIDLE_MASK 128
+#define ETH_TXIDLE_MASK 0b10000000
 /* Ethernet transmit side is idle, i.e., a packet can be sent. (bit mask) */
-#define TXIDLE_MASK 128
+#define TXIDLE_MASK 0b10000000
 /* Number of free receive buffers (address) */
 #define ETH_RXBF_ADDR 0xD6E1
 /* Number of free receive buffers (address) */
 #define RXBF_ADDR 0xD6E1
 /* Number of free receive buffers (bit mask) */
-#define ETH_RXBF_MASK 6
+#define ETH_RXBF_MASK 0b00000110
 /* Number of free receive buffers (bit mask) */
-#define RXBF_MASK 6
+#define RXBF_MASK 0b00000110
 /* Enable streaming of CPU instruction stream or VIC-IV display on ethernet (address) */
 #define ETH_STRM_ADDR 0xD6E1
 /* Enable streaming of CPU instruction stream or VIC-IV display on ethernet (address) */
 #define STRM_ADDR 0xD6E1
 /* Enable streaming of CPU instruction stream or VIC-IV display on ethernet (bit mask) */
-#define ETH_STRM_MASK 8
+#define ETH_STRM_MASK 0b00001000
 /* Enable streaming of CPU instruction stream or VIC-IV display on ethernet (bit mask) */
-#define STRM_MASK 8
+#define STRM_MASK 0b00001000
 /* Ethernet TX IRQ status (address) */
 #define ETH_TXQ_ADDR 0xD6E1
 /* Ethernet TX IRQ status (address) */
 #define TXQ_ADDR 0xD6E1
 /* Ethernet TX IRQ status (bit mask) */
-#define ETH_TXQ_MASK 16
+#define ETH_TXQ_MASK 0b00010000
 /* Ethernet TX IRQ status (bit mask) */
-#define TXQ_MASK 16
+#define TXQ_MASK 0b00010000
 /* Ethernet RX IRQ status (address) */
 #define ETH_RXQ_ADDR 0xD6E1
 /* Ethernet RX IRQ status (address) */
 #define RXQ_ADDR 0xD6E1
 /* Ethernet RX IRQ status (bit mask) */
-#define ETH_RXQ_MASK 32
+#define ETH_RXQ_MASK 0b00100000
 /* Ethernet RX IRQ status (bit mask) */
-#define RXQ_MASK 32
+#define RXQ_MASK 0b00100000
 /* Enable ethernet TX IRQ (address) */
 #define ETH_TXQEN_ADDR 0xD6E1
 /* Enable ethernet TX IRQ (address) */
 #define TXQEN_ADDR 0xD6E1
 /* Enable ethernet TX IRQ (bit mask) */
-#define ETH_TXQEN_MASK 64
+#define ETH_TXQEN_MASK 0b01000000
 /* Enable ethernet TX IRQ (bit mask) */
-#define TXQEN_MASK 64
+#define TXQEN_MASK 0b01000000
 /* Enable ethernet RX IRQ (address) */
 #define ETH_RXQEN_ADDR 0xD6E1
 /* Enable ethernet RX IRQ (address) */
 #define RXQEN_ADDR 0xD6E1
 /* Enable ethernet RX IRQ (bit mask) */
-#define ETH_RXQEN_MASK 128
+#define ETH_RXQEN_MASK 0b10000000
 /* Enable ethernet RX IRQ (bit mask) */
-#define RXQEN_MASK 128
+#define RXQEN_MASK 0b10000000
 /* TX Packet size (low byte) */
 #define ETH_TXSZLSB 0xD6E2
 /* TX Packet size (low byte) */
@@ -3626,65 +3626,65 @@
 /* Ethernet disable promiscuous mode (address) */
 #define NOPROM_ADDR 0xD6E5
 /* Ethernet disable promiscuous mode (bit mask) */
-#define ETH_NOPROM_MASK 1
+#define ETH_NOPROM_MASK 0b00000001
 /* Ethernet disable promiscuous mode (bit mask) */
-#define NOPROM_MASK 1
+#define NOPROM_MASK 0b00000001
 /* Disable CRC check for received packets (address) */
 #define ETH_NOCRC_ADDR 0xD6E5
 /* Disable CRC check for received packets (address) */
 #define NOCRC_ADDR 0xD6E5
 /* Disable CRC check for received packets (bit mask) */
-#define ETH_NOCRC_MASK 2
+#define ETH_NOCRC_MASK 0b00000010
 /* Disable CRC check for received packets (bit mask) */
-#define NOCRC_MASK 2
+#define NOCRC_MASK 0b00000010
 /* Ethernet TX clock phase adjust (address) */
 #define ETH_TXPH_ADDR 0xD6E5
 /* Ethernet TX clock phase adjust (address) */
 #define TXPH_ADDR 0xD6E5
 /* Ethernet TX clock phase adjust (bit mask) */
-#define ETH_TXPH_MASK 12
+#define ETH_TXPH_MASK 0b00001100
 /* Ethernet TX clock phase adjust (bit mask) */
-#define TXPH_MASK 12
+#define TXPH_MASK 0b00001100
 /* Accept broadcast frames (address) */
 #define ETH_BCST_ADDR 0xD6E5
 /* Accept broadcast frames (address) */
 #define BCST_ADDR 0xD6E5
 /* Accept broadcast frames (bit mask) */
-#define ETH_BCST_MASK 16
+#define ETH_BCST_MASK 0b00010000
 /* Accept broadcast frames (bit mask) */
-#define BCST_MASK 16
+#define BCST_MASK 0b00010000
 /* Accept multicast frames (address) */
 #define ETH_MCST_ADDR 0xD6E5
 /* Accept multicast frames (address) */
 #define MCST_ADDR 0xD6E5
 /* Accept multicast frames (bit mask) */
-#define ETH_MCST_MASK 32
+#define ETH_MCST_MASK 0b00100000
 /* Accept multicast frames (bit mask) */
-#define MCST_MASK 32
+#define MCST_MASK 0b00100000
 /* Ethernet RX clock phase adjust (address) */
 #define ETH_RXPH_ADDR 0xD6E5
 /* Ethernet RX clock phase adjust (address) */
 #define RXPH_ADDR 0xD6E5
 /* Ethernet RX clock phase adjust (bit mask) */
-#define ETH_RXPH_MASK 192
+#define ETH_RXPH_MASK 0b11000000
 /* Ethernet RX clock phase adjust (bit mask) */
-#define RXPH_MASK 192
+#define RXPH_MASK 0b11000000
 /* Ethernet MIIM register number (address) */
 #define ETH_MIIMREG_ADDR 0xD6E6
 /* Ethernet MIIM register number (address) */
 #define MIIMREG_ADDR 0xD6E6
 /* Ethernet MIIM register number (bit mask) */
-#define ETH_MIIMREG_MASK 31
+#define ETH_MIIMREG_MASK 0b00011111
 /* Ethernet MIIM register number (bit mask) */
-#define MIIMREG_MASK 31
+#define MIIMREG_MASK 0b00011111
 /* Ethernet MIIM PHY number (use 0 for Nexys4, 1 for MEGA65 r1 PCBs) (address) */
 #define ETH_MIIMPHY_ADDR 0xD6E6
 /* Ethernet MIIM PHY number (use 0 for Nexys4, 1 for MEGA65 r1 PCBs) (address) */
 #define MIIMPHY_ADDR 0xD6E6
 /* Ethernet MIIM PHY number (use 0 for Nexys4, 1 for MEGA65 r1 PCBs) (bit mask) */
-#define ETH_MIIMPHY_MASK 224
+#define ETH_MIIMPHY_MASK 0b11100000
 /* Ethernet MIIM PHY number (use 0 for Nexys4, 1 for MEGA65 r1 PCBs) (bit mask) */
-#define MIIMPHY_MASK 224
+#define MIIMPHY_MASK 0b11100000
 /* Ethernet MIIM register value (LSB) */
 #define ETH_MIIMVLSB 0xD6E7
 /* Ethernet MIIM register value (LSB) */
@@ -3826,9 +3826,9 @@
 /* DMA enable F018B mode (adds sub-command byte) (address) */
 #define EN018B_ADDR 0xD703
 /* DMA enable F018B mode (adds sub-command byte) (bit mask) */
-#define DMA_EN018B_MASK 1
+#define DMA_EN018B_MASK 0b00000001
 /* DMA enable F018B mode (adds sub-command byte) (bit mask) */
-#define EN018B_MASK 1
+#define EN018B_MASK 0b00000001
 /* DMA list address mega-byte */
 #define DMA_ADDRMB 0xD704
 /* DMA list address mega-byte */
@@ -3850,105 +3850,105 @@
 /* Set if hardware multiplier is busy (address) */
 #define MULBUSY_ADDR 0xD70F
 /* Set if hardware multiplier is busy (bit mask) */
-#define MATH_MULBUSY_MASK 64
+#define MATH_MULBUSY_MASK 0b01000000
 /* Set if hardware multiplier is busy (bit mask) */
-#define MULBUSY_MASK 64
+#define MULBUSY_MASK 0b01000000
 /* Set if hardware divider is busy (address) */
 #define MATH_DIVBUSY_ADDR 0xD70F
 /* Set if hardware divider is busy (address) */
 #define DIVBUSY_ADDR 0xD70F
 /* Set if hardware divider is busy (bit mask) */
-#define MATH_DIVBUSY_MASK 128
+#define MATH_DIVBUSY_MASK 0b10000000
 /* Set if hardware divider is busy (bit mask) */
-#define DIVBUSY_MASK 128
+#define DIVBUSY_MASK 0b10000000
 /* Enable badline emulation (address) */
 #define CPU_BADLEN_ADDR 0xD710
 /* Enable badline emulation (address) */
 #define BADLEN_ADDR 0xD710
 /* Enable badline emulation (bit mask) */
-#define CPU_BADLEN_MASK 1
+#define CPU_BADLEN_MASK 0b00000001
 /* Enable badline emulation (bit mask) */
-#define BADLEN_MASK 1
+#define BADLEN_MASK 0b00000001
 /* Enable 6502-style slow (7 cycle) interrupts (address) */
 #define CPU_SLIEN_ADDR 0xD710
 /* Enable 6502-style slow (7 cycle) interrupts (address) */
 #define SLIEN_ADDR 0xD710
 /* Enable 6502-style slow (7 cycle) interrupts (bit mask) */
-#define CPU_SLIEN_MASK 2
+#define CPU_SLIEN_MASK 0b00000010
 /* Enable 6502-style slow (7 cycle) interrupts (bit mask) */
-#define SLIEN_MASK 2
+#define SLIEN_MASK 0b00000010
 /* Enable VDC inteface simulation (address) */
 #define MISC_VDCSEN_ADDR 0xD710
 /* Enable VDC inteface simulation (address) */
 #define VDCSEN_ADDR 0xD710
 /* Enable VDC inteface simulation (bit mask) */
-#define MISC_VDCSEN_MASK 4
+#define MISC_VDCSEN_MASK 0b00000100
 /* Enable VDC inteface simulation (bit mask) */
-#define VDCSEN_MASK 4
+#define VDCSEN_MASK 0b00000100
 /* 1=charge extra cycle(s) for branches taken (address) */
 #define CPU_BRCOST_ADDR 0xD710
 /* 1=charge extra cycle(s) for branches taken (address) */
 #define BRCOST_ADDR 0xD710
 /* 1=charge extra cycle(s) for branches taken (bit mask) */
-#define CPU_BRCOST_MASK 8
+#define CPU_BRCOST_MASK 0b00001000
 /* 1=charge extra cycle(s) for branches taken (bit mask) */
-#define BRCOST_MASK 8
+#define BRCOST_MASK 0b00001000
 /* Cost of badlines minus 40. ie. 00=40 cycles, 11 = 43 cycles. (address) */
 #define CPU_BADEXTRA_ADDR 0xD710
 /* Cost of badlines minus 40. ie. 00=40 cycles, 11 = 43 cycles. (address) */
 #define BADEXTRA_ADDR 0xD710
 /* Cost of badlines minus 40. ie. 00=40 cycles, 11 = 43 cycles. (bit mask) */
-#define CPU_BADEXTRA_MASK 48
+#define CPU_BADEXTRA_MASK 0b00110000
 /* Cost of badlines minus 40. ie. 00=40 cycles, 11 = 43 cycles. (bit mask) */
-#define BADEXTRA_MASK 48
+#define BADEXTRA_MASK 0b00110000
 /* Audio DMA block timeout (read only) DEBUG (address) */
 #define DMA_AUD_BLKTO_ADDR 0xD711
 /* Audio DMA block timeout (read only) DEBUG (address) */
 #define AUD_BLKTO_ADDR 0xD711
 /* Audio DMA block timeout (read only) DEBUG (bit mask) */
-#define DMA_AUD_BLKTO_MASK 7
+#define DMA_AUD_BLKTO_MASK 0b00000111
 /* Audio DMA block timeout (read only) DEBUG (bit mask) */
-#define AUD_BLKTO_MASK 7
+#define AUD_BLKTO_MASK 0b00000111
 /* PWM/PDM audio encoding select (address) */
 #define AUDIO_PWMPDM_ADDR 0xD711
 /* PWM/PDM audio encoding select (address) */
 #define PWMPDM_ADDR 0xD711
 /* PWM/PDM audio encoding select (bit mask) */
-#define AUDIO_PWMPDM_MASK 8
+#define AUDIO_PWMPDM_MASK 0b00001000
 /* PWM/PDM audio encoding select (bit mask) */
-#define PWMPDM_MASK 8
+#define PWMPDM_MASK 0b00001000
 /* Audio DMA bypasses audio mixer (address) */
 #define DMA_NOMIX_ADDR 0xD711
 /* Audio DMA bypasses audio mixer (address) */
 #define NOMIX_ADDR 0xD711
 /* Audio DMA bypasses audio mixer (bit mask) */
-#define DMA_NOMIX_MASK 16
+#define DMA_NOMIX_MASK 0b00010000
 /* Audio DMA bypasses audio mixer (bit mask) */
-#define NOMIX_MASK 16
+#define NOMIX_MASK 0b00010000
 /* Audio DMA block writes (samples still get read) (address) */
 #define DMA_AUD_WRBLK_ADDR 0xD711
 /* Audio DMA block writes (samples still get read) (address) */
 #define AUD_WRBLK_ADDR 0xD711
 /* Audio DMA block writes (samples still get read) (bit mask) */
-#define DMA_AUD_WRBLK_MASK 32
+#define DMA_AUD_WRBLK_MASK 0b00100000
 /* Audio DMA block writes (samples still get read) (bit mask) */
-#define AUD_WRBLK_MASK 32
+#define AUD_WRBLK_MASK 0b00100000
 /* Audio DMA blocked (read only) DEBUG (address) */
 #define DMA_BLKD_ADDR 0xD711
 /* Audio DMA blocked (read only) DEBUG (address) */
 #define BLKD_ADDR 0xD711
 /* Audio DMA blocked (read only) DEBUG (bit mask) */
-#define DMA_BLKD_MASK 64
+#define DMA_BLKD_MASK 0b01000000
 /* Audio DMA blocked (read only) DEBUG (bit mask) */
-#define BLKD_MASK 64
+#define BLKD_MASK 0b01000000
 /* Enable Audio DMA (address) */
 #define DMA_AUDEN_ADDR 0xD711
 /* Enable Audio DMA (address) */
 #define AUDEN_ADDR 0xD711
 /* Enable Audio DMA (bit mask) */
-#define DMA_AUDEN_MASK 128
+#define DMA_AUDEN_MASK 0b10000000
 /* Enable Audio DMA (bit mask) */
-#define AUDEN_MASK 128
+#define AUDEN_MASK 0b10000000
 /* Audio DMA channel 0 right channel volume */
 #define DMA_CH0RVOL 0xD71C
 /* Audio DMA channel 0 right channel volume */
@@ -3970,49 +3970,49 @@
 /* Audio DMA channel X sample bits (11=16, 10=8, 01=upper nybl, 00=lower nybl) (address) */
 #define CH0_SBITS_ADDR 0xD720
 /* Audio DMA channel X sample bits (11=16, 10=8, 01=upper nybl, 00=lower nybl) (bit mask) */
-#define DMA_CH0_SBITS_MASK 3
+#define DMA_CH0_SBITS_MASK 0b00000011
 /* Audio DMA channel X sample bits (11=16, 10=8, 01=upper nybl, 00=lower nybl) (bit mask) */
-#define CH0_SBITS_MASK 3
+#define CH0_SBITS_MASK 0b00000011
 /* Audio DMA channel X stop flag (address) */
 #define DMA_CH0_STP_ADDR 0xD720
 /* Audio DMA channel X stop flag (address) */
 #define CH0_STP_ADDR 0xD720
 /* Audio DMA channel X stop flag (bit mask) */
-#define DMA_CH0_STP_MASK 8
+#define DMA_CH0_STP_MASK 0b00001000
 /* Audio DMA channel X stop flag (bit mask) */
-#define CH0_STP_MASK 8
+#define CH0_STP_MASK 0b00001000
 /* Audio DMA channel X play 32-sample sine wave instead of DMA data (address) */
 #define DMA_CH0_SINE_ADDR 0xD720
 /* Audio DMA channel X play 32-sample sine wave instead of DMA data (address) */
 #define CH0_SINE_ADDR 0xD720
 /* Audio DMA channel X play 32-sample sine wave instead of DMA data (bit mask) */
-#define DMA_CH0_SINE_MASK 16
+#define DMA_CH0_SINE_MASK 0b00010000
 /* Audio DMA channel X play 32-sample sine wave instead of DMA data (bit mask) */
-#define CH0_SINE_MASK 16
+#define CH0_SINE_MASK 0b00010000
 /* Enable Audio DMA channel X signed samples (address) */
 #define DMA_CH0_SGN_ADDR 0xD720
 /* Enable Audio DMA channel X signed samples (address) */
 #define CH0_SGN_ADDR 0xD720
 /* Enable Audio DMA channel X signed samples (bit mask) */
-#define DMA_CH0_SGN_MASK 32
+#define DMA_CH0_SGN_MASK 0b00100000
 /* Enable Audio DMA channel X signed samples (bit mask) */
-#define CH0_SGN_MASK 32
+#define CH0_SGN_MASK 0b00100000
 /* Enable Audio DMA channel X looping (address) */
 #define DMA_CH0_LOOP_ADDR 0xD720
 /* Enable Audio DMA channel X looping (address) */
 #define CH0_LOOP_ADDR 0xD720
 /* Enable Audio DMA channel X looping (bit mask) */
-#define DMA_CH0_LOOP_MASK 64
+#define DMA_CH0_LOOP_MASK 0b01000000
 /* Enable Audio DMA channel X looping (bit mask) */
-#define CH0_LOOP_MASK 64
+#define CH0_LOOP_MASK 0b01000000
 /* Enable Audio DMA channel X (address) */
 #define DMA_CH0_EN_ADDR 0xD720
 /* Enable Audio DMA channel X (address) */
 #define CH0_EN_ADDR 0xD720
 /* Enable Audio DMA channel X (bit mask) */
-#define DMA_CH0_EN_MASK 128
+#define DMA_CH0_EN_MASK 0b10000000
 /* Enable Audio DMA channel X (bit mask) */
-#define CH0_EN_MASK 128
+#define CH0_EN_MASK 0b10000000
 /* Audio DMA channel X base address LSB */
 #define DMA_CH0BADDRL 0xD721
 /* Audio DMA channel X base address LSB */
@@ -4078,49 +4078,49 @@
 /* @CHXSBITS (address) */
 #define CH1_SBITS_ADDR 0xD730
 /* @CHXSBITS (bit mask) */
-#define DMA_CH1_SBITS_MASK 3
+#define DMA_CH1_SBITS_MASK 0b00000011
 /* @CHXSBITS (bit mask) */
-#define CH1_SBITS_MASK 3
+#define CH1_SBITS_MASK 0b00000011
 /* @CHXSTP (address) */
 #define DMA_CH1_STP_ADDR 0xD730
 /* @CHXSTP (address) */
 #define CH1_STP_ADDR 0xD730
 /* @CHXSTP (bit mask) */
-#define DMA_CH1_STP_MASK 8
+#define DMA_CH1_STP_MASK 0b00001000
 /* @CHXSTP (bit mask) */
-#define CH1_STP_MASK 8
+#define CH1_STP_MASK 0b00001000
 /* @CHXSINE (address) */
 #define DMA_CH1_SINE_ADDR 0xD730
 /* @CHXSINE (address) */
 #define CH1_SINE_ADDR 0xD730
 /* @CHXSINE (bit mask) */
-#define DMA_CH1_SINE_MASK 16
+#define DMA_CH1_SINE_MASK 0b00010000
 /* @CHXSINE (bit mask) */
-#define CH1_SINE_MASK 16
+#define CH1_SINE_MASK 0b00010000
 /* @CHXSGN (address) */
 #define DMA_CH1_SGN_ADDR 0xD730
 /* @CHXSGN (address) */
 #define CH1_SGN_ADDR 0xD730
 /* @CHXSGN (bit mask) */
-#define DMA_CH1_SGN_MASK 32
+#define DMA_CH1_SGN_MASK 0b00100000
 /* @CHXSGN (bit mask) */
-#define CH1_SGN_MASK 32
+#define CH1_SGN_MASK 0b00100000
 /* @CHXLOOP (address) */
 #define DMA_CH1_LOOP_ADDR 0xD730
 /* @CHXLOOP (address) */
 #define CH1_LOOP_ADDR 0xD730
 /* @CHXLOOP (bit mask) */
-#define DMA_CH1_LOOP_MASK 64
+#define DMA_CH1_LOOP_MASK 0b01000000
 /* @CHXLOOP (bit mask) */
-#define CH1_LOOP_MASK 64
+#define CH1_LOOP_MASK 0b01000000
 /* @CHXEN (address) */
 #define DMA_CH1_EN_ADDR 0xD730
 /* @CHXEN (address) */
 #define CH1_EN_ADDR 0xD730
 /* @CHXEN (bit mask) */
-#define DMA_CH1_EN_MASK 128
+#define DMA_CH1_EN_MASK 0b10000000
 /* @CHXEN (bit mask) */
-#define CH1_EN_MASK 128
+#define CH1_EN_MASK 0b10000000
 /* @CHXBADDRL */
 #define DMA_CH1BADDRL 0xD731
 /* @CHXBADDRL */
@@ -4186,49 +4186,49 @@
 /* @CHXSBITS (address) */
 #define CH2_SBITS_ADDR 0xD740
 /* @CHXSBITS (bit mask) */
-#define DMA_CH2_SBITS_MASK 3
+#define DMA_CH2_SBITS_MASK 0b00000011
 /* @CHXSBITS (bit mask) */
-#define CH2_SBITS_MASK 3
+#define CH2_SBITS_MASK 0b00000011
 /* @CHXSTP (address) */
 #define DMA_CH2_STP_ADDR 0xD740
 /* @CHXSTP (address) */
 #define CH2_STP_ADDR 0xD740
 /* @CHXSTP (bit mask) */
-#define DMA_CH2_STP_MASK 8
+#define DMA_CH2_STP_MASK 0b00001000
 /* @CHXSTP (bit mask) */
-#define CH2_STP_MASK 8
+#define CH2_STP_MASK 0b00001000
 /* @CHXSINE (address) */
 #define DMA_CH2_SINE_ADDR 0xD740
 /* @CHXSINE (address) */
 #define CH2_SINE_ADDR 0xD740
 /* @CHXSINE (bit mask) */
-#define DMA_CH2_SINE_MASK 16
+#define DMA_CH2_SINE_MASK 0b00010000
 /* @CHXSINE (bit mask) */
-#define CH2_SINE_MASK 16
+#define CH2_SINE_MASK 0b00010000
 /* @CHXSGN (address) */
 #define DMA_CH2_SGN_ADDR 0xD740
 /* @CHXSGN (address) */
 #define CH2_SGN_ADDR 0xD740
 /* @CHXSGN (bit mask) */
-#define DMA_CH2_SGN_MASK 32
+#define DMA_CH2_SGN_MASK 0b00100000
 /* @CHXSGN (bit mask) */
-#define CH2_SGN_MASK 32
+#define CH2_SGN_MASK 0b00100000
 /* @CHXLOOP (address) */
 #define DMA_CH2_LOOP_ADDR 0xD740
 /* @CHXLOOP (address) */
 #define CH2_LOOP_ADDR 0xD740
 /* @CHXLOOP (bit mask) */
-#define DMA_CH2_LOOP_MASK 64
+#define DMA_CH2_LOOP_MASK 0b01000000
 /* @CHXLOOP (bit mask) */
-#define CH2_LOOP_MASK 64
+#define CH2_LOOP_MASK 0b01000000
 /* @CHXEN (address) */
 #define DMA_CH2_EN_ADDR 0xD740
 /* @CHXEN (address) */
 #define CH2_EN_ADDR 0xD740
 /* @CHXEN (bit mask) */
-#define DMA_CH2_EN_MASK 128
+#define DMA_CH2_EN_MASK 0b10000000
 /* @CHXEN (bit mask) */
-#define CH2_EN_MASK 128
+#define CH2_EN_MASK 0b10000000
 /* @CHXBADDRL */
 #define DMA_CH2BADDRL 0xD741
 /* @CHXBADDRL */
@@ -4294,49 +4294,49 @@
 /* @CHXSBITS (address) */
 #define CH3_SBITS_ADDR 0xD750
 /* @CHXSBITS (bit mask) */
-#define DMA_CH3_SBITS_MASK 3
+#define DMA_CH3_SBITS_MASK 0b00000011
 /* @CHXSBITS (bit mask) */
-#define CH3_SBITS_MASK 3
+#define CH3_SBITS_MASK 0b00000011
 /* @CHXSTP (address) */
 #define DMA_CH3_STP_ADDR 0xD750
 /* @CHXSTP (address) */
 #define CH3_STP_ADDR 0xD750
 /* @CHXSTP (bit mask) */
-#define DMA_CH3_STP_MASK 8
+#define DMA_CH3_STP_MASK 0b00001000
 /* @CHXSTP (bit mask) */
-#define CH3_STP_MASK 8
+#define CH3_STP_MASK 0b00001000
 /* @CHXSINE (address) */
 #define DMA_CH3_SINE_ADDR 0xD750
 /* @CHXSINE (address) */
 #define CH3_SINE_ADDR 0xD750
 /* @CHXSINE (bit mask) */
-#define DMA_CH3_SINE_MASK 16
+#define DMA_CH3_SINE_MASK 0b00010000
 /* @CHXSINE (bit mask) */
-#define CH3_SINE_MASK 16
+#define CH3_SINE_MASK 0b00010000
 /* @CHXSGN (address) */
 #define DMA_CH3_SGN_ADDR 0xD750
 /* @CHXSGN (address) */
 #define CH3_SGN_ADDR 0xD750
 /* @CHXSGN (bit mask) */
-#define DMA_CH3_SGN_MASK 32
+#define DMA_CH3_SGN_MASK 0b00100000
 /* @CHXSGN (bit mask) */
-#define CH3_SGN_MASK 32
+#define CH3_SGN_MASK 0b00100000
 /* @CHXLOOP (address) */
 #define DMA_CH3_LOOP_ADDR 0xD750
 /* @CHXLOOP (address) */
 #define CH3_LOOP_ADDR 0xD750
 /* @CHXLOOP (bit mask) */
-#define DMA_CH3_LOOP_MASK 64
+#define DMA_CH3_LOOP_MASK 0b01000000
 /* @CHXLOOP (bit mask) */
-#define CH3_LOOP_MASK 64
+#define CH3_LOOP_MASK 0b01000000
 /* @CHXEN (address) */
 #define DMA_CH3_EN_ADDR 0xD750
 /* @CHXEN (address) */
 #define CH3_EN_ADDR 0xD750
 /* @CHXEN (bit mask) */
-#define DMA_CH3_EN_MASK 128
+#define DMA_CH3_EN_MASK 0b10000000
 /* @CHXEN (bit mask) */
-#define CH3_EN_MASK 128
+#define CH3_EN_MASK 0b10000000
 /* @CHXBADDRL */
 #define DMA_CH3BADDRL 0xD751
 /* @CHXBADDRL */
@@ -4578,897 +4578,897 @@
 /* Select which of the 16 32-bit math registers is input A for Math Function Unit X. (address) */
 #define UNIT0INA_ADDR 0xD7C0
 /* Select which of the 16 32-bit math registers is input A for Math Function Unit X. (bit mask) */
-#define MATH_UNIT0INA_MASK 15
+#define MATH_UNIT0INA_MASK 0b00001111
 /* Select which of the 16 32-bit math registers is input A for Math Function Unit X. (bit mask) */
-#define UNIT0INA_MASK 15
+#define UNIT0INA_MASK 0b00001111
 /* Select which of the 16 32-bit math registers is input B for Math Function Unit X. (address) */
 #define MATH_UNIT0INB_ADDR 0xD7C0
 /* Select which of the 16 32-bit math registers is input B for Math Function Unit X. (address) */
 #define UNIT0INB_ADDR 0xD7C0
 /* Select which of the 16 32-bit math registers is input B for Math Function Unit X. (bit mask) */
-#define MATH_UNIT0INB_MASK 240
+#define MATH_UNIT0INB_MASK 0b11110000
 /* Select which of the 16 32-bit math registers is input B for Math Function Unit X. (bit mask) */
-#define UNIT0INB_MASK 240
+#define UNIT0INB_MASK 0b11110000
 /* @UNITXINA (address) */
 #define MATH_UNIT1INA_ADDR 0xD7C1
 /* @UNITXINA (address) */
 #define UNIT1INA_ADDR 0xD7C1
 /* @UNITXINA (bit mask) */
-#define MATH_UNIT1INA_MASK 15
+#define MATH_UNIT1INA_MASK 0b00001111
 /* @UNITXINA (bit mask) */
-#define UNIT1INA_MASK 15
+#define UNIT1INA_MASK 0b00001111
 /* @UNITXINB (address) */
 #define MATH_UNIT1INB_ADDR 0xD7C1
 /* @UNITXINB (address) */
 #define UNIT1INB_ADDR 0xD7C1
 /* @UNITXINB (bit mask) */
-#define MATH_UNIT1INB_MASK 240
+#define MATH_UNIT1INB_MASK 0b11110000
 /* @UNITXINB (bit mask) */
-#define UNIT1INB_MASK 240
+#define UNIT1INB_MASK 0b11110000
 /* @UNITXINA (address) */
 #define MATH_UNIT2INA_ADDR 0xD7C2
 /* @UNITXINA (address) */
 #define UNIT2INA_ADDR 0xD7C2
 /* @UNITXINA (bit mask) */
-#define MATH_UNIT2INA_MASK 15
+#define MATH_UNIT2INA_MASK 0b00001111
 /* @UNITXINA (bit mask) */
-#define UNIT2INA_MASK 15
+#define UNIT2INA_MASK 0b00001111
 /* @UNITXINB (address) */
 #define MATH_UNIT2INB_ADDR 0xD7C2
 /* @UNITXINB (address) */
 #define UNIT2INB_ADDR 0xD7C2
 /* @UNITXINB (bit mask) */
-#define MATH_UNIT2INB_MASK 240
+#define MATH_UNIT2INB_MASK 0b11110000
 /* @UNITXINB (bit mask) */
-#define UNIT2INB_MASK 240
+#define UNIT2INB_MASK 0b11110000
 /* @UNITXINA (address) */
 #define MATH_UNIT3INA_ADDR 0xD7C3
 /* @UNITXINA (address) */
 #define UNIT3INA_ADDR 0xD7C3
 /* @UNITXINA (bit mask) */
-#define MATH_UNIT3INA_MASK 15
+#define MATH_UNIT3INA_MASK 0b00001111
 /* @UNITXINA (bit mask) */
-#define UNIT3INA_MASK 15
+#define UNIT3INA_MASK 0b00001111
 /* @UNITXINB (address) */
 #define MATH_UNIT3INB_ADDR 0xD7C3
 /* @UNITXINB (address) */
 #define UNIT3INB_ADDR 0xD7C3
 /* @UNITXINB (bit mask) */
-#define MATH_UNIT3INB_MASK 240
+#define MATH_UNIT3INB_MASK 0b11110000
 /* @UNITXINB (bit mask) */
-#define UNIT3INB_MASK 240
+#define UNIT3INB_MASK 0b11110000
 /* @UNITXINA (address) */
 #define MATH_UNIT4INA_ADDR 0xD7C4
 /* @UNITXINA (address) */
 #define UNIT4INA_ADDR 0xD7C4
 /* @UNITXINA (bit mask) */
-#define MATH_UNIT4INA_MASK 15
+#define MATH_UNIT4INA_MASK 0b00001111
 /* @UNITXINA (bit mask) */
-#define UNIT4INA_MASK 15
+#define UNIT4INA_MASK 0b00001111
 /* @UNITXINB (address) */
 #define MATH_UNIT4INB_ADDR 0xD7C4
 /* @UNITXINB (address) */
 #define UNIT4INB_ADDR 0xD7C4
 /* @UNITXINB (bit mask) */
-#define MATH_UNIT4INB_MASK 240
+#define MATH_UNIT4INB_MASK 0b11110000
 /* @UNITXINB (bit mask) */
-#define UNIT4INB_MASK 240
+#define UNIT4INB_MASK 0b11110000
 /* @UNITXINA (address) */
 #define MATH_UNIT5INA_ADDR 0xD7C5
 /* @UNITXINA (address) */
 #define UNIT5INA_ADDR 0xD7C5
 /* @UNITXINA (bit mask) */
-#define MATH_UNIT5INA_MASK 15
+#define MATH_UNIT5INA_MASK 0b00001111
 /* @UNITXINA (bit mask) */
-#define UNIT5INA_MASK 15
+#define UNIT5INA_MASK 0b00001111
 /* @UNITXINB (address) */
 #define MATH_UNIT5INB_ADDR 0xD7C5
 /* @UNITXINB (address) */
 #define UNIT5INB_ADDR 0xD7C5
 /* @UNITXINB (bit mask) */
-#define MATH_UNIT5INB_MASK 240
+#define MATH_UNIT5INB_MASK 0b11110000
 /* @UNITXINB (bit mask) */
-#define UNIT5INB_MASK 240
+#define UNIT5INB_MASK 0b11110000
 /* @UNITXINA (address) */
 #define MATH_UNIT6INA_ADDR 0xD7C6
 /* @UNITXINA (address) */
 #define UNIT6INA_ADDR 0xD7C6
 /* @UNITXINA (bit mask) */
-#define MATH_UNIT6INA_MASK 15
+#define MATH_UNIT6INA_MASK 0b00001111
 /* @UNITXINA (bit mask) */
-#define UNIT6INA_MASK 15
+#define UNIT6INA_MASK 0b00001111
 /* @UNITXINB (address) */
 #define MATH_UNIT6INB_ADDR 0xD7C6
 /* @UNITXINB (address) */
 #define UNIT6INB_ADDR 0xD7C6
 /* @UNITXINB (bit mask) */
-#define MATH_UNIT6INB_MASK 240
+#define MATH_UNIT6INB_MASK 0b11110000
 /* @UNITXINB (bit mask) */
-#define UNIT6INB_MASK 240
+#define UNIT6INB_MASK 0b11110000
 /* @UNITXINA (address) */
 #define MATH_UNIT7INA_ADDR 0xD7C7
 /* @UNITXINA (address) */
 #define UNIT7INA_ADDR 0xD7C7
 /* @UNITXINA (bit mask) */
-#define MATH_UNIT7INA_MASK 15
+#define MATH_UNIT7INA_MASK 0b00001111
 /* @UNITXINA (bit mask) */
-#define UNIT7INA_MASK 15
+#define UNIT7INA_MASK 0b00001111
 /* @UNITXINB (address) */
 #define MATH_UNIT7INB_ADDR 0xD7C7
 /* @UNITXINB (address) */
 #define UNIT7INB_ADDR 0xD7C7
 /* @UNITXINB (bit mask) */
-#define MATH_UNIT7INB_MASK 240
+#define MATH_UNIT7INB_MASK 0b11110000
 /* @UNITXINB (bit mask) */
-#define UNIT7INB_MASK 240
+#define UNIT7INB_MASK 0b11110000
 /* @UNITXINA (address) */
 #define MATH_UNIT8INA_ADDR 0xD7C8
 /* @UNITXINA (address) */
 #define UNIT8INA_ADDR 0xD7C8
 /* @UNITXINA (bit mask) */
-#define MATH_UNIT8INA_MASK 15
+#define MATH_UNIT8INA_MASK 0b00001111
 /* @UNITXINA (bit mask) */
-#define UNIT8INA_MASK 15
+#define UNIT8INA_MASK 0b00001111
 /* @UNITXINB (address) */
 #define MATH_UNIT8INB_ADDR 0xD7C8
 /* @UNITXINB (address) */
 #define UNIT8INB_ADDR 0xD7C8
 /* @UNITXINB (bit mask) */
-#define MATH_UNIT8INB_MASK 240
+#define MATH_UNIT8INB_MASK 0b11110000
 /* @UNITXINB (bit mask) */
-#define UNIT8INB_MASK 240
+#define UNIT8INB_MASK 0b11110000
 /* @UNITXINA (address) */
 #define MATH_UNIT9INA_ADDR 0xD7C9
 /* @UNITXINA (address) */
 #define UNIT9INA_ADDR 0xD7C9
 /* @UNITXINA (bit mask) */
-#define MATH_UNIT9INA_MASK 15
+#define MATH_UNIT9INA_MASK 0b00001111
 /* @UNITXINA (bit mask) */
-#define UNIT9INA_MASK 15
+#define UNIT9INA_MASK 0b00001111
 /* @UNITXINB (address) */
 #define MATH_UNIT9INB_ADDR 0xD7C9
 /* @UNITXINB (address) */
 #define UNIT9INB_ADDR 0xD7C9
 /* @UNITXINB (bit mask) */
-#define MATH_UNIT9INB_MASK 240
+#define MATH_UNIT9INB_MASK 0b11110000
 /* @UNITXINB (bit mask) */
-#define UNIT9INB_MASK 240
+#define UNIT9INB_MASK 0b11110000
 /* @UNITXINA (address) */
 #define MATH_UNITAINA_ADDR 0xD7CA
 /* @UNITXINA (address) */
 #define UNITAINA_ADDR 0xD7CA
 /* @UNITXINA (bit mask) */
-#define MATH_UNITAINA_MASK 15
+#define MATH_UNITAINA_MASK 0b00001111
 /* @UNITXINA (bit mask) */
-#define UNITAINA_MASK 15
+#define UNITAINA_MASK 0b00001111
 /* @UNITXINB (address) */
 #define MATH_UNITAINB_ADDR 0xD7CA
 /* @UNITXINB (address) */
 #define UNITAINB_ADDR 0xD7CA
 /* @UNITXINB (bit mask) */
-#define MATH_UNITAINB_MASK 240
+#define MATH_UNITAINB_MASK 0b11110000
 /* @UNITXINB (bit mask) */
-#define UNITAINB_MASK 240
+#define UNITAINB_MASK 0b11110000
 /* @UNITXINA (address) */
 #define MATH_UNITBINA_ADDR 0xD7CB
 /* @UNITXINA (address) */
 #define UNITBINA_ADDR 0xD7CB
 /* @UNITXINA (bit mask) */
-#define MATH_UNITBINA_MASK 15
+#define MATH_UNITBINA_MASK 0b00001111
 /* @UNITXINA (bit mask) */
-#define UNITBINA_MASK 15
+#define UNITBINA_MASK 0b00001111
 /* @UNITXINB (address) */
 #define MATH_UNITBINB_ADDR 0xD7CB
 /* @UNITXINB (address) */
 #define UNITBINB_ADDR 0xD7CB
 /* @UNITXINB (bit mask) */
-#define MATH_UNITBINB_MASK 240
+#define MATH_UNITBINB_MASK 0b11110000
 /* @UNITXINB (bit mask) */
-#define UNITBINB_MASK 240
+#define UNITBINB_MASK 0b11110000
 /* @UNITXINA (address) */
 #define MATH_UNITCINA_ADDR 0xD7CC
 /* @UNITXINA (address) */
 #define UNITCINA_ADDR 0xD7CC
 /* @UNITXINA (bit mask) */
-#define MATH_UNITCINA_MASK 15
+#define MATH_UNITCINA_MASK 0b00001111
 /* @UNITXINA (bit mask) */
-#define UNITCINA_MASK 15
+#define UNITCINA_MASK 0b00001111
 /* @UNITXINB (address) */
 #define MATH_UNITCINB_ADDR 0xD7CC
 /* @UNITXINB (address) */
 #define UNITCINB_ADDR 0xD7CC
 /* @UNITXINB (bit mask) */
-#define MATH_UNITCINB_MASK 240
+#define MATH_UNITCINB_MASK 0b11110000
 /* @UNITXINB (bit mask) */
-#define UNITCINB_MASK 240
+#define UNITCINB_MASK 0b11110000
 /* @UNITXINA (address) */
 #define MATH_UNITDINA_ADDR 0xD7CD
 /* @UNITXINA (address) */
 #define UNITDINA_ADDR 0xD7CD
 /* @UNITXINA (bit mask) */
-#define MATH_UNITDINA_MASK 15
+#define MATH_UNITDINA_MASK 0b00001111
 /* @UNITXINA (bit mask) */
-#define UNITDINA_MASK 15
+#define UNITDINA_MASK 0b00001111
 /* @UNITXINB (address) */
 #define MATH_UNITDINB_ADDR 0xD7CD
 /* @UNITXINB (address) */
 #define UNITDINB_ADDR 0xD7CD
 /* @UNITXINB (bit mask) */
-#define MATH_UNITDINB_MASK 240
+#define MATH_UNITDINB_MASK 0b11110000
 /* @UNITXINB (bit mask) */
-#define UNITDINB_MASK 240
+#define UNITDINB_MASK 0b11110000
 /* @UNITXINA (address) */
 #define MATH_UNITEINA_ADDR 0xD7CE
 /* @UNITXINA (address) */
 #define UNITEINA_ADDR 0xD7CE
 /* @UNITXINA (bit mask) */
-#define MATH_UNITEINA_MASK 15
+#define MATH_UNITEINA_MASK 0b00001111
 /* @UNITXINA (bit mask) */
-#define UNITEINA_MASK 15
+#define UNITEINA_MASK 0b00001111
 /* @UNITXINB (address) */
 #define MATH_UNITEINB_ADDR 0xD7CE
 /* @UNITXINB (address) */
 #define UNITEINB_ADDR 0xD7CE
 /* @UNITXINB (bit mask) */
-#define MATH_UNITEINB_MASK 240
+#define MATH_UNITEINB_MASK 0b11110000
 /* @UNITXINB (bit mask) */
-#define UNITEINB_MASK 240
+#define UNITEINB_MASK 0b11110000
 /* @UNITXINA (address) */
 #define MATH_UNITFINA_ADDR 0xD7CF
 /* @UNITXINA (address) */
 #define UNITFINA_ADDR 0xD7CF
 /* @UNITXINA (bit mask) */
-#define MATH_UNITFINA_MASK 15
+#define MATH_UNITFINA_MASK 0b00001111
 /* @UNITXINA (bit mask) */
-#define UNITFINA_MASK 15
+#define UNITFINA_MASK 0b00001111
 /* @UNITXINB (address) */
 #define MATH_UNITFINB_ADDR 0xD7CF
 /* @UNITXINB (address) */
 #define UNITFINB_ADDR 0xD7CF
 /* @UNITXINB (bit mask) */
-#define MATH_UNITFINB_MASK 240
+#define MATH_UNITFINB_MASK 0b11110000
 /* @UNITXINB (bit mask) */
-#define UNITFINB_MASK 240
+#define UNITFINB_MASK 0b11110000
 /* Select which of the 16 32-bit math registers receives the output of Math Function Unit X (address) */
 #define MATH_UNIT0OUT_ADDR 0xD7D0
 /* Select which of the 16 32-bit math registers receives the output of Math Function Unit X (address) */
 #define UNIT0OUT_ADDR 0xD7D0
 /* Select which of the 16 32-bit math registers receives the output of Math Function Unit X (bit mask) */
-#define MATH_UNIT0OUT_MASK 15
+#define MATH_UNIT0OUT_MASK 0b00001111
 /* Select which of the 16 32-bit math registers receives the output of Math Function Unit X (bit mask) */
-#define UNIT0OUT_MASK 15
+#define UNIT0OUT_MASK 0b00001111
 /* If set, the low-half of the output of Math Function Unit X is written to math register UNITXOUT. (address) */
 #define MATH_U0_LOWOUT_ADDR 0xD7D0
 /* If set, the low-half of the output of Math Function Unit X is written to math register UNITXOUT. (address) */
 #define U0_LOWOUT_ADDR 0xD7D0
 /* If set, the low-half of the output of Math Function Unit X is written to math register UNITXOUT. (bit mask) */
-#define MATH_U0_LOWOUT_MASK 16
+#define MATH_U0_LOWOUT_MASK 0b00010000
 /* If set, the low-half of the output of Math Function Unit X is written to math register UNITXOUT. (bit mask) */
-#define U0_LOWOUT_MASK 16
+#define U0_LOWOUT_MASK 0b00010000
 /* If set, the high-half of the output of Math Function Unit X is written to math register UNITXOUT. (address) */
 #define MATH_U0_HIOUT_ADDR 0xD7D0
 /* If set, the high-half of the output of Math Function Unit X is written to math register UNITXOUT. (address) */
 #define U0_HIOUT_ADDR 0xD7D0
 /* If set, the high-half of the output of Math Function Unit X is written to math register UNITXOUT. (bit mask) */
-#define MATH_U0_HIOUT_MASK 32
+#define MATH_U0_HIOUT_MASK 0b00100000
 /* If set, the high-half of the output of Math Function Unit X is written to math register UNITXOUT. (bit mask) */
-#define U0_HIOUT_MASK 32
+#define U0_HIOUT_MASK 0b00100000
 /* If set, Math Function Unit X acts as a 32-bit adder instead of 32-bit multiplier. (address) */
 #define MATH_U0_MLADD_ADDR 0xD7D0
 /* If set, Math Function Unit X acts as a 32-bit adder instead of 32-bit multiplier. (address) */
 #define U0_MLADD_ADDR 0xD7D0
 /* If set, Math Function Unit X acts as a 32-bit adder instead of 32-bit multiplier. (bit mask) */
-#define MATH_U0_MLADD_MASK 64
+#define MATH_U0_MLADD_MASK 0b01000000
 /* If set, Math Function Unit X acts as a 32-bit adder instead of 32-bit multiplier. (bit mask) */
-#define U0_MLADD_MASK 64
+#define U0_MLADD_MASK 0b01000000
 /* If set, Math Function Unit X's output is latched. (address) */
 #define MATH_U0_LATCH_ADDR 0xD7D0
 /* If set, Math Function Unit X's output is latched. (address) */
 #define U0_LATCH_ADDR 0xD7D0
 /* If set, Math Function Unit X's output is latched. (bit mask) */
-#define MATH_U0_LATCH_MASK 128
+#define MATH_U0_LATCH_MASK 0b10000000
 /* If set, Math Function Unit X's output is latched. (bit mask) */
-#define U0_LATCH_MASK 128
+#define U0_LATCH_MASK 0b10000000
 /* @UNITXOUT (address) */
 #define MATH_UNIT1OUT_ADDR 0xD7D1
 /* @UNITXOUT (address) */
 #define UNIT1OUT_ADDR 0xD7D1
 /* @UNITXOUT (bit mask) */
-#define MATH_UNIT1OUT_MASK 15
+#define MATH_UNIT1OUT_MASK 0b00001111
 /* @UNITXOUT (bit mask) */
-#define UNIT1OUT_MASK 15
+#define UNIT1OUT_MASK 0b00001111
 /* @UXLOWOUT (address) */
 #define MATH_U1_LOWOUT_ADDR 0xD7D1
 /* @UXLOWOUT (address) */
 #define U1_LOWOUT_ADDR 0xD7D1
 /* @UXLOWOUT (bit mask) */
-#define MATH_U1_LOWOUT_MASK 16
+#define MATH_U1_LOWOUT_MASK 0b00010000
 /* @UXLOWOUT (bit mask) */
-#define U1_LOWOUT_MASK 16
+#define U1_LOWOUT_MASK 0b00010000
 /* @UXHIOUT (address) */
 #define MATH_U1_HIOUT_ADDR 0xD7D1
 /* @UXHIOUT (address) */
 #define U1_HIOUT_ADDR 0xD7D1
 /* @UXHIOUT (bit mask) */
-#define MATH_U1_HIOUT_MASK 32
+#define MATH_U1_HIOUT_MASK 0b00100000
 /* @UXHIOUT (bit mask) */
-#define U1_HIOUT_MASK 32
+#define U1_HIOUT_MASK 0b00100000
 /* @UXMLADD (address) */
 #define MATH_U1_MLADD_ADDR 0xD7D1
 /* @UXMLADD (address) */
 #define U1_MLADD_ADDR 0xD7D1
 /* @UXMLADD (bit mask) */
-#define MATH_U1_MLADD_MASK 64
+#define MATH_U1_MLADD_MASK 0b01000000
 /* @UXMLADD (bit mask) */
-#define U1_MLADD_MASK 64
+#define U1_MLADD_MASK 0b01000000
 /* @UXLATCH (address) */
 #define MATH_U1_LATCH_ADDR 0xD7D1
 /* @UXLATCH (address) */
 #define U1_LATCH_ADDR 0xD7D1
 /* @UXLATCH (bit mask) */
-#define MATH_U1_LATCH_MASK 128
+#define MATH_U1_LATCH_MASK 0b10000000
 /* @UXLATCH (bit mask) */
-#define U1_LATCH_MASK 128
+#define U1_LATCH_MASK 0b10000000
 /* @UNITXOUT (address) */
 #define MATH_UNIT2OUT_ADDR 0xD7D2
 /* @UNITXOUT (address) */
 #define UNIT2OUT_ADDR 0xD7D2
 /* @UNITXOUT (bit mask) */
-#define MATH_UNIT2OUT_MASK 15
+#define MATH_UNIT2OUT_MASK 0b00001111
 /* @UNITXOUT (bit mask) */
-#define UNIT2OUT_MASK 15
+#define UNIT2OUT_MASK 0b00001111
 /* @UXLOWOUT (address) */
 #define MATH_U2_LOWOUT_ADDR 0xD7D2
 /* @UXLOWOUT (address) */
 #define U2_LOWOUT_ADDR 0xD7D2
 /* @UXLOWOUT (bit mask) */
-#define MATH_U2_LOWOUT_MASK 16
+#define MATH_U2_LOWOUT_MASK 0b00010000
 /* @UXLOWOUT (bit mask) */
-#define U2_LOWOUT_MASK 16
+#define U2_LOWOUT_MASK 0b00010000
 /* @UXHIOUT (address) */
 #define MATH_U2_HIOUT_ADDR 0xD7D2
 /* @UXHIOUT (address) */
 #define U2_HIOUT_ADDR 0xD7D2
 /* @UXHIOUT (bit mask) */
-#define MATH_U2_HIOUT_MASK 32
+#define MATH_U2_HIOUT_MASK 0b00100000
 /* @UXHIOUT (bit mask) */
-#define U2_HIOUT_MASK 32
+#define U2_HIOUT_MASK 0b00100000
 /* @UXMLADD (address) */
 #define MATH_U2_MLADD_ADDR 0xD7D2
 /* @UXMLADD (address) */
 #define U2_MLADD_ADDR 0xD7D2
 /* @UXMLADD (bit mask) */
-#define MATH_U2_MLADD_MASK 64
+#define MATH_U2_MLADD_MASK 0b01000000
 /* @UXMLADD (bit mask) */
-#define U2_MLADD_MASK 64
+#define U2_MLADD_MASK 0b01000000
 /* @UXLATCH (address) */
 #define MATH_U2_LATCH_ADDR 0xD7D2
 /* @UXLATCH (address) */
 #define U2_LATCH_ADDR 0xD7D2
 /* @UXLATCH (bit mask) */
-#define MATH_U2_LATCH_MASK 128
+#define MATH_U2_LATCH_MASK 0b10000000
 /* @UXLATCH (bit mask) */
-#define U2_LATCH_MASK 128
+#define U2_LATCH_MASK 0b10000000
 /* @UNITXOUT (address) */
 #define MATH_UNIT3OUT_ADDR 0xD7D3
 /* @UNITXOUT (address) */
 #define UNIT3OUT_ADDR 0xD7D3
 /* @UNITXOUT (bit mask) */
-#define MATH_UNIT3OUT_MASK 15
+#define MATH_UNIT3OUT_MASK 0b00001111
 /* @UNITXOUT (bit mask) */
-#define UNIT3OUT_MASK 15
+#define UNIT3OUT_MASK 0b00001111
 /* @UXLOWOUT (address) */
 #define MATH_U3_LOWOUT_ADDR 0xD7D3
 /* @UXLOWOUT (address) */
 #define U3_LOWOUT_ADDR 0xD7D3
 /* @UXLOWOUT (bit mask) */
-#define MATH_U3_LOWOUT_MASK 16
+#define MATH_U3_LOWOUT_MASK 0b00010000
 /* @UXLOWOUT (bit mask) */
-#define U3_LOWOUT_MASK 16
+#define U3_LOWOUT_MASK 0b00010000
 /* @UXHIOUT (address) */
 #define MATH_U3_HIOUT_ADDR 0xD7D3
 /* @UXHIOUT (address) */
 #define U3_HIOUT_ADDR 0xD7D3
 /* @UXHIOUT (bit mask) */
-#define MATH_U3_HIOUT_MASK 32
+#define MATH_U3_HIOUT_MASK 0b00100000
 /* @UXHIOUT (bit mask) */
-#define U3_HIOUT_MASK 32
+#define U3_HIOUT_MASK 0b00100000
 /* @UXMLADD (address) */
 #define MATH_U3_MLADD_ADDR 0xD7D3
 /* @UXMLADD (address) */
 #define U3_MLADD_ADDR 0xD7D3
 /* @UXMLADD (bit mask) */
-#define MATH_U3_MLADD_MASK 64
+#define MATH_U3_MLADD_MASK 0b01000000
 /* @UXMLADD (bit mask) */
-#define U3_MLADD_MASK 64
+#define U3_MLADD_MASK 0b01000000
 /* @UXLATCH (address) */
 #define MATH_U3_LATCH_ADDR 0xD7D3
 /* @UXLATCH (address) */
 #define U3_LATCH_ADDR 0xD7D3
 /* @UXLATCH (bit mask) */
-#define MATH_U3_LATCH_MASK 128
+#define MATH_U3_LATCH_MASK 0b10000000
 /* @UXLATCH (bit mask) */
-#define U3_LATCH_MASK 128
+#define U3_LATCH_MASK 0b10000000
 /* @UNITXOUT (address) */
 #define MATH_UNIT4OUT_ADDR 0xD7D4
 /* @UNITXOUT (address) */
 #define UNIT4OUT_ADDR 0xD7D4
 /* @UNITXOUT (bit mask) */
-#define MATH_UNIT4OUT_MASK 15
+#define MATH_UNIT4OUT_MASK 0b00001111
 /* @UNITXOUT (bit mask) */
-#define UNIT4OUT_MASK 15
+#define UNIT4OUT_MASK 0b00001111
 /* @UXLOWOUT (address) */
 #define MATH_U4_LOWOUT_ADDR 0xD7D4
 /* @UXLOWOUT (address) */
 #define U4_LOWOUT_ADDR 0xD7D4
 /* @UXLOWOUT (bit mask) */
-#define MATH_U4_LOWOUT_MASK 16
+#define MATH_U4_LOWOUT_MASK 0b00010000
 /* @UXLOWOUT (bit mask) */
-#define U4_LOWOUT_MASK 16
+#define U4_LOWOUT_MASK 0b00010000
 /* @UXHIOUT (address) */
 #define MATH_U4_HIOUT_ADDR 0xD7D4
 /* @UXHIOUT (address) */
 #define U4_HIOUT_ADDR 0xD7D4
 /* @UXHIOUT (bit mask) */
-#define MATH_U4_HIOUT_MASK 32
+#define MATH_U4_HIOUT_MASK 0b00100000
 /* @UXHIOUT (bit mask) */
-#define U4_HIOUT_MASK 32
+#define U4_HIOUT_MASK 0b00100000
 /* @UXMLADD (address) */
 #define MATH_U4_MLADD_ADDR 0xD7D4
 /* @UXMLADD (address) */
 #define U4_MLADD_ADDR 0xD7D4
 /* @UXMLADD (bit mask) */
-#define MATH_U4_MLADD_MASK 64
+#define MATH_U4_MLADD_MASK 0b01000000
 /* @UXMLADD (bit mask) */
-#define U4_MLADD_MASK 64
+#define U4_MLADD_MASK 0b01000000
 /* @UXLATCH (address) */
 #define MATH_U4_LATCH_ADDR 0xD7D4
 /* @UXLATCH (address) */
 #define U4_LATCH_ADDR 0xD7D4
 /* @UXLATCH (bit mask) */
-#define MATH_U4_LATCH_MASK 128
+#define MATH_U4_LATCH_MASK 0b10000000
 /* @UXLATCH (bit mask) */
-#define U4_LATCH_MASK 128
+#define U4_LATCH_MASK 0b10000000
 /* @UNITXOUT (address) */
 #define MATH_UNIT5OUT_ADDR 0xD7D5
 /* @UNITXOUT (address) */
 #define UNIT5OUT_ADDR 0xD7D5
 /* @UNITXOUT (bit mask) */
-#define MATH_UNIT5OUT_MASK 15
+#define MATH_UNIT5OUT_MASK 0b00001111
 /* @UNITXOUT (bit mask) */
-#define UNIT5OUT_MASK 15
+#define UNIT5OUT_MASK 0b00001111
 /* @UXLOWOUT (address) */
 #define MATH_U5_LOWOUT_ADDR 0xD7D5
 /* @UXLOWOUT (address) */
 #define U5_LOWOUT_ADDR 0xD7D5
 /* @UXLOWOUT (bit mask) */
-#define MATH_U5_LOWOUT_MASK 16
+#define MATH_U5_LOWOUT_MASK 0b00010000
 /* @UXLOWOUT (bit mask) */
-#define U5_LOWOUT_MASK 16
+#define U5_LOWOUT_MASK 0b00010000
 /* @UXHIOUT (address) */
 #define MATH_U5_HIOUT_ADDR 0xD7D5
 /* @UXHIOUT (address) */
 #define U5_HIOUT_ADDR 0xD7D5
 /* @UXHIOUT (bit mask) */
-#define MATH_U5_HIOUT_MASK 32
+#define MATH_U5_HIOUT_MASK 0b00100000
 /* @UXHIOUT (bit mask) */
-#define U5_HIOUT_MASK 32
+#define U5_HIOUT_MASK 0b00100000
 /* @UXMLADD (address) */
 #define MATH_U5_MLADD_ADDR 0xD7D5
 /* @UXMLADD (address) */
 #define U5_MLADD_ADDR 0xD7D5
 /* @UXMLADD (bit mask) */
-#define MATH_U5_MLADD_MASK 64
+#define MATH_U5_MLADD_MASK 0b01000000
 /* @UXMLADD (bit mask) */
-#define U5_MLADD_MASK 64
+#define U5_MLADD_MASK 0b01000000
 /* @UXLATCH (address) */
 #define MATH_U5_LATCH_ADDR 0xD7D5
 /* @UXLATCH (address) */
 #define U5_LATCH_ADDR 0xD7D5
 /* @UXLATCH (bit mask) */
-#define MATH_U5_LATCH_MASK 128
+#define MATH_U5_LATCH_MASK 0b10000000
 /* @UXLATCH (bit mask) */
-#define U5_LATCH_MASK 128
+#define U5_LATCH_MASK 0b10000000
 /* @UNITXOUT (address) */
 #define MATH_UNIT6OUT_ADDR 0xD7D6
 /* @UNITXOUT (address) */
 #define UNIT6OUT_ADDR 0xD7D6
 /* @UNITXOUT (bit mask) */
-#define MATH_UNIT6OUT_MASK 15
+#define MATH_UNIT6OUT_MASK 0b00001111
 /* @UNITXOUT (bit mask) */
-#define UNIT6OUT_MASK 15
+#define UNIT6OUT_MASK 0b00001111
 /* @UXLOWOUT (address) */
 #define MATH_U6_LOWOUT_ADDR 0xD7D6
 /* @UXLOWOUT (address) */
 #define U6_LOWOUT_ADDR 0xD7D6
 /* @UXLOWOUT (bit mask) */
-#define MATH_U6_LOWOUT_MASK 16
+#define MATH_U6_LOWOUT_MASK 0b00010000
 /* @UXLOWOUT (bit mask) */
-#define U6_LOWOUT_MASK 16
+#define U6_LOWOUT_MASK 0b00010000
 /* @UXHIOUT (address) */
 #define MATH_U6_HIOUT_ADDR 0xD7D6
 /* @UXHIOUT (address) */
 #define U6_HIOUT_ADDR 0xD7D6
 /* @UXHIOUT (bit mask) */
-#define MATH_U6_HIOUT_MASK 32
+#define MATH_U6_HIOUT_MASK 0b00100000
 /* @UXHIOUT (bit mask) */
-#define U6_HIOUT_MASK 32
+#define U6_HIOUT_MASK 0b00100000
 /* @UXMLADD (address) */
 #define MATH_U6_MLADD_ADDR 0xD7D6
 /* @UXMLADD (address) */
 #define U6_MLADD_ADDR 0xD7D6
 /* @UXMLADD (bit mask) */
-#define MATH_U6_MLADD_MASK 64
+#define MATH_U6_MLADD_MASK 0b01000000
 /* @UXMLADD (bit mask) */
-#define U6_MLADD_MASK 64
+#define U6_MLADD_MASK 0b01000000
 /* @UXLATCH (address) */
 #define MATH_U6_LATCH_ADDR 0xD7D6
 /* @UXLATCH (address) */
 #define U6_LATCH_ADDR 0xD7D6
 /* @UXLATCH (bit mask) */
-#define MATH_U6_LATCH_MASK 128
+#define MATH_U6_LATCH_MASK 0b10000000
 /* @UXLATCH (bit mask) */
-#define U6_LATCH_MASK 128
+#define U6_LATCH_MASK 0b10000000
 /* @UNITXOUT (address) */
 #define MATH_UNIT7OUT_ADDR 0xD7D7
 /* @UNITXOUT (address) */
 #define UNIT7OUT_ADDR 0xD7D7
 /* @UNITXOUT (bit mask) */
-#define MATH_UNIT7OUT_MASK 15
+#define MATH_UNIT7OUT_MASK 0b00001111
 /* @UNITXOUT (bit mask) */
-#define UNIT7OUT_MASK 15
+#define UNIT7OUT_MASK 0b00001111
 /* @UXLOWOUT (address) */
 #define MATH_U7_LOWOUT_ADDR 0xD7D7
 /* @UXLOWOUT (address) */
 #define U7_LOWOUT_ADDR 0xD7D7
 /* @UXLOWOUT (bit mask) */
-#define MATH_U7_LOWOUT_MASK 16
+#define MATH_U7_LOWOUT_MASK 0b00010000
 /* @UXLOWOUT (bit mask) */
-#define U7_LOWOUT_MASK 16
+#define U7_LOWOUT_MASK 0b00010000
 /* @UXHIOUT (address) */
 #define MATH_U7_HIOUT_ADDR 0xD7D7
 /* @UXHIOUT (address) */
 #define U7_HIOUT_ADDR 0xD7D7
 /* @UXHIOUT (bit mask) */
-#define MATH_U7_HIOUT_MASK 32
+#define MATH_U7_HIOUT_MASK 0b00100000
 /* @UXHIOUT (bit mask) */
-#define U7_HIOUT_MASK 32
+#define U7_HIOUT_MASK 0b00100000
 /* @UXMLADD (address) */
 #define MATH_U7_MLADD_ADDR 0xD7D7
 /* @UXMLADD (address) */
 #define U7_MLADD_ADDR 0xD7D7
 /* @UXMLADD (bit mask) */
-#define MATH_U7_MLADD_MASK 64
+#define MATH_U7_MLADD_MASK 0b01000000
 /* @UXMLADD (bit mask) */
-#define U7_MLADD_MASK 64
+#define U7_MLADD_MASK 0b01000000
 /* @UXLATCH (address) */
 #define MATH_U7_LATCH_ADDR 0xD7D7
 /* @UXLATCH (address) */
 #define U7_LATCH_ADDR 0xD7D7
 /* @UXLATCH (bit mask) */
-#define MATH_U7_LATCH_MASK 128
+#define MATH_U7_LATCH_MASK 0b10000000
 /* @UXLATCH (bit mask) */
-#define U7_LATCH_MASK 128
+#define U7_LATCH_MASK 0b10000000
 /* @UNITXOUT (address) */
 #define MATH_UNIT8OUT_ADDR 0xD7D8
 /* @UNITXOUT (address) */
 #define UNIT8OUT_ADDR 0xD7D8
 /* @UNITXOUT (bit mask) */
-#define MATH_UNIT8OUT_MASK 15
+#define MATH_UNIT8OUT_MASK 0b00001111
 /* @UNITXOUT (bit mask) */
-#define UNIT8OUT_MASK 15
+#define UNIT8OUT_MASK 0b00001111
 /* @UXLOWOUT (address) */
 #define MATH_U8_LOWOUT_ADDR 0xD7D8
 /* @UXLOWOUT (address) */
 #define U8_LOWOUT_ADDR 0xD7D8
 /* @UXLOWOUT (bit mask) */
-#define MATH_U8_LOWOUT_MASK 16
+#define MATH_U8_LOWOUT_MASK 0b00010000
 /* @UXLOWOUT (bit mask) */
-#define U8_LOWOUT_MASK 16
+#define U8_LOWOUT_MASK 0b00010000
 /* @UXHIOUT (address) */
 #define MATH_U8_HIOUT_ADDR 0xD7D8
 /* @UXHIOUT (address) */
 #define U8_HIOUT_ADDR 0xD7D8
 /* @UXHIOUT (bit mask) */
-#define MATH_U8_HIOUT_MASK 32
+#define MATH_U8_HIOUT_MASK 0b00100000
 /* @UXHIOUT (bit mask) */
-#define U8_HIOUT_MASK 32
+#define U8_HIOUT_MASK 0b00100000
 /* If set, Math Function Unit Y acts as a 32-bit adder instead of 32-bit barrel-shifter. (address) */
 #define MATH_U8_BSADD_ADDR 0xD7D8
 /* If set, Math Function Unit Y acts as a 32-bit adder instead of 32-bit barrel-shifter. (address) */
 #define U8_BSADD_ADDR 0xD7D8
 /* If set, Math Function Unit Y acts as a 32-bit adder instead of 32-bit barrel-shifter. (bit mask) */
-#define MATH_U8_BSADD_MASK 64
+#define MATH_U8_BSADD_MASK 0b01000000
 /* If set, Math Function Unit Y acts as a 32-bit adder instead of 32-bit barrel-shifter. (bit mask) */
-#define U8_BSADD_MASK 64
+#define U8_BSADD_MASK 0b01000000
 /* @UXLATCH (address) */
 #define MATH_U8_LATCH_ADDR 0xD7D8
 /* @UXLATCH (address) */
 #define U8_LATCH_ADDR 0xD7D8
 /* @UXLATCH (bit mask) */
-#define MATH_U8_LATCH_MASK 128
+#define MATH_U8_LATCH_MASK 0b10000000
 /* @UXLATCH (bit mask) */
-#define U8_LATCH_MASK 128
+#define U8_LATCH_MASK 0b10000000
 /* @UNITXOUT (address) */
 #define MATH_UNIT9OUT_ADDR 0xD7D9
 /* @UNITXOUT (address) */
 #define UNIT9OUT_ADDR 0xD7D9
 /* @UNITXOUT (bit mask) */
-#define MATH_UNIT9OUT_MASK 15
+#define MATH_UNIT9OUT_MASK 0b00001111
 /* @UNITXOUT (bit mask) */
-#define UNIT9OUT_MASK 15
+#define UNIT9OUT_MASK 0b00001111
 /* @UXLOWOUT (address) */
 #define MATH_U9_LOWOUT_ADDR 0xD7D9
 /* @UXLOWOUT (address) */
 #define U9_LOWOUT_ADDR 0xD7D9
 /* @UXLOWOUT (bit mask) */
-#define MATH_U9_LOWOUT_MASK 16
+#define MATH_U9_LOWOUT_MASK 0b00010000
 /* @UXLOWOUT (bit mask) */
-#define U9_LOWOUT_MASK 16
+#define U9_LOWOUT_MASK 0b00010000
 /* @UXHIOUT (address) */
 #define MATH_U9_HIOUT_ADDR 0xD7D9
 /* @UXHIOUT (address) */
 #define U9_HIOUT_ADDR 0xD7D9
 /* @UXHIOUT (bit mask) */
-#define MATH_U9_HIOUT_MASK 32
+#define MATH_U9_HIOUT_MASK 0b00100000
 /* @UXHIOUT (bit mask) */
-#define U9_HIOUT_MASK 32
+#define U9_HIOUT_MASK 0b00100000
 /* @UXBSADD (address) */
 #define MATH_U9_BSADD_ADDR 0xD7D9
 /* @UXBSADD (address) */
 #define U9_BSADD_ADDR 0xD7D9
 /* @UXBSADD (bit mask) */
-#define MATH_U9_BSADD_MASK 64
+#define MATH_U9_BSADD_MASK 0b01000000
 /* @UXBSADD (bit mask) */
-#define U9_BSADD_MASK 64
+#define U9_BSADD_MASK 0b01000000
 /* @UXLATCH (address) */
 #define MATH_U9_LATCH_ADDR 0xD7D9
 /* @UXLATCH (address) */
 #define U9_LATCH_ADDR 0xD7D9
 /* @UXLATCH (bit mask) */
-#define MATH_U9_LATCH_MASK 128
+#define MATH_U9_LATCH_MASK 0b10000000
 /* @UXLATCH (bit mask) */
-#define U9_LATCH_MASK 128
+#define U9_LATCH_MASK 0b10000000
 /* @UNITXOUT (address) */
 #define MATH_UNITAOUT_ADDR 0xD7DA
 /* @UNITXOUT (address) */
 #define UNITAOUT_ADDR 0xD7DA
 /* @UNITXOUT (bit mask) */
-#define MATH_UNITAOUT_MASK 15
+#define MATH_UNITAOUT_MASK 0b00001111
 /* @UNITXOUT (bit mask) */
-#define UNITAOUT_MASK 15
+#define UNITAOUT_MASK 0b00001111
 /* @UXLOWOUT (address) */
 #define MATH_UA_LOWOUT_ADDR 0xD7DA
 /* @UXLOWOUT (address) */
 #define UA_LOWOUT_ADDR 0xD7DA
 /* @UXLOWOUT (bit mask) */
-#define MATH_UA_LOWOUT_MASK 16
+#define MATH_UA_LOWOUT_MASK 0b00010000
 /* @UXLOWOUT (bit mask) */
-#define UA_LOWOUT_MASK 16
+#define UA_LOWOUT_MASK 0b00010000
 /* @UXHIOUT (address) */
 #define MATH_UA_HIOUT_ADDR 0xD7DA
 /* @UXHIOUT (address) */
 #define UA_HIOUT_ADDR 0xD7DA
 /* @UXHIOUT (bit mask) */
-#define MATH_UA_HIOUT_MASK 32
+#define MATH_UA_HIOUT_MASK 0b00100000
 /* @UXHIOUT (bit mask) */
-#define UA_HIOUT_MASK 32
+#define UA_HIOUT_MASK 0b00100000
 /* @UXBSADD (address) */
 #define MATH_UA_BSADD_ADDR 0xD7DA
 /* @UXBSADD (address) */
 #define UA_BSADD_ADDR 0xD7DA
 /* @UXBSADD (bit mask) */
-#define MATH_UA_BSADD_MASK 64
+#define MATH_UA_BSADD_MASK 0b01000000
 /* @UXBSADD (bit mask) */
-#define UA_BSADD_MASK 64
+#define UA_BSADD_MASK 0b01000000
 /* @UXLATCH (address) */
 #define MATH_UA_LATCH_ADDR 0xD7DA
 /* @UXLATCH (address) */
 #define UA_LATCH_ADDR 0xD7DA
 /* @UXLATCH (bit mask) */
-#define MATH_UA_LATCH_MASK 128
+#define MATH_UA_LATCH_MASK 0b10000000
 /* @UXLATCH (bit mask) */
-#define UA_LATCH_MASK 128
+#define UA_LATCH_MASK 0b10000000
 /* @UNITXOUT (address) */
 #define MATH_UNITBOUT_ADDR 0xD7DB
 /* @UNITXOUT (address) */
 #define UNITBOUT_ADDR 0xD7DB
 /* @UNITXOUT (bit mask) */
-#define MATH_UNITBOUT_MASK 15
+#define MATH_UNITBOUT_MASK 0b00001111
 /* @UNITXOUT (bit mask) */
-#define UNITBOUT_MASK 15
+#define UNITBOUT_MASK 0b00001111
 /* @UXLOWOUT (address) */
 #define MATH_UB_LOWOUT_ADDR 0xD7DB
 /* @UXLOWOUT (address) */
 #define UB_LOWOUT_ADDR 0xD7DB
 /* @UXLOWOUT (bit mask) */
-#define MATH_UB_LOWOUT_MASK 16
+#define MATH_UB_LOWOUT_MASK 0b00010000
 /* @UXLOWOUT (bit mask) */
-#define UB_LOWOUT_MASK 16
+#define UB_LOWOUT_MASK 0b00010000
 /* @UXHIOUT (address) */
 #define MATH_UB_HIOUT_ADDR 0xD7DB
 /* @UXHIOUT (address) */
 #define UB_HIOUT_ADDR 0xD7DB
 /* @UXHIOUT (bit mask) */
-#define MATH_UB_HIOUT_MASK 32
+#define MATH_UB_HIOUT_MASK 0b00100000
 /* @UXHIOUT (bit mask) */
-#define UB_HIOUT_MASK 32
+#define UB_HIOUT_MASK 0b00100000
 /* @UXBSADD (address) */
 #define MATH_UB_BSADD_ADDR 0xD7DB
 /* @UXBSADD (address) */
 #define UB_BSADD_ADDR 0xD7DB
 /* @UXBSADD (bit mask) */
-#define MATH_UB_BSADD_MASK 64
+#define MATH_UB_BSADD_MASK 0b01000000
 /* @UXBSADD (bit mask) */
-#define UB_BSADD_MASK 64
+#define UB_BSADD_MASK 0b01000000
 /* @UXLATCH (address) */
 #define MATH_UB_LATCH_ADDR 0xD7DB
 /* @UXLATCH (address) */
 #define UB_LATCH_ADDR 0xD7DB
 /* @UXLATCH (bit mask) */
-#define MATH_UB_LATCH_MASK 128
+#define MATH_UB_LATCH_MASK 0b10000000
 /* @UXLATCH (bit mask) */
-#define UB_LATCH_MASK 128
+#define UB_LATCH_MASK 0b10000000
 /* @UNITXOUT (address) */
 #define MATH_UNITCOUT_ADDR 0xD7DC
 /* @UNITXOUT (address) */
 #define UNITCOUT_ADDR 0xD7DC
 /* @UNITXOUT (bit mask) */
-#define MATH_UNITCOUT_MASK 15
+#define MATH_UNITCOUT_MASK 0b00001111
 /* @UNITXOUT (bit mask) */
-#define UNITCOUT_MASK 15
+#define UNITCOUT_MASK 0b00001111
 /* @UXLOWOUT (address) */
 #define MATH_UC_LOWOUT_ADDR 0xD7DC
 /* @UXLOWOUT (address) */
 #define UC_LOWOUT_ADDR 0xD7DC
 /* @UXLOWOUT (bit mask) */
-#define MATH_UC_LOWOUT_MASK 16
+#define MATH_UC_LOWOUT_MASK 0b00010000
 /* @UXLOWOUT (bit mask) */
-#define UC_LOWOUT_MASK 16
+#define UC_LOWOUT_MASK 0b00010000
 /* @UXHIOUT (address) */
 #define MATH_UC_HIOUT_ADDR 0xD7DC
 /* @UXHIOUT (address) */
 #define UC_HIOUT_ADDR 0xD7DC
 /* @UXHIOUT (bit mask) */
-#define MATH_UC_HIOUT_MASK 32
+#define MATH_UC_HIOUT_MASK 0b00100000
 /* @UXHIOUT (bit mask) */
-#define UC_HIOUT_MASK 32
+#define UC_HIOUT_MASK 0b00100000
 /* If set, Math Function Unit X acts as a 32-bit adder instead of 32-bit divider. (address) */
 #define MATH_UC_DVADD_ADDR 0xD7DC
 /* If set, Math Function Unit X acts as a 32-bit adder instead of 32-bit divider. (address) */
 #define UC_DVADD_ADDR 0xD7DC
 /* If set, Math Function Unit X acts as a 32-bit adder instead of 32-bit divider. (bit mask) */
-#define MATH_UC_DVADD_MASK 64
+#define MATH_UC_DVADD_MASK 0b01000000
 /* If set, Math Function Unit X acts as a 32-bit adder instead of 32-bit divider. (bit mask) */
-#define UC_DVADD_MASK 64
+#define UC_DVADD_MASK 0b01000000
 /* @UXLATCH (address) */
 #define MATH_UC_LATCH_ADDR 0xD7DC
 /* @UXLATCH (address) */
 #define UC_LATCH_ADDR 0xD7DC
 /* @UXLATCH (bit mask) */
-#define MATH_UC_LATCH_MASK 128
+#define MATH_UC_LATCH_MASK 0b10000000
 /* @UXLATCH (bit mask) */
-#define UC_LATCH_MASK 128
+#define UC_LATCH_MASK 0b10000000
 /* @UNITXOUT (address) */
 #define MATH_UNITDOUT_ADDR 0xD7DD
 /* @UNITXOUT (address) */
 #define UNITDOUT_ADDR 0xD7DD
 /* @UNITXOUT (bit mask) */
-#define MATH_UNITDOUT_MASK 15
+#define MATH_UNITDOUT_MASK 0b00001111
 /* @UNITXOUT (bit mask) */
-#define UNITDOUT_MASK 15
+#define UNITDOUT_MASK 0b00001111
 /* @UXLOWOUT (address) */
 #define MATH_UD_LOWOUT_ADDR 0xD7DD
 /* @UXLOWOUT (address) */
 #define UD_LOWOUT_ADDR 0xD7DD
 /* @UXLOWOUT (bit mask) */
-#define MATH_UD_LOWOUT_MASK 16
+#define MATH_UD_LOWOUT_MASK 0b00010000
 /* @UXLOWOUT (bit mask) */
-#define UD_LOWOUT_MASK 16
+#define UD_LOWOUT_MASK 0b00010000
 /* @UXHIOUT (address) */
 #define MATH_UD_HIOUT_ADDR 0xD7DD
 /* @UXHIOUT (address) */
 #define UD_HIOUT_ADDR 0xD7DD
 /* @UXHIOUT (bit mask) */
-#define MATH_UD_HIOUT_MASK 32
+#define MATH_UD_HIOUT_MASK 0b00100000
 /* @UXHIOUT (bit mask) */
-#define UD_HIOUT_MASK 32
+#define UD_HIOUT_MASK 0b00100000
 /*  (address) */
 #define MATH_UD_DVADD_ADDR 0xD7DD
 /*  (address) */
 #define UD_DVADD_ADDR 0xD7DD
 /*  (bit mask) */
-#define MATH_UD_DVADD_MASK 64
+#define MATH_UD_DVADD_MASK 0b01000000
 /*  (bit mask) */
-#define UD_DVADD_MASK 64
+#define UD_DVADD_MASK 0b01000000
 /* @UXLATCH (address) */
 #define MATH_UD_LATCH_ADDR 0xD7DD
 /* @UXLATCH (address) */
 #define UD_LATCH_ADDR 0xD7DD
 /* @UXLATCH (bit mask) */
-#define MATH_UD_LATCH_MASK 128
+#define MATH_UD_LATCH_MASK 0b10000000
 /* @UXLATCH (bit mask) */
-#define UD_LATCH_MASK 128
+#define UD_LATCH_MASK 0b10000000
 /* @UNITXOUT (address) */
 #define MATH_UNITEOUT_ADDR 0xD7DE
 /* @UNITXOUT (address) */
 #define UNITEOUT_ADDR 0xD7DE
 /* @UNITXOUT (bit mask) */
-#define MATH_UNITEOUT_MASK 15
+#define MATH_UNITEOUT_MASK 0b00001111
 /* @UNITXOUT (bit mask) */
-#define UNITEOUT_MASK 15
+#define UNITEOUT_MASK 0b00001111
 /* @UXLOWOUT (address) */
 #define MATH_UE_LOWOUT_ADDR 0xD7DE
 /* @UXLOWOUT (address) */
 #define UE_LOWOUT_ADDR 0xD7DE
 /* @UXLOWOUT (bit mask) */
-#define MATH_UE_LOWOUT_MASK 16
+#define MATH_UE_LOWOUT_MASK 0b00010000
 /* @UXLOWOUT (bit mask) */
-#define UE_LOWOUT_MASK 16
+#define UE_LOWOUT_MASK 0b00010000
 /* @UXHIOUT (address) */
 #define MATH_UE_HIOUT_ADDR 0xD7DE
 /* @UXHIOUT (address) */
 #define UE_HIOUT_ADDR 0xD7DE
 /* @UXHIOUT (bit mask) */
-#define MATH_UE_HIOUT_MASK 32
+#define MATH_UE_HIOUT_MASK 0b00100000
 /* @UXHIOUT (bit mask) */
-#define UE_HIOUT_MASK 32
+#define UE_HIOUT_MASK 0b00100000
 /*  (address) */
 #define MATH_UE_DVADD_ADDR 0xD7DE
 /*  (address) */
 #define UE_DVADD_ADDR 0xD7DE
 /*  (bit mask) */
-#define MATH_UE_DVADD_MASK 64
+#define MATH_UE_DVADD_MASK 0b01000000
 /*  (bit mask) */
-#define UE_DVADD_MASK 64
+#define UE_DVADD_MASK 0b01000000
 /* @UXLATCH (address) */
 #define MATH_UE_LATCH_ADDR 0xD7DE
 /* @UXLATCH (address) */
 #define UE_LATCH_ADDR 0xD7DE
 /* @UXLATCH (bit mask) */
-#define MATH_UE_LATCH_MASK 128
+#define MATH_UE_LATCH_MASK 0b10000000
 /* @UXLATCH (bit mask) */
-#define UE_LATCH_MASK 128
+#define UE_LATCH_MASK 0b10000000
 /* @UNITXOUT (address) */
 #define MATH_UNITFOUT_ADDR 0xD7DF
 /* @UNITXOUT (address) */
 #define UNITFOUT_ADDR 0xD7DF
 /* @UNITXOUT (bit mask) */
-#define MATH_UNITFOUT_MASK 15
+#define MATH_UNITFOUT_MASK 0b00001111
 /* @UNITXOUT (bit mask) */
-#define UNITFOUT_MASK 15
+#define UNITFOUT_MASK 0b00001111
 /* @UXLOWOUT (address) */
 #define MATH_UF_LOWOUT_ADDR 0xD7DF
 /* @UXLOWOUT (address) */
 #define UF_LOWOUT_ADDR 0xD7DF
 /* @UXLOWOUT (bit mask) */
-#define MATH_UF_LOWOUT_MASK 16
+#define MATH_UF_LOWOUT_MASK 0b00010000
 /* @UXLOWOUT (bit mask) */
-#define UF_LOWOUT_MASK 16
+#define UF_LOWOUT_MASK 0b00010000
 /* @UXHIOUT (address) */
 #define MATH_UF_HIOUT_ADDR 0xD7DF
 /* @UXHIOUT (address) */
 #define UF_HIOUT_ADDR 0xD7DF
 /* @UXHIOUT (bit mask) */
-#define MATH_UF_HIOUT_MASK 32
+#define MATH_UF_HIOUT_MASK 0b00100000
 /* @UXHIOUT (bit mask) */
-#define UF_HIOUT_MASK 32
+#define UF_HIOUT_MASK 0b00100000
 /*  (address) */
 #define MATH_UF_DVADD_ADDR 0xD7DF
 /*  (address) */
 #define UF_DVADD_ADDR 0xD7DF
 /*  (bit mask) */
-#define MATH_UF_DVADD_MASK 64
+#define MATH_UF_DVADD_MASK 0b01000000
 /*  (bit mask) */
-#define UF_DVADD_MASK 64
+#define UF_DVADD_MASK 0b01000000
 /* @UXLATCH (address) */
 #define MATH_UF_LATCH_ADDR 0xD7DF
 /* @UXLATCH (address) */
 #define UF_LATCH_ADDR 0xD7DF
 /* @UXLATCH (bit mask) */
-#define MATH_UF_LATCH_MASK 128
+#define MATH_UF_LATCH_MASK 0b10000000
 /* @UXLATCH (bit mask) */
-#define UF_LATCH_MASK 128
+#define UF_LATCH_MASK 0b10000000
 /* Latch interval for latched outputs (in CPU cycles) */
 #define MATH_LATCHINT 0xD7E0
 /* Latch interval for latched outputs (in CPU cycles) */
@@ -5478,17 +5478,17 @@
 /* Enable setting of math registers (must normally be set) (address) */
 #define WREN_ADDR 0xD7E1
 /* Enable setting of math registers (must normally be set) (bit mask) */
-#define MATH_WREN_MASK 1
+#define MATH_WREN_MASK 0b00000001
 /* Enable setting of math registers (must normally be set) (bit mask) */
-#define WREN_MASK 1
+#define WREN_MASK 0b00000001
 /* Enable committing of output values from math units back to math registers (clearing effectively pauses iterative formulae) (address) */
 #define MATH_CALCEN_ADDR 0xD7E1
 /* Enable committing of output values from math units back to math registers (clearing effectively pauses iterative formulae) (address) */
 #define CALCEN_ADDR 0xD7E1
 /* Enable committing of output values from math units back to math registers (clearing effectively pauses iterative formulae) (bit mask) */
-#define MATH_CALCEN_MASK 2
+#define MATH_CALCEN_MASK 0b00000010
 /* Enable committing of output values from math units back to math registers (clearing effectively pauses iterative formulae) (bit mask) */
-#define CALCEN_MASK 2
+#define CALCEN_MASK 0b00000010
 /* Reserved */
 #define MATH_RESERVED 0xD7E2
 /* Reserved */
@@ -5514,9 +5514,9 @@
 /* IEC bus is active (address) */
 #define IECBUSACT_ADDR 0xD7F1
 /* IEC bus is active (bit mask) */
-#define CPU_IECBUSACT_MASK 1
+#define CPU_IECBUSACT_MASK 0b00000001
 /* IEC bus is active (bit mask) */
-#define IECBUSACT_MASK 1
+#define IECBUSACT_MASK 0b00000001
 /* Count the number of PHI cycles per video frame (LSB) */
 #define CPU_PHIPERFRAME 0xD7F2
 /* Count the number of PHI cycles per video frame (MSB) */
@@ -5534,49 +5534,49 @@
 /* 1= enable cartridges (address) */
 #define CARTEN_ADDR 0xD7FB
 /* 1= enable cartridges (bit mask) */
-#define CPU_CARTEN_MASK 2
+#define CPU_CARTEN_MASK 0b00000010
 /* 1= enable cartridges (bit mask) */
-#define CARTEN_MASK 2
+#define CARTEN_MASK 0b00000010
 /* Set to zero to power off computer on supported systems. WRITE ONLY. (address) */
 #define CPU_POWEREN_ADDR 0xD7FD
 /* Set to zero to power off computer on supported systems. WRITE ONLY. (address) */
 #define POWEREN_ADDR 0xD7FD
 /* Set to zero to power off computer on supported systems. WRITE ONLY. (bit mask) */
-#define CPU_POWEREN_MASK 1
+#define CPU_POWEREN_MASK 0b00000001
 /* Set to zero to power off computer on supported systems. WRITE ONLY. (bit mask) */
-#define POWEREN_MASK 1
+#define POWEREN_MASK 0b00000001
 /* Override for /GAME : Must be 0 to enable /GAME signal (address) */
 #define CPU_NOGAME_ADDR 0xD7FD
 /* Override for /GAME : Must be 0 to enable /GAME signal (address) */
 #define NOGAME_ADDR 0xD7FD
 /* Override for /GAME : Must be 0 to enable /GAME signal (bit mask) */
-#define CPU_NOGAME_MASK 64
+#define CPU_NOGAME_MASK 0b01000000
 /* Override for /GAME : Must be 0 to enable /GAME signal (bit mask) */
-#define NOGAME_MASK 64
+#define NOGAME_MASK 0b01000000
 /* Override for /EXROM : Must be 0 to enable /EXROM signal (address) */
 #define CPU_NOEXROM_ADDR 0xD7FD
 /* Override for /EXROM : Must be 0 to enable /EXROM signal (address) */
 #define NOEXROM_ADDR 0xD7FD
 /* Override for /EXROM : Must be 0 to enable /EXROM signal (bit mask) */
-#define CPU_NOEXROM_MASK 128
+#define CPU_NOEXROM_MASK 0b10000000
 /* Override for /EXROM : Must be 0 to enable /EXROM signal (bit mask) */
-#define NOEXROM_MASK 128
+#define NOEXROM_MASK 0b10000000
 /* Enable expansion RAM pre-fetch logic (address) */
 #define CPU_PREFETCH_ADDR 0xD7FE
 /* Enable expansion RAM pre-fetch logic (address) */
 #define PREFETCH_ADDR 0xD7FE
 /* Enable expansion RAM pre-fetch logic (bit mask) */
-#define CPU_PREFETCH_MASK 1
+#define CPU_PREFETCH_MASK 0b00000001
 /* Enable expansion RAM pre-fetch logic (bit mask) */
-#define PREFETCH_MASK 1
+#define PREFETCH_MASK 0b00000001
 /* Enable Ocean Type A cartridge emulation (address) */
 #define CPU_OCEANA_ADDR 0xD7FE
 /* Enable Ocean Type A cartridge emulation (address) */
 #define OCEANA_ADDR 0xD7FE
 /* Enable Ocean Type A cartridge emulation (bit mask) */
-#define CPU_OCEANA_MASK 2
+#define CPU_OCEANA_MASK 0b00000010
 /* Enable Ocean Type A cartridge emulation (bit mask) */
-#define OCEANA_MASK 2
+#define OCEANA_MASK 0b00000010
 /* Select CPU debug stream via ethernet when \$D6E1.3 is set */
 #define ETHCOMMAND_DEBUGCPU 0xDC
 /* Select CPU debug stream via ethernet when \$D6E1.3 is set */
@@ -5600,113 +5600,113 @@
 /* TOD tenths of seconds (address) */
 #define CIA1_TODJIF_ADDR 0xDC08
 /* TOD tenths of seconds (bit mask) */
-#define CIA1_TODJIF_MASK 15
+#define CIA1_TODJIF_MASK 0b00001111
 /* TOD seconds (address) */
 #define CIA1_TODSEC_ADDR 0xDC09
 /* TOD seconds (bit mask) */
-#define CIA1_TODSEC_MASK 63
+#define CIA1_TODSEC_MASK 0b00111111
 /* TOD minutes (address) */
 #define CIA1_TODMIN_ADDR 0xDC0A
 /* TOD minutes (address) */
 #define TODMIN_ADDR 0xDC0A
 /* TOD minutes (bit mask) */
-#define CIA1_TODMIN_MASK 63
+#define CIA1_TODMIN_MASK 0b00111111
 /* TOD minutes (bit mask) */
-#define TODMIN_MASK 63
+#define TODMIN_MASK 0b00111111
 /* TOD hours (address) */
 #define CIA1_TODHOUR_ADDR 0xDC0B
 /* TOD hours (bit mask) */
-#define CIA1_TODHOUR_MASK 31
+#define CIA1_TODHOUR_MASK 0b00011111
 /* TOD PM flag (address) */
 #define CIA1_TODAMPM_ADDR 0xDC0B
 /* TOD PM flag (bit mask) */
-#define CIA1_TODAMPM_MASK 128
+#define CIA1_TODAMPM_MASK 0b10000000
 /* shift register data register(writing starts sending) */
 #define CIA1_SDR 0xDC0C
 /* Timer A underflow (address) */
 #define CIA1_TA_ADDR 0xDC0D
 /* Timer A underflow (bit mask) */
-#define CIA1_TA_MASK 1
+#define CIA1_TA_MASK 0b00000001
 /* Timer B underflow (address) */
 #define CIA1_TB_ADDR 0xDC0D
 /* Timer B underflow (bit mask) */
-#define CIA1_TB_MASK 2
+#define CIA1_TB_MASK 0b00000010
 /* TOD alarm (address) */
 #define CIA1_ALRM_ADDR 0xDC0D
 /* TOD alarm (bit mask) */
-#define CIA1_ALRM_MASK 4
+#define CIA1_ALRM_MASK 0b00000100
 /* shift register full/empty (address) */
 #define CIA1_SP_ADDR 0xDC0D
 /* shift register full/empty (bit mask) */
-#define CIA1_SP_MASK 8
+#define CIA1_SP_MASK 0b00001000
 /* FLAG edge detected (address) */
 #define CIA1_FLG_ADDR 0xDC0D
 /* FLAG edge detected (bit mask) */
-#define CIA1_FLG_MASK 16
+#define CIA1_FLG_MASK 0b00010000
 /* Interrupt flag (address) */
 #define CIA1_IR_ADDR 0xDC0D
 /* Interrupt flag (address) */
 #define IR_ADDR 0xDC0D
 /* Interrupt flag (bit mask) */
-#define CIA1_IR_MASK 128
+#define CIA1_IR_MASK 0b10000000
 /* Interrupt flag (bit mask) */
-#define IR_MASK 128
+#define IR_MASK 0b10000000
 /* Timer A start (address) */
 #define CIA1_STRTA_ADDR 0xDC0E
 /* Timer A start (bit mask) */
-#define CIA1_STRTA_MASK 1
+#define CIA1_STRTA_MASK 0b00000001
 /* Timer A PB6 out (address) */
 #define CIA1_PBONA_ADDR 0xDC0E
 /* Timer A PB6 out (bit mask) */
-#define CIA1_PBONA_MASK 2
+#define CIA1_PBONA_MASK 0b00000010
 /* Timer A toggle or pulse (address) */
 #define CIA1_OMODA_ADDR 0xDC0E
 /* Timer A toggle or pulse (bit mask) */
-#define CIA1_OMODA_MASK 4
+#define CIA1_OMODA_MASK 0b00000100
 /* Timer A one-shot mode (address) */
 #define CIA1_RMODA_ADDR 0xDC0E
 /* Timer A one-shot mode (bit mask) */
-#define CIA1_RMODA_MASK 8
+#define CIA1_RMODA_MASK 0b00001000
 /* Timer A Timer A tick source (address) */
 #define CIA1_IMODA_ADDR 0xDC0E
 /* Timer A Timer A tick source (bit mask) */
-#define CIA1_IMODA_MASK 32
+#define CIA1_IMODA_MASK 0b00100000
 /* Serial port direction (address) */
 #define CIA1_SPMOD_ADDR 0xDC0E
 /* Serial port direction (bit mask) */
-#define CIA1_SPMOD_MASK 64
+#define CIA1_SPMOD_MASK 0b01000000
 /* 50/60Hz select for TOD clock (address) */
 #define CIA1_TOD50_ADDR 0xDC0E
 /* 50/60Hz select for TOD clock (bit mask) */
-#define CIA1_TOD50_MASK 128
+#define CIA1_TOD50_MASK 0b10000000
 /* Timer B start (address) */
 #define CIA1_STRTB_ADDR 0xDC0F
 /* Timer B start (bit mask) */
-#define CIA1_STRTB_MASK 1
+#define CIA1_STRTB_MASK 0b00000001
 /* Timer B PB7 out (address) */
 #define CIA1_PBONB_ADDR 0xDC0F
 /* Timer B PB7 out (bit mask) */
-#define CIA1_PBONB_MASK 2
+#define CIA1_PBONB_MASK 0b00000010
 /* Timer B toggle or pulse (address) */
 #define CIA1_OMODB_ADDR 0xDC0F
 /* Timer B toggle or pulse (bit mask) */
-#define CIA1_OMODB_MASK 4
+#define CIA1_OMODB_MASK 0b00000100
 /* Timer B one-shot mode (address) */
 #define CIA1_RMODB_ADDR 0xDC0F
 /* Timer B one-shot mode (bit mask) */
-#define CIA1_RMODB_MASK 8
+#define CIA1_RMODB_MASK 0b00001000
 /* Strobe input to force-load timers (address) */
 #define CIA1_LOAD_ADDR 0xDC0F
 /* Strobe input to force-load timers (bit mask) */
-#define CIA1_LOAD_MASK 16
+#define CIA1_LOAD_MASK 0b00010000
 /* Timer B Timer A tick source (address) */
 #define CIA1_IMODB_ADDR 0xDC0F
 /* Timer B Timer A tick source (bit mask) */
-#define CIA1_IMODB_MASK 96
+#define CIA1_IMODB_MASK 0b01100000
 /* TOD alarm edit (address) */
 #define CIA2_TODEDIT_ADDR 0xDC0F
 /* TOD alarm edit (bit mask) */
-#define CIA2_TODEDIT_MASK 128
+#define CIA2_TODEDIT_MASK 0b10000000
 /* Timer A latch value (16 bit) */
 #define CIA1_TALATCH 0xDC10
 /* Timer A latch value (16 bit) */
@@ -5726,23 +5726,23 @@
 /* TOD 10ths of seconds value (address) */
 #define GS_CIA1_TODJIF_ADDR 0xDC18
 /* TOD 10ths of seconds value (bit mask) */
-#define GS_CIA1_TODJIF_MASK 15
+#define GS_CIA1_TODJIF_MASK 0b00001111
 /* Interrupt mask for Timer B (address) */
 #define CIA1_IMTB_ADDR 0xDC18
 /* Interrupt mask for Timer B (bit mask) */
-#define CIA1_IMTB_MASK 16
+#define CIA1_IMTB_MASK 0b00010000
 /* Interrupt mask for TOD alarm (address) */
 #define CIA1_IMALRM_ADDR 0xDC18
 /* Interrupt mask for TOD alarm (bit mask) */
-#define CIA1_IMALRM_MASK 32
+#define CIA1_IMALRM_MASK 0b00100000
 /* Interrupt mask for shift register (serial port) (address) */
 #define CIA1_IMSP_ADDR 0xDC18
 /* Interrupt mask for shift register (serial port) (bit mask) */
-#define CIA1_IMSP_MASK 64
+#define CIA1_IMSP_MASK 0b01000000
 /* Interrupt mask for FLAG line (address) */
 #define CIA1_IMFLG_ADDR 0xDC18
 /* Interrupt mask for FLAG line (bit mask) */
-#define CIA1_IMFLG_MASK 128
+#define CIA1_IMFLG_MASK 0b10000000
 /* TOD Alarm seconds value */
 #define CIA1_TODSEC 0xDC19
 /* TOD Alarm minutes value */
@@ -5750,11 +5750,11 @@
 /* TOD hours value (address) */
 #define GS_CIA1_TODHOUR_ADDR 0xDC1B
 /* TOD hours value (bit mask) */
-#define GS_CIA1_TODHOUR_MASK 127
+#define GS_CIA1_TODHOUR_MASK 0b01111111
 /* TOD AM/PM flag (address) */
 #define GS_CIA1_TODAMPM_ADDR 0xDC1B
 /* TOD AM/PM flag (bit mask) */
-#define GS_CIA1_TODAMPM_MASK 128
+#define GS_CIA1_TODAMPM_MASK 0b10000000
 /* TOD Alarm 10ths of seconds value */
 #define CIA1_ALRMJIF 0xDC1C
 /* TOD Alarm seconds value */
@@ -5764,11 +5764,11 @@
 /* TOD Alarm hours value (address) */
 #define CIA1_ALRMHOUR_ADDR 0xDC1F
 /* TOD Alarm hours value (bit mask) */
-#define CIA1_ALRMHOUR_MASK 127
+#define CIA1_ALRMHOUR_MASK 0b01111111
 /* TOD Alarm AM/PM flag (address) */
 #define CIA1_ALRMAMPM_ADDR 0xDC1F
 /* TOD Alarm AM/PM flag (bit mask) */
-#define CIA1_ALRMAMPM_MASK 128
+#define CIA1_ALRMAMPM_MASK 0b10000000
 /* Port A */
 #define CIA2_PORTA 0xDD00
 /* Port B */
@@ -5788,97 +5788,97 @@
 /* TOD tenths of seconds (address) */
 #define CIA2_TODJIF_ADDR 0xDD08
 /* TOD tenths of seconds (bit mask) */
-#define CIA2_TODJIF_MASK 15
+#define CIA2_TODJIF_MASK 0b00001111
 /* TOD seconds (address) */
 #define CIA2_TODSEC_ADDR 0xDD09
 /* TOD seconds (bit mask) */
-#define CIA2_TODSEC_MASK 63
+#define CIA2_TODSEC_MASK 0b00111111
 /* TOD hours (address) */
 #define CIA2_TODHOUR_ADDR 0xDD0B
 /* TOD hours (bit mask) */
-#define CIA2_TODHOUR_MASK 31
+#define CIA2_TODHOUR_MASK 0b00011111
 /* TOD PM flag (address) */
 #define CIA2_TODAMPM_ADDR 0xDD0B
 /* TOD PM flag (bit mask) */
-#define CIA2_TODAMPM_MASK 128
+#define CIA2_TODAMPM_MASK 0b10000000
 /* shift register data register(writing starts sending) */
 #define CIA2_SDR 0xDD0C
 /* Timer A underflow (address) */
 #define CIA2_TA_ADDR 0xDD0D
 /* Timer A underflow (bit mask) */
-#define CIA2_TA_MASK 1
+#define CIA2_TA_MASK 0b00000001
 /* Timer B underflow (address) */
 #define CIA2_TB_ADDR 0xDD0D
 /* Timer B underflow (bit mask) */
-#define CIA2_TB_MASK 2
+#define CIA2_TB_MASK 0b00000010
 /* TOD alarm (address) */
 #define CIA2_ALRM_ADDR 0xDD0D
 /* TOD alarm (bit mask) */
-#define CIA2_ALRM_MASK 4
+#define CIA2_ALRM_MASK 0b00000100
 /* shift register full/empty (address) */
 #define CIA2_SP_ADDR 0xDD0D
 /* shift register full/empty (bit mask) */
-#define CIA2_SP_MASK 8
+#define CIA2_SP_MASK 0b00001000
 /* FLAG edge detected (address) */
 #define CIA2_FLG_ADDR 0xDD0D
 /* FLAG edge detected (bit mask) */
-#define CIA2_FLG_MASK 16
+#define CIA2_FLG_MASK 0b00010000
 /* Timer A start (address) */
 #define CIA2_STRTA_ADDR 0xDD0E
 /* Timer A start (bit mask) */
-#define CIA2_STRTA_MASK 1
+#define CIA2_STRTA_MASK 0b00000001
 /* Timer A PB6 out (address) */
 #define CIA2_PBONA_ADDR 0xDD0E
 /* Timer A PB6 out (bit mask) */
-#define CIA2_PBONA_MASK 2
+#define CIA2_PBONA_MASK 0b00000010
 /* Timer A toggle or pulse (address) */
 #define CIA2_OMODA_ADDR 0xDD0E
 /* Timer A toggle or pulse (bit mask) */
-#define CIA2_OMODA_MASK 4
+#define CIA2_OMODA_MASK 0b00000100
 /* Timer A one-shot mode (address) */
 #define CIA2_RMODA_ADDR 0xDD0E
 /* Timer A one-shot mode (bit mask) */
-#define CIA2_RMODA_MASK 8
+#define CIA2_RMODA_MASK 0b00001000
 /* Timer A Timer A tick source (address) */
 #define CIA2_IMODA_ADDR 0xDD0E
 /* Timer A Timer A tick source (bit mask) */
-#define CIA2_IMODA_MASK 32
+#define CIA2_IMODA_MASK 0b00100000
 /* Serial port direction (address) */
 #define CIA2_SPMOD_ADDR 0xDD0E
 /* Serial port direction (bit mask) */
-#define CIA2_SPMOD_MASK 64
+#define CIA2_SPMOD_MASK 0b01000000
 /* 50/60Hz select for TOD clock (address) */
 #define CIA2_TOD50_ADDR 0xDD0E
 /* 50/60Hz select for TOD clock (bit mask) */
-#define CIA2_TOD50_MASK 128
+#define CIA2_TOD50_MASK 0b10000000
 /* Timer B start (address) */
 #define CIA2_STRTB_ADDR 0xDD0F
 /* Timer B start (bit mask) */
-#define CIA2_STRTB_MASK 1
+#define CIA2_STRTB_MASK 0b00000001
 /* Timer B PB7 out (address) */
 #define CIA2_PBONB_ADDR 0xDD0F
 /* Timer B PB7 out (bit mask) */
-#define CIA2_PBONB_MASK 2
+#define CIA2_PBONB_MASK 0b00000010
 /* Timer B toggle or pulse (address) */
 #define CIA2_OMODB_ADDR 0xDD0F
 /* Timer B toggle or pulse (bit mask) */
-#define CIA2_OMODB_MASK 4
+#define CIA2_OMODB_MASK 0b00000100
 /* Timer B one-shot mode (address) */
 #define CIA2_RMODB_ADDR 0xDD0F
 /* Timer B one-shot mode (bit mask) */
-#define CIA2_RMODB_MASK 8
+#define CIA2_RMODB_MASK 0b00001000
 /* Strobe input to force-load timers (address) */
 #define CIA2_LOAD_ADDR 0xDD0F
 /* Strobe input to force-load timers (bit mask) */
-#define CIA2_LOAD_MASK 16
+#define CIA2_LOAD_MASK 0b00010000
 /* Timer B Timer A tick source (address) */
 #define CIA2_IMODB_ADDR 0xDD0F
 /* Timer B Timer A tick source (bit mask) */
-#define CIA2_IMODB_MASK 96
+#define CIA2_IMODB_MASK 0b01100000
 /* TOD alarm edit (address) */
 #define C64_CIA2_TODEDIT_ADDR 0xDD0F
 /* TOD alarm edit (bit mask) */
-#define C64_CIA2_TODEDIT_MASK 128
+#define C64_CIA2_TODEDIT_MASK 0b10000000
 /* Timer A latch value (16 bit) */
 #define CIA2_TALATCH 0xDD10
 /* Timer A latch value (16 bit) */
@@ -5898,23 +5898,23 @@
 /* TOD 10ths of seconds value (address) */
 #define GS_CIA2_TODJIF_ADDR 0xDD18
 /* TOD 10ths of seconds value (bit mask) */
-#define GS_CIA2_TODJIF_MASK 15
+#define GS_CIA2_TODJIF_MASK 0b00001111
 /* Interrupt mask for Timer B (address) */
 #define CIA2_IMTB_ADDR 0xDD18
 /* Interrupt mask for Timer B (bit mask) */
-#define CIA2_IMTB_MASK 16
+#define CIA2_IMTB_MASK 0b00010000
 /* Interrupt mask for TOD alarm (address) */
 #define CIA2_IMALRM_ADDR 0xDD18
 /* Interrupt mask for TOD alarm (bit mask) */
-#define CIA2_IMALRM_MASK 32
+#define CIA2_IMALRM_MASK 0b00100000
 /* Interrupt mask for shift register (serial port) (address) */
 #define CIA2_IMSP_ADDR 0xDD18
 /* Interrupt mask for shift register (serial port) (bit mask) */
-#define CIA2_IMSP_MASK 64
+#define CIA2_IMSP_MASK 0b01000000
 /* Interrupt mask for FLAG line (address) */
 #define CIA2_IMFLG_ADDR 0xDD18
 /* Interrupt mask for FLAG line (bit mask) */
-#define CIA2_IMFLG_MASK 128
+#define CIA2_IMFLG_MASK 0b10000000
 /* TOD Alarm seconds value */
 #define CIA2_TODSEC 0xDD19
 /* TOD Alarm minutes value */
@@ -5922,11 +5922,11 @@
 /* TOD hours value (address) */
 #define GS_CIA2_TODHOUR_ADDR 0xDD1B
 /* TOD hours value (bit mask) */
-#define GS_CIA2_TODHOUR_MASK 127
+#define GS_CIA2_TODHOUR_MASK 0b01111111
 /* TOD AM/PM flag (address) */
 #define GS_CIA2_TODAMPM_ADDR 0xDD1B
 /* TOD AM/PM flag (bit mask) */
-#define GS_CIA2_TODAMPM_MASK 128
+#define GS_CIA2_TODAMPM_MASK 0b10000000
 /* TOD Alarm 10ths of seconds value */
 #define CIA2_ALRMJIF 0xDD1C
 /* Enable delaying writes to $DD00 by 3 cycles to match real 6502 timing (address) */
@@ -5934,9 +5934,9 @@
 /* Enable delaying writes to $DD00 by 3 cycles to match real 6502 timing (address) */
 #define DD00DELAY_ADDR 0xDD1C
 /* Enable delaying writes to $DD00 by 3 cycles to match real 6502 timing (bit mask) */
-#define CIA2_DD00DELAY_MASK 128
+#define CIA2_DD00DELAY_MASK 0b10000000
 /* Enable delaying writes to $DD00 by 3 cycles to match real 6502 timing (bit mask) */
-#define DD00DELAY_MASK 128
+#define DD00DELAY_MASK 0b10000000
 /* TOD Alarm seconds value */
 #define CIA2_ALRMSEC 0xDD1D
 /* TOD Alarm minutes value */
@@ -5944,11 +5944,11 @@
 /* TOD Alarm hours value (address) */
 #define CIA2_ALRMHOUR_ADDR 0xDD1F
 /* TOD Alarm hours value (bit mask) */
-#define CIA2_ALRMHOUR_MASK 127
+#define CIA2_ALRMHOUR_MASK 0b01111111
 /* TOD Alarm AM/PM flag (address) */
 #define CIA2_ALRMAMPM_ADDR 0xDD1F
 /* TOD Alarm AM/PM flag (bit mask) */
-#define CIA2_ALRMAMPM_MASK 128
+#define CIA2_ALRMAMPM_MASK 0b10000000
 /* Receive exactly one ethernet frame only, and keep all signals states (for debugging ethernet sub-system) */
 #define ETHCOMMAND_RXONLYONE 0xDE
 /* Receive exactly one ethernet frame only, and keep all signals states (for debugging ethernet sub-system) */
