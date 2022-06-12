@@ -88,6 +88,7 @@ class Format:
     fname_suffix: str
     comment_tmpl: str
     sym_tmpl: str
+    use_c_hex: bool = False
 
 
 @dataclass
@@ -112,7 +113,8 @@ FORMATS = {
     'cc65': Format(
         fname_suffix='.h',
         comment_tmpl='/*{comment}*/\n{item}',
-        sym_tmpl='#define {sym} {val}'),
+        sym_tmpl='#define {sym} {val}',
+        use_c_hex=True),
     'kick': Format(
         fname_suffix='.asm',
         comment_tmpl='{item}//{comment}',
@@ -262,14 +264,20 @@ def write_comment(outfh, txt, fmt):
 
 
 def write_sym(outfh, sym, fmt):
+    val = sym.value
+    if fmt.use_c_hex and val.startswith('$'):
+        val = '0x' + val[1:]
+
     item = fmt.sym_tmpl.format(
         addr='!addr ' if sym.is_address else '',
         sym=sym.full_name,
-        val=sym.value)
+        val=val)
+
     if sym.description:
         item = fmt.comment_tmpl.format(
             item=item + '  ',
             comment=' ' + sym.description + ' ').strip()
+
     outfh.write(item + '\n')
 
 
