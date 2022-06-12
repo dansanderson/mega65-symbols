@@ -38,6 +38,7 @@ ARCH_MODES = set(('C64', 'C65', 'GS'))
 # Symbol names typically start with a chip ID followed by a colon. Names
 # that start with these chip IDs are recognized as symbols.
 CHIPS = set((
+    'AUDIO',
     'AUDIOMIX',
     'AUXFPGA',
     'CIA1',
@@ -54,6 +55,7 @@ CHIPS = set((
     'HCPU',
     'KBD',
     'MATH',
+    'MISC',
     'MISCIO',
     'MISCIO',
     'QSPI',
@@ -319,6 +321,8 @@ def main():
                 if syms:
                     iomap.extend(syms)
                 else:
+                    if args.verbose:
+                        print('Skipped: ' + line[:-1])
                     line_no_symbol_count += 1
             except:
                 print(f'\n** Error parsing line {line_count}: {line=}\n')

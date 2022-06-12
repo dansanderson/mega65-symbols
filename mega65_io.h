@@ -3383,6 +3383,10 @@
 #define FPGA_RECONFTRIG $D6CF
 /* Write $42 to Trigger FPGA reconfiguration to switch to alternate bitstream. */
 #define RECONFTRIG $D6CF
+/* I2C bus select (bus 0 = temp sensor on Nexys4 boardS) */
+#define MISC_I2CBUSSELECT $D6D0
+/* I2C bus select (bus 0 = temp sensor on Nexys4 boardS) */
+#define I2CBUSSELECT $D6D0
 /* Select I2C bus number (I2C busses vary between MEGA65 and MEGAphone variants) */
 #define MISCIO_I2CBUSSEL $D6D0
 /* Select I2C bus number (I2C busses vary between MEGA65 and MEGAphone variants) */
@@ -3451,6 +3455,14 @@
 #define MISCIO_I2CRDATA $D6D4
 /* I2C data read register */
 #define I2CRDATA $D6D4
+/* DEBUG SD card last error code LSB */
+#define MISC_SDDEBUGERRLSB $D6DA
+/* DEBUG SD card last error code LSB */
+#define SDDEBUGERRLSB $D6DA
+/* DEBUG SD card last error code MSB */
+#define MISC_SDDEBUGERRMSB $D6DB
+/* DEBUG SD card last error code MSB */
+#define SDDEBUGERRMSB $D6DB
 /* FPGA die temperature sensor (lower nybl) */
 #define FPGA_FPGATEMPLSB $D6DE
 /* FPGA die temperature sensor (lower nybl) */
@@ -3674,21 +3686,89 @@
 /* DEBUG show current ethernet TX state */
 #define DBGTXSTAT $D6EF
 /* LCD panel brightness control */
+#define MISC_LCDBRIGHTNESS $D6F0
+/* LCD panel brightness control */
+#define LCDBRIGHTNESS $D6F0
+/* LCD panel brightness control */
 #define MISCIO_LCDBRIGHT $D6F0
 /* LCD panel brightness control */
 #define LCDBRIGHT $D6F0
+/* Read FPGA five-way buttons */
+#define MISC_FPGABUTTONS $D6F2
+/* Read FPGA five-way buttons */
+#define FPGABUTTONS $D6F2
+/* Accelerometer bit-bash interface */
+#define MISC_ACCELBITBASH $D6F3
+/* Accelerometer bit-bash interface */
+#define ACCELBITBASH $D6F3
 /* Accelerometer bit-bashing port (debug only) */
 #define MISCIO_ACCELBASH $D6F3
 /* Accelerometer bit-bashing port (debug only) */
 #define ACCELBASH $D6F3
 /* Audio Mixer register select */
+#define AUDIO_MIXREGSEL $D6F4
+/* Audio Mixer register select */
+#define MIXREGSEL $D6F4
+/* Audio Mixer register select */
 #define AUDIOMIX_REGSEL $D6F4
 /* Audio Mixer register select */
 #define REGSEL $D6F4
+/* Audio Mixer register read port */
+#define AUDIO_MIXREGDATA $D6F5
+/* Audio Mixer register read port */
+#define MIXREGDATA $D6F5
 /* Audio Mixer register write port */
 #define AUDIOMIX_REGWDATA $D6F5
 /* Audio Mixer register write port */
 #define REGWDATA $D6F5
+/* Keyboard scan code reader (lower byte) */
+#define MISC_PS2KEYSCANLSB $D6F6
+/* Keyboard scan code reader (lower byte) */
+#define PS2KEYSCANLSB $D6F6
+/* Keyboard scan code reader (upper nybl) */
+#define MISC_PS2KEYSCANMSB $D6F7
+/* Keyboard scan code reader (upper nybl) */
+#define PS2KEYSCANMSB $D6F7
+/* Digital audio, left channel, LSB */
+#define AUDIO_DIGILEFTLSB $D6F8
+/* Digital audio, left channel, LSB */
+#define DIGILEFTLSB $D6F8
+/* 16-bit digital audio out (left LSB) */
+#define AUDIO_DIGILLSB $D6F8
+/* 16-bit digital audio out (left LSB) */
+#define DIGILLSB $D6F8
+/* Digital audio, left channel, MSB */
+#define AUDIO_DIGILEFTMSB $D6F9
+/* Digital audio, left channel, MSB */
+#define DIGILEFTMSB $D6F9
+/* 16-bit digital audio out (left MSB) */
+#define AUDIO_DIGILMSB $D6F9
+/* 16-bit digital audio out (left MSB) */
+#define DIGILMSB $D6F9
+/* Digital audio, left channel, LSB */
+#define AUDIO_DIGIRIGHTLSB $D6FA
+/* Digital audio, left channel, LSB */
+#define DIGIRIGHTLSB $D6FA
+/* 16-bit digital audio out (right LSB) */
+#define AUDIO_DIGIRLSB $D6FA
+/* 16-bit digital audio out (right LSB) */
+#define DIGIRLSB $D6FA
+/* Digital audio, left channel, MSB */
+#define AUDIO_DIGIRIGHTMSB $D6FB
+/* Digital audio, left channel, MSB */
+#define DIGIRIGHTMSB $D6FB
+/* 16-bit digital audio out (right MSB) */
+#define AUDIO_DIGIRMSB $D6FB
+/* 16-bit digital audio out (right MSB) */
+#define DIGIRMSB $D6FB
+/* audio read-back LSB (source selected by $D6F4) */
+#define AUDIO_READBACKLSB $D6FC
+/* audio read-back LSB (source selected by $D6F4) */
+#define READBACKLSB $D6FC
+/* audio read-back MSB (source selected by $D6F4) */
+#define AUDIO_READBACKMSB $D6FD
+/* audio read-back MSB (source selected by $D6F4) */
+#define READBACKMSB $D6FD
 /* DMAgic DMA list address LSB, and trigger DMA (when written) */
 #define DMA_ADDRLSBTRIG $D700
 /* DMAgic DMA list address LSB, and trigger DMA (when written) */
@@ -3757,6 +3837,14 @@
 #define CPU_SLIEN_MASK 2
 /* Enable 6502-style slow (7 cycle) interrupts (bit mask) */
 #define SLIEN_MASK 2
+/* Enable VDC inteface simulation (address) */
+#define MISC_VDCSEN_ADDR $D710
+/* Enable VDC inteface simulation (address) */
+#define VDCSEN_ADDR $D710
+/* Enable VDC inteface simulation (bit mask) */
+#define MISC_VDCSEN_MASK 4
+/* Enable VDC inteface simulation (bit mask) */
+#define VDCSEN_MASK 4
 /* 1=charge extra cycle(s) for branches taken (address) */
 #define CPU_BRCOST_ADDR $D710
 /* 1=charge extra cycle(s) for branches taken (address) */
@@ -3781,6 +3869,14 @@
 #define DMA_AUD_BLKTO_MASK 7
 /* Audio DMA block timeout (read only) DEBUG (bit mask) */
 #define AUD_BLKTO_MASK 7
+/* PWM/PDM audio encoding select (address) */
+#define AUDIO_PWMPDM_ADDR $D711
+/* PWM/PDM audio encoding select (address) */
+#define PWMPDM_ADDR $D711
+/* PWM/PDM audio encoding select (bit mask) */
+#define AUDIO_PWMPDM_MASK 8
+/* PWM/PDM audio encoding select (bit mask) */
+#define PWMPDM_MASK 8
 /* Audio DMA bypasses audio mixer (address) */
 #define DMA_NOMIX_ADDR $D711
 /* Audio DMA bypasses audio mixer (address) */

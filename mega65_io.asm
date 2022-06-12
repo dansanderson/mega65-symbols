@@ -1,4 +1,4 @@
-// Generated from: /Users/dan/Projects/mega65-core/iomap.txt
+// Generated from: ../mega65-core/iomap.txt
 // Date: 2022-06-11
 
 .var ETHCOMMAND_STOPTX = $00  // Immediately stop transmitting the current ethernet frame. Will cause a partially sent frame to be received, most likely resulting in the loss of that frame.
@@ -1692,6 +1692,8 @@
 .var GS_QSPI_CLOCK_MASK = 2  // Alternate address for direct manipulation of QSPI CLOCK (bit mask)
 .var FPGA_RECONFTRIG = $D6CF  // Write $42 to Trigger FPGA reconfiguration to switch to alternate bitstream.
 .var RECONFTRIG = $D6CF  // Write $42 to Trigger FPGA reconfiguration to switch to alternate bitstream.
+.var MISC_I2CBUSSELECT = $D6D0  // I2C bus select (bus 0 = temp sensor on Nexys4 boardS)
+.var I2CBUSSELECT = $D6D0  // I2C bus select (bus 0 = temp sensor on Nexys4 boardS)
 .var MISCIO_I2CBUSSEL = $D6D0  // Select I2C bus number (I2C busses vary between MEGA65 and MEGAphone variants)
 .var I2CBUSSEL = $D6D0  // Select I2C bus number (I2C busses vary between MEGA65 and MEGAphone variants)
 .var MISCIO_I2CRST_ADDR = $D6D1  // I2C reset (address)
@@ -1726,6 +1728,10 @@
 .var I2CWDATA = $D6D3  // I2C data write register
 .var MISCIO_I2CRDATA = $D6D4  // I2C data read register
 .var I2CRDATA = $D6D4  // I2C data read register
+.var MISC_SDDEBUGERRLSB = $D6DA  // DEBUG SD card last error code LSB
+.var SDDEBUGERRLSB = $D6DA  // DEBUG SD card last error code LSB
+.var MISC_SDDEBUGERRMSB = $D6DB  // DEBUG SD card last error code MSB
+.var SDDEBUGERRMSB = $D6DB  // DEBUG SD card last error code MSB
 .var FPGA_FPGATEMPLSB = $D6DE  // FPGA die temperature sensor (lower nybl)
 .var FPGATEMPLSB = $D6DE  // FPGA die temperature sensor (lower nybl)
 .var FPGA_FPGATEMPMSB = $D6DF  // FPGA die temperature sensor (upper byte)
@@ -1837,14 +1843,48 @@
 .var DBGRXWCOUNT = $D6EF  // DEBUG show number of writes to eth RX buffer
 .var ETH_DBGTXSTAT = $D6EF  // DEBUG show current ethernet TX state
 .var DBGTXSTAT = $D6EF  // DEBUG show current ethernet TX state
+.var MISC_LCDBRIGHTNESS = $D6F0  // LCD panel brightness control
+.var LCDBRIGHTNESS = $D6F0  // LCD panel brightness control
 .var MISCIO_LCDBRIGHT = $D6F0  // LCD panel brightness control
 .var LCDBRIGHT = $D6F0  // LCD panel brightness control
+.var MISC_FPGABUTTONS = $D6F2  // Read FPGA five-way buttons
+.var FPGABUTTONS = $D6F2  // Read FPGA five-way buttons
+.var MISC_ACCELBITBASH = $D6F3  // Accelerometer bit-bash interface
+.var ACCELBITBASH = $D6F3  // Accelerometer bit-bash interface
 .var MISCIO_ACCELBASH = $D6F3  // Accelerometer bit-bashing port (debug only)
 .var ACCELBASH = $D6F3  // Accelerometer bit-bashing port (debug only)
+.var AUDIO_MIXREGSEL = $D6F4  // Audio Mixer register select
+.var MIXREGSEL = $D6F4  // Audio Mixer register select
 .var AUDIOMIX_REGSEL = $D6F4  // Audio Mixer register select
 .var REGSEL = $D6F4  // Audio Mixer register select
+.var AUDIO_MIXREGDATA = $D6F5  // Audio Mixer register read port
+.var MIXREGDATA = $D6F5  // Audio Mixer register read port
 .var AUDIOMIX_REGWDATA = $D6F5  // Audio Mixer register write port
 .var REGWDATA = $D6F5  // Audio Mixer register write port
+.var MISC_PS2KEYSCANLSB = $D6F6  // Keyboard scan code reader (lower byte)
+.var PS2KEYSCANLSB = $D6F6  // Keyboard scan code reader (lower byte)
+.var MISC_PS2KEYSCANMSB = $D6F7  // Keyboard scan code reader (upper nybl)
+.var PS2KEYSCANMSB = $D6F7  // Keyboard scan code reader (upper nybl)
+.var AUDIO_DIGILEFTLSB = $D6F8  // Digital audio, left channel, LSB
+.var DIGILEFTLSB = $D6F8  // Digital audio, left channel, LSB
+.var AUDIO_DIGILLSB = $D6F8  // 16-bit digital audio out (left LSB)
+.var DIGILLSB = $D6F8  // 16-bit digital audio out (left LSB)
+.var AUDIO_DIGILEFTMSB = $D6F9  // Digital audio, left channel, MSB
+.var DIGILEFTMSB = $D6F9  // Digital audio, left channel, MSB
+.var AUDIO_DIGILMSB = $D6F9  // 16-bit digital audio out (left MSB)
+.var DIGILMSB = $D6F9  // 16-bit digital audio out (left MSB)
+.var AUDIO_DIGIRIGHTLSB = $D6FA  // Digital audio, left channel, LSB
+.var DIGIRIGHTLSB = $D6FA  // Digital audio, left channel, LSB
+.var AUDIO_DIGIRLSB = $D6FA  // 16-bit digital audio out (right LSB)
+.var DIGIRLSB = $D6FA  // 16-bit digital audio out (right LSB)
+.var AUDIO_DIGIRIGHTMSB = $D6FB  // Digital audio, left channel, MSB
+.var DIGIRIGHTMSB = $D6FB  // Digital audio, left channel, MSB
+.var AUDIO_DIGIRMSB = $D6FB  // 16-bit digital audio out (right MSB)
+.var DIGIRMSB = $D6FB  // 16-bit digital audio out (right MSB)
+.var AUDIO_READBACKLSB = $D6FC  // audio read-back LSB (source selected by $D6F4)
+.var READBACKLSB = $D6FC  // audio read-back LSB (source selected by $D6F4)
+.var AUDIO_READBACKMSB = $D6FD  // audio read-back MSB (source selected by $D6F4)
+.var READBACKMSB = $D6FD  // audio read-back MSB (source selected by $D6F4)
 .var DMA_ADDRLSBTRIG = $D700  // DMAgic DMA list address LSB, and trigger DMA (when written)
 .var ADDRLSBTRIG = $D700  // DMAgic DMA list address LSB, and trigger DMA (when written)
 .var DMA_ADDRMSB = $D701  // DMA list address high byte (address bits 8 -- 15).
@@ -1879,6 +1919,10 @@
 .var SLIEN_ADDR = $D710  // Enable 6502-style slow (7 cycle) interrupts (address)
 .var CPU_SLIEN_MASK = 2  // Enable 6502-style slow (7 cycle) interrupts (bit mask)
 .var SLIEN_MASK = 2  // Enable 6502-style slow (7 cycle) interrupts (bit mask)
+.var MISC_VDCSEN_ADDR = $D710  // Enable VDC inteface simulation (address)
+.var VDCSEN_ADDR = $D710  // Enable VDC inteface simulation (address)
+.var MISC_VDCSEN_MASK = 4  // Enable VDC inteface simulation (bit mask)
+.var VDCSEN_MASK = 4  // Enable VDC inteface simulation (bit mask)
 .var CPU_BRCOST_ADDR = $D710  // 1=charge extra cycle(s) for branches taken (address)
 .var BRCOST_ADDR = $D710  // 1=charge extra cycle(s) for branches taken (address)
 .var CPU_BRCOST_MASK = 8  // 1=charge extra cycle(s) for branches taken (bit mask)
@@ -1891,6 +1935,10 @@
 .var AUD_BLKTO_ADDR = $D711  // Audio DMA block timeout (read only) DEBUG (address)
 .var DMA_AUD_BLKTO_MASK = 7  // Audio DMA block timeout (read only) DEBUG (bit mask)
 .var AUD_BLKTO_MASK = 7  // Audio DMA block timeout (read only) DEBUG (bit mask)
+.var AUDIO_PWMPDM_ADDR = $D711  // PWM/PDM audio encoding select (address)
+.var PWMPDM_ADDR = $D711  // PWM/PDM audio encoding select (address)
+.var AUDIO_PWMPDM_MASK = 8  // PWM/PDM audio encoding select (bit mask)
+.var PWMPDM_MASK = 8  // PWM/PDM audio encoding select (bit mask)
 .var DMA_NOMIX_ADDR = $D711  // Audio DMA bypasses audio mixer (address)
 .var NOMIX_ADDR = $D711  // Audio DMA bypasses audio mixer (address)
 .var DMA_NOMIX_MASK = 16  // Audio DMA bypasses audio mixer (bit mask)

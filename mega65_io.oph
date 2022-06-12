@@ -1,4 +1,4 @@
-; Generated from: /Users/dan/Projects/mega65-core/iomap.txt
+; Generated from: ../mega65-core/iomap.txt
 ; Date: 2022-06-11
 
 .alias ETHCOMMAND_STOPTX $00  ; Immediately stop transmitting the current ethernet frame. Will cause a partially sent frame to be received, most likely resulting in the loss of that frame.
@@ -1692,6 +1692,8 @@
 .alias GS_QSPI_CLOCK_MASK 2  ; Alternate address for direct manipulation of QSPI CLOCK (bit mask)
 .alias FPGA_RECONFTRIG $D6CF  ; Write $42 to Trigger FPGA reconfiguration to switch to alternate bitstream.
 .alias RECONFTRIG $D6CF  ; Write $42 to Trigger FPGA reconfiguration to switch to alternate bitstream.
+.alias MISC_I2CBUSSELECT $D6D0  ; I2C bus select (bus 0 = temp sensor on Nexys4 boardS)
+.alias I2CBUSSELECT $D6D0  ; I2C bus select (bus 0 = temp sensor on Nexys4 boardS)
 .alias MISCIO_I2CBUSSEL $D6D0  ; Select I2C bus number (I2C busses vary between MEGA65 and MEGAphone variants)
 .alias I2CBUSSEL $D6D0  ; Select I2C bus number (I2C busses vary between MEGA65 and MEGAphone variants)
 .alias MISCIO_I2CRST_ADDR $D6D1  ; I2C reset (address)
@@ -1726,6 +1728,10 @@
 .alias I2CWDATA $D6D3  ; I2C data write register
 .alias MISCIO_I2CRDATA $D6D4  ; I2C data read register
 .alias I2CRDATA $D6D4  ; I2C data read register
+.alias MISC_SDDEBUGERRLSB $D6DA  ; DEBUG SD card last error code LSB
+.alias SDDEBUGERRLSB $D6DA  ; DEBUG SD card last error code LSB
+.alias MISC_SDDEBUGERRMSB $D6DB  ; DEBUG SD card last error code MSB
+.alias SDDEBUGERRMSB $D6DB  ; DEBUG SD card last error code MSB
 .alias FPGA_FPGATEMPLSB $D6DE  ; FPGA die temperature sensor (lower nybl)
 .alias FPGATEMPLSB $D6DE  ; FPGA die temperature sensor (lower nybl)
 .alias FPGA_FPGATEMPMSB $D6DF  ; FPGA die temperature sensor (upper byte)
@@ -1837,14 +1843,48 @@
 .alias DBGRXWCOUNT $D6EF  ; DEBUG show number of writes to eth RX buffer
 .alias ETH_DBGTXSTAT $D6EF  ; DEBUG show current ethernet TX state
 .alias DBGTXSTAT $D6EF  ; DEBUG show current ethernet TX state
+.alias MISC_LCDBRIGHTNESS $D6F0  ; LCD panel brightness control
+.alias LCDBRIGHTNESS $D6F0  ; LCD panel brightness control
 .alias MISCIO_LCDBRIGHT $D6F0  ; LCD panel brightness control
 .alias LCDBRIGHT $D6F0  ; LCD panel brightness control
+.alias MISC_FPGABUTTONS $D6F2  ; Read FPGA five-way buttons
+.alias FPGABUTTONS $D6F2  ; Read FPGA five-way buttons
+.alias MISC_ACCELBITBASH $D6F3  ; Accelerometer bit-bash interface
+.alias ACCELBITBASH $D6F3  ; Accelerometer bit-bash interface
 .alias MISCIO_ACCELBASH $D6F3  ; Accelerometer bit-bashing port (debug only)
 .alias ACCELBASH $D6F3  ; Accelerometer bit-bashing port (debug only)
+.alias AUDIO_MIXREGSEL $D6F4  ; Audio Mixer register select
+.alias MIXREGSEL $D6F4  ; Audio Mixer register select
 .alias AUDIOMIX_REGSEL $D6F4  ; Audio Mixer register select
 .alias REGSEL $D6F4  ; Audio Mixer register select
+.alias AUDIO_MIXREGDATA $D6F5  ; Audio Mixer register read port
+.alias MIXREGDATA $D6F5  ; Audio Mixer register read port
 .alias AUDIOMIX_REGWDATA $D6F5  ; Audio Mixer register write port
 .alias REGWDATA $D6F5  ; Audio Mixer register write port
+.alias MISC_PS2KEYSCANLSB $D6F6  ; Keyboard scan code reader (lower byte)
+.alias PS2KEYSCANLSB $D6F6  ; Keyboard scan code reader (lower byte)
+.alias MISC_PS2KEYSCANMSB $D6F7  ; Keyboard scan code reader (upper nybl)
+.alias PS2KEYSCANMSB $D6F7  ; Keyboard scan code reader (upper nybl)
+.alias AUDIO_DIGILEFTLSB $D6F8  ; Digital audio, left channel, LSB
+.alias DIGILEFTLSB $D6F8  ; Digital audio, left channel, LSB
+.alias AUDIO_DIGILLSB $D6F8  ; 16-bit digital audio out (left LSB)
+.alias DIGILLSB $D6F8  ; 16-bit digital audio out (left LSB)
+.alias AUDIO_DIGILEFTMSB $D6F9  ; Digital audio, left channel, MSB
+.alias DIGILEFTMSB $D6F9  ; Digital audio, left channel, MSB
+.alias AUDIO_DIGILMSB $D6F9  ; 16-bit digital audio out (left MSB)
+.alias DIGILMSB $D6F9  ; 16-bit digital audio out (left MSB)
+.alias AUDIO_DIGIRIGHTLSB $D6FA  ; Digital audio, left channel, LSB
+.alias DIGIRIGHTLSB $D6FA  ; Digital audio, left channel, LSB
+.alias AUDIO_DIGIRLSB $D6FA  ; 16-bit digital audio out (right LSB)
+.alias DIGIRLSB $D6FA  ; 16-bit digital audio out (right LSB)
+.alias AUDIO_DIGIRIGHTMSB $D6FB  ; Digital audio, left channel, MSB
+.alias DIGIRIGHTMSB $D6FB  ; Digital audio, left channel, MSB
+.alias AUDIO_DIGIRMSB $D6FB  ; 16-bit digital audio out (right MSB)
+.alias DIGIRMSB $D6FB  ; 16-bit digital audio out (right MSB)
+.alias AUDIO_READBACKLSB $D6FC  ; audio read-back LSB (source selected by $D6F4)
+.alias READBACKLSB $D6FC  ; audio read-back LSB (source selected by $D6F4)
+.alias AUDIO_READBACKMSB $D6FD  ; audio read-back MSB (source selected by $D6F4)
+.alias READBACKMSB $D6FD  ; audio read-back MSB (source selected by $D6F4)
 .alias DMA_ADDRLSBTRIG $D700  ; DMAgic DMA list address LSB, and trigger DMA (when written)
 .alias ADDRLSBTRIG $D700  ; DMAgic DMA list address LSB, and trigger DMA (when written)
 .alias DMA_ADDRMSB $D701  ; DMA list address high byte (address bits 8 -- 15).
@@ -1879,6 +1919,10 @@
 .alias SLIEN_ADDR $D710  ; Enable 6502-style slow (7 cycle) interrupts (address)
 .alias CPU_SLIEN_MASK 2  ; Enable 6502-style slow (7 cycle) interrupts (bit mask)
 .alias SLIEN_MASK 2  ; Enable 6502-style slow (7 cycle) interrupts (bit mask)
+.alias MISC_VDCSEN_ADDR $D710  ; Enable VDC inteface simulation (address)
+.alias VDCSEN_ADDR $D710  ; Enable VDC inteface simulation (address)
+.alias MISC_VDCSEN_MASK 4  ; Enable VDC inteface simulation (bit mask)
+.alias VDCSEN_MASK 4  ; Enable VDC inteface simulation (bit mask)
 .alias CPU_BRCOST_ADDR $D710  ; 1=charge extra cycle(s) for branches taken (address)
 .alias BRCOST_ADDR $D710  ; 1=charge extra cycle(s) for branches taken (address)
 .alias CPU_BRCOST_MASK 8  ; 1=charge extra cycle(s) for branches taken (bit mask)
@@ -1891,6 +1935,10 @@
 .alias AUD_BLKTO_ADDR $D711  ; Audio DMA block timeout (read only) DEBUG (address)
 .alias DMA_AUD_BLKTO_MASK 7  ; Audio DMA block timeout (read only) DEBUG (bit mask)
 .alias AUD_BLKTO_MASK 7  ; Audio DMA block timeout (read only) DEBUG (bit mask)
+.alias AUDIO_PWMPDM_ADDR $D711  ; PWM/PDM audio encoding select (address)
+.alias PWMPDM_ADDR $D711  ; PWM/PDM audio encoding select (address)
+.alias AUDIO_PWMPDM_MASK 8  ; PWM/PDM audio encoding select (bit mask)
+.alias PWMPDM_MASK 8  ; PWM/PDM audio encoding select (bit mask)
 .alias DMA_NOMIX_ADDR $D711  ; Audio DMA bypasses audio mixer (address)
 .alias NOMIX_ADDR $D711  ; Audio DMA bypasses audio mixer (address)
 .alias DMA_NOMIX_MASK 16  ; Audio DMA bypasses audio mixer (bit mask)

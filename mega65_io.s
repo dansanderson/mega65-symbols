@@ -1,4 +1,4 @@
-; Generated from: /Users/dan/Projects/mega65-core/iomap.txt
+; Generated from: ../mega65-core/iomap.txt
 ; Date: 2022-06-11
 
 ETHCOMMAND_STOPTX = $00  ; Immediately stop transmitting the current ethernet frame. Will cause a partially sent frame to be received, most likely resulting in the loss of that frame.
@@ -1692,6 +1692,8 @@ GS_QSPI_CLOCK_ADDR = $D6CD  ; Alternate address for direct manipulation of QSPI 
 GS_QSPI_CLOCK_MASK = 2  ; Alternate address for direct manipulation of QSPI CLOCK (bit mask)
 FPGA_RECONFTRIG = $D6CF  ; Write $42 to Trigger FPGA reconfiguration to switch to alternate bitstream.
 RECONFTRIG = $D6CF  ; Write $42 to Trigger FPGA reconfiguration to switch to alternate bitstream.
+MISC_I2CBUSSELECT = $D6D0  ; I2C bus select (bus 0 = temp sensor on Nexys4 boardS)
+I2CBUSSELECT = $D6D0  ; I2C bus select (bus 0 = temp sensor on Nexys4 boardS)
 MISCIO_I2CBUSSEL = $D6D0  ; Select I2C bus number (I2C busses vary between MEGA65 and MEGAphone variants)
 I2CBUSSEL = $D6D0  ; Select I2C bus number (I2C busses vary between MEGA65 and MEGAphone variants)
 MISCIO_I2CRST_ADDR = $D6D1  ; I2C reset (address)
@@ -1726,6 +1728,10 @@ MISCIO_I2CWDATA = $D6D3  ; I2C data write register
 I2CWDATA = $D6D3  ; I2C data write register
 MISCIO_I2CRDATA = $D6D4  ; I2C data read register
 I2CRDATA = $D6D4  ; I2C data read register
+MISC_SDDEBUGERRLSB = $D6DA  ; DEBUG SD card last error code LSB
+SDDEBUGERRLSB = $D6DA  ; DEBUG SD card last error code LSB
+MISC_SDDEBUGERRMSB = $D6DB  ; DEBUG SD card last error code MSB
+SDDEBUGERRMSB = $D6DB  ; DEBUG SD card last error code MSB
 FPGA_FPGATEMPLSB = $D6DE  ; FPGA die temperature sensor (lower nybl)
 FPGATEMPLSB = $D6DE  ; FPGA die temperature sensor (lower nybl)
 FPGA_FPGATEMPMSB = $D6DF  ; FPGA die temperature sensor (upper byte)
@@ -1837,14 +1843,48 @@ ETH_DBGRXWCOUNT = $D6EF  ; DEBUG show number of writes to eth RX buffer
 DBGRXWCOUNT = $D6EF  ; DEBUG show number of writes to eth RX buffer
 ETH_DBGTXSTAT = $D6EF  ; DEBUG show current ethernet TX state
 DBGTXSTAT = $D6EF  ; DEBUG show current ethernet TX state
+MISC_LCDBRIGHTNESS = $D6F0  ; LCD panel brightness control
+LCDBRIGHTNESS = $D6F0  ; LCD panel brightness control
 MISCIO_LCDBRIGHT = $D6F0  ; LCD panel brightness control
 LCDBRIGHT = $D6F0  ; LCD panel brightness control
+MISC_FPGABUTTONS = $D6F2  ; Read FPGA five-way buttons
+FPGABUTTONS = $D6F2  ; Read FPGA five-way buttons
+MISC_ACCELBITBASH = $D6F3  ; Accelerometer bit-bash interface
+ACCELBITBASH = $D6F3  ; Accelerometer bit-bash interface
 MISCIO_ACCELBASH = $D6F3  ; Accelerometer bit-bashing port (debug only)
 ACCELBASH = $D6F3  ; Accelerometer bit-bashing port (debug only)
+AUDIO_MIXREGSEL = $D6F4  ; Audio Mixer register select
+MIXREGSEL = $D6F4  ; Audio Mixer register select
 AUDIOMIX_REGSEL = $D6F4  ; Audio Mixer register select
 REGSEL = $D6F4  ; Audio Mixer register select
+AUDIO_MIXREGDATA = $D6F5  ; Audio Mixer register read port
+MIXREGDATA = $D6F5  ; Audio Mixer register read port
 AUDIOMIX_REGWDATA = $D6F5  ; Audio Mixer register write port
 REGWDATA = $D6F5  ; Audio Mixer register write port
+MISC_PS2KEYSCANLSB = $D6F6  ; Keyboard scan code reader (lower byte)
+PS2KEYSCANLSB = $D6F6  ; Keyboard scan code reader (lower byte)
+MISC_PS2KEYSCANMSB = $D6F7  ; Keyboard scan code reader (upper nybl)
+PS2KEYSCANMSB = $D6F7  ; Keyboard scan code reader (upper nybl)
+AUDIO_DIGILEFTLSB = $D6F8  ; Digital audio, left channel, LSB
+DIGILEFTLSB = $D6F8  ; Digital audio, left channel, LSB
+AUDIO_DIGILLSB = $D6F8  ; 16-bit digital audio out (left LSB)
+DIGILLSB = $D6F8  ; 16-bit digital audio out (left LSB)
+AUDIO_DIGILEFTMSB = $D6F9  ; Digital audio, left channel, MSB
+DIGILEFTMSB = $D6F9  ; Digital audio, left channel, MSB
+AUDIO_DIGILMSB = $D6F9  ; 16-bit digital audio out (left MSB)
+DIGILMSB = $D6F9  ; 16-bit digital audio out (left MSB)
+AUDIO_DIGIRIGHTLSB = $D6FA  ; Digital audio, left channel, LSB
+DIGIRIGHTLSB = $D6FA  ; Digital audio, left channel, LSB
+AUDIO_DIGIRLSB = $D6FA  ; 16-bit digital audio out (right LSB)
+DIGIRLSB = $D6FA  ; 16-bit digital audio out (right LSB)
+AUDIO_DIGIRIGHTMSB = $D6FB  ; Digital audio, left channel, MSB
+DIGIRIGHTMSB = $D6FB  ; Digital audio, left channel, MSB
+AUDIO_DIGIRMSB = $D6FB  ; 16-bit digital audio out (right MSB)
+DIGIRMSB = $D6FB  ; 16-bit digital audio out (right MSB)
+AUDIO_READBACKLSB = $D6FC  ; audio read-back LSB (source selected by $D6F4)
+READBACKLSB = $D6FC  ; audio read-back LSB (source selected by $D6F4)
+AUDIO_READBACKMSB = $D6FD  ; audio read-back MSB (source selected by $D6F4)
+READBACKMSB = $D6FD  ; audio read-back MSB (source selected by $D6F4)
 DMA_ADDRLSBTRIG = $D700  ; DMAgic DMA list address LSB, and trigger DMA (when written)
 ADDRLSBTRIG = $D700  ; DMAgic DMA list address LSB, and trigger DMA (when written)
 DMA_ADDRMSB = $D701  ; DMA list address high byte (address bits 8 -- 15).
@@ -1879,6 +1919,10 @@ CPU_SLIEN_ADDR = $D710  ; Enable 6502-style slow (7 cycle) interrupts (address)
 SLIEN_ADDR = $D710  ; Enable 6502-style slow (7 cycle) interrupts (address)
 CPU_SLIEN_MASK = 2  ; Enable 6502-style slow (7 cycle) interrupts (bit mask)
 SLIEN_MASK = 2  ; Enable 6502-style slow (7 cycle) interrupts (bit mask)
+MISC_VDCSEN_ADDR = $D710  ; Enable VDC inteface simulation (address)
+VDCSEN_ADDR = $D710  ; Enable VDC inteface simulation (address)
+MISC_VDCSEN_MASK = 4  ; Enable VDC inteface simulation (bit mask)
+VDCSEN_MASK = 4  ; Enable VDC inteface simulation (bit mask)
 CPU_BRCOST_ADDR = $D710  ; 1=charge extra cycle(s) for branches taken (address)
 BRCOST_ADDR = $D710  ; 1=charge extra cycle(s) for branches taken (address)
 CPU_BRCOST_MASK = 8  ; 1=charge extra cycle(s) for branches taken (bit mask)
@@ -1891,6 +1935,10 @@ DMA_AUD_BLKTO_ADDR = $D711  ; Audio DMA block timeout (read only) DEBUG (address
 AUD_BLKTO_ADDR = $D711  ; Audio DMA block timeout (read only) DEBUG (address)
 DMA_AUD_BLKTO_MASK = 7  ; Audio DMA block timeout (read only) DEBUG (bit mask)
 AUD_BLKTO_MASK = 7  ; Audio DMA block timeout (read only) DEBUG (bit mask)
+AUDIO_PWMPDM_ADDR = $D711  ; PWM/PDM audio encoding select (address)
+PWMPDM_ADDR = $D711  ; PWM/PDM audio encoding select (address)
+AUDIO_PWMPDM_MASK = 8  ; PWM/PDM audio encoding select (bit mask)
+PWMPDM_MASK = 8  ; PWM/PDM audio encoding select (bit mask)
 DMA_NOMIX_ADDR = $D711  ; Audio DMA bypasses audio mixer (address)
 NOMIX_ADDR = $D711  ; Audio DMA bypasses audio mixer (address)
 DMA_NOMIX_MASK = 16  ; Audio DMA bypasses audio mixer (bit mask)
