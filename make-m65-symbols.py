@@ -116,11 +116,6 @@ FORMATS = {
         comment_tmpl='/*{comment}*/\n{item}',
         sym_tmpl='#define {sym} {val}',
         use_c_hex=True),
-    'rust': Format(
-        fname_suffix='.rs',
-        comment_tmpl='/// {comment}\n{item}',
-        sym_tmpl="pub const {sym}: u8 = {val};\n",
-        use_c_hex=True),
     'kick': Format(
         fname_suffix='.asm',
         comment_tmpl='{item}//{comment}',
@@ -129,6 +124,11 @@ FORMATS = {
         fname_suffix='.oph',
         comment_tmpl='{item};{comment}',
         sym_tmpl='.alias {sym} {val}'),
+    'rust': Format(
+        fname_suffix='.rs',
+        comment_tmpl='/// {comment}\n{item}',
+        sym_tmpl="pub const {sym}: u8 = {val};\n",
+        use_c_hex=True),
 }
 
 
