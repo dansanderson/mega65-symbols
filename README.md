@@ -30,6 +30,7 @@ For convenience, I have committed the output from this tool directly in this rep
 -   `mega65_io.s` : [ca65 assmebler](https://cc65.github.io/doc/ca65.html)
 -   `mega65_io.h` : [cc65 C compiler](https://cc65.github.io/doc/cc65.html)
 -   `mega65_io.oph` : [Ophis assembler](https://michaelcmartin.github.io/Ophis/)
+-   `mega65_io.rs` : [Rust compiler](https://github.com/mrk-its/rust-mos)
 
 ## How?
 
