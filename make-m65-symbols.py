@@ -19,6 +19,7 @@ Supported output formats:
     cc65    cc65 C #defines
     kick    Kick Assembler symbols
     ophis   Ophis assembler symbols
+    rust    Rust constants
 
 If --output-file is omitted, a canonical name is chosen for the selected
 format.
@@ -114,6 +115,11 @@ FORMATS = {
         fname_suffix='.h',
         comment_tmpl='/*{comment}*/\n{item}',
         sym_tmpl='#define {sym} {val}',
+        use_c_hex=True),
+    'rust': Format(
+        fname_suffix='.rs',
+        comment_tmpl='/// {comment}\n{item}',
+        sym_tmpl="pub const {sym}: u8 = {val};\n",
         use_c_hex=True),
     'kick': Format(
         fname_suffix='.asm',
