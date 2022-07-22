@@ -437,13 +437,16 @@ def main():
         epilog=EPILOG,
         formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument(
+        '-f',
         '--format',
         choices=FORMATS.keys(),
         help='The output format')
     parser.add_argument(
+        '-o',
         '--output-file',
         help='The symbols output file path')
     parser.add_argument(
+        '-i',
         '--iomap-file',
         help='The iomap.txt file path')
     parser.add_argument(
